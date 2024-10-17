@@ -29,7 +29,7 @@ You will be able to complete the following tasks:
 
       ![Account-manager-start](./Images/fabric-3.png)
 
-1. Click on S**tay in current page** when prompted.
+1. Click on S**tay on current page** when prompted.
 
       ![Account-manager-start](./Images/fabric-2.png)
 
@@ -45,6 +45,7 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
  
     ![New Workspace](./Images/ws/11.png)
  
+
 2. Fill out the **Create a workspace** form with the following details:
  
    - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**

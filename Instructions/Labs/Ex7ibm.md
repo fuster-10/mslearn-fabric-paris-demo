@@ -12,9 +12,9 @@
 
     ![New dataflow.](./Images/27.png)
 
-1. In the home page for your workspace, select **New Dataflow Gen2**. 
+1. In the home page for your workspace, select **Dataflow Gen2**. 
 
-   ![New dataflow.](./Images/28.png)
+   ![New dataflow.](./Images/data-factorygen2.png)
 
 1. After a few seconds, the Power Query editor for your new dataflow opens as shown here.
 
@@ -128,5 +128,8 @@ Call out that the quantities for all items are 1.
    - **Enables advanced data manipulation**: M-Query/M-Code scripting provides a robust framework for performing intricate data transformations and analysis, empowering users to tailor processes to specific requirements beyond the capabilities of visual tools.
    - **Facilitates automation and customization**: Through M-Query/M-Code scripting, users can automate repetitive tasks, build custom functions, and create tailored solutions, increasing efficiency and flexibility in data workflows.
 
----
-Continue to page 10 ...
+### Summary
+
+In this exercise, you learned how to ingest data into Microsoft Fabric using Fabric Copilot. The lab covered setting up data pipelines, automating data ingestion processes, and leveraging Fabric Copilot to streamline data operations. You practiced loading datasets into Fabric, explored different ingestion methods, and understood best practices for managing large-scale data workflows. By the end of the lab, you gained hands-on experience in efficient data ingestion within Fabric.
+
+### You have successfully completed the lab.
