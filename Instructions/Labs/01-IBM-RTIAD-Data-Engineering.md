@@ -37,9 +37,9 @@ Now that you have created a workspace in the previous step, it's time to switch 
 
     - Click on **Create**.
 
-      ![02](./Images/fabric20.png)
+      ![02](./Images/fabriclakehouse.png)
 
-    After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
+      >**Note:** After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
 
 3. On the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** tab in the pane on the left, in the **...** menu for the **Files (1)** node, select **New subfolder (2)** and create a subfolder named **new_data**
 
@@ -60,21 +60,21 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
 1. On the **Home** page for your lakehouse, select **New data pipeline**.
 
-    ![03](./Images/fabric21.png)
+    ![03](./Images/data-pipelinefabric.png)
 
-2. Create a new data pipeline named **Ingest Sales Data Pipeline (1)** and click on **Create (2)**. 
+1. Create a new data pipeline named **Ingest Sales Data Pipeline (1)** and click on **Create (2)**. 
    
    ![03](./Images/01/Pg3-TCreatePipeline-S1.1.png)
    
-3. If the **Copy data** wizard doesn't open automatically, select **Copy data assistance (1)** in the pipeline editor page.
+1. If the **Copy data** wizard doesn't open automatically, select **Copy data assistance** in the pipeline editor page.
 
    ![03](./Images/01/03.png)
 
-4. In the **Copy Data** wizard, on the **Choose a data source** page, search for HTTP and select the **Other** tab and then select **HTTP (2)**, click on **Next (3)**.
+1. In the **Copy Data** wizard, on the **Choose a data source** page, search for **http (1)** and select the **Other** tab and then select **Http (2)**.
 
    ![Screenshot of the Choose data source page.](./Images/data-source.png)
 
-5. In the **Connection settings** pane, enter the following settings for the connection to your data source:
+1. In the **Connection settings** pane, enter the following settings for the connection to your data source:
     - **URL (1)**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
     - **Connection (2)**: Create new connection
     - **Connection name (3)**: *Specify a unique name*
@@ -83,7 +83,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
   
        ![Account-manager-start](./Images/lab1-image11.png)
     
-6. Select **Next**. Make sure the following settings are selected:
+1. Select **Next**. Make sure the following settings are selected:
     - **Relative URL**: *Leave blank*
     - **Request method**: GET
     - **Additional headers**: *Leave blank*
@@ -93,7 +93,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
   
         ![05](./Images/fabric4.png)
    
-7. Wait for the data to be sampled and then ensure that the following settings are selected:
+1. Wait for the data to be sampled and then ensure that the following settings are selected:
     - **File format (1)**: DelimitedText
     - **Column delimiter (2)**: Comma (,)
     - **Row delimiter (3)**: Line feed (\n)
@@ -101,45 +101,51 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
       ![Account-manager-start](./Images/lab1-image12.png)
 
-8. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
+1. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
 
      ![Account-manager-start](./Images/lab1-image13.png)
 
-9. On the **Choose data destination** page, click on **OneLake data hub** and select **Lakehouse**.
+1. On the **Choose data destination** page, click on **OneLake data hub** and select **Lakehouse**.
 
      ![Account-manager-start](./Images/lab1-image14.png)
 
-10. Set the following data destination options, and then select **Next (4)**:
+     >**Note:** If it asks for the sign in, select sign in, select the username as <inject key="AzureAdUserEmail"></inject>, and enter the password as <inject key="AzureAdUserPassword"></inject>.
+     
+     > On the **Connect to data source**, under connection select the lakehouse that we created in previous step, and select **Connect**.
+
+1. Set the following data destination options, and then select **Next (4)**:
     - **Root folder (1)**: Files
     - **Folder path (2)**: new_data
     - **File name (3)**: sales.csv
    
         ![08](./Images/fabric9.png)
 
-11. Set the following file format options and then select **Next (4)**:
+1. Set the following file format options and then select **Next (4)**:
     - **File format (1)**: DelimitedText
     - **Column delimiter (2)**: Comma (,)
     - **Row delimiter (3)**: Line feed (\n)
    
       ![09](./Images/fabric10.png)
 
-12. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
+1. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
 
-    ![09](./Images/fabric11.png)
+    ![09](./Images/saverunfabric.png)
 
-    A new pipeline containing a **Copy data** activity is created, as shown here:
+    >**Note:** A new pipeline containing a **Copy data** activity is created, as shown here:
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/copy-data-pipeline.png)
 
-13. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
+1. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/Pg3-CpyOutput.png)
 
-14. In the menu bar on the left, select your lakehouse i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
+1. In the menu bar on the left, select your lakehouse i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
 
-15. On the **Home** page, in the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Files** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
+1. On the **Home** page, in the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Files** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
 
     ![Account-manager-start](./Images/lab1-image16.png)
+
+   >**Note:** If you are unable to see the **sales.csv** file under **Files**, right-click on **Files** and select **Refresh**.
 
 ### Task 4: Create a notebook
 
