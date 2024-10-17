@@ -109,7 +109,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
      ![Account-manager-start](./Images/lab1-image14.png)
 
-     >**Note:** If it asks for the sign in, select sign in, select the username as <inject key="AzureAdUserEmail"></inject>, and enter the password as <inject key="AzureAdUserPassword"></inject>.
+     >**Note:** If it prompts for sign-in, select **Sign In**, enter the username as <inject key="AzureAdUserEmail"></inject>, and provide the password as <inject key="AzureAdUserPassword"></inject>.
      
      > On the **Connect to data source**, under connection select the lakehouse that we created in previous step, and select **Connect**.
 
@@ -153,7 +153,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
       ![11](./Images/01/11.png)
 
-    After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
+    >**Note:** After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
 2. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration and click on **&#9655; Run**.
 
@@ -189,7 +189,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
    df.write.format("delta").mode("append").saveAsTable(table_name)
     ```
 
-    This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a **managed table** - appending the data if the table already exists.
+    >**Note:** This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a **managed table** - appending the data if the table already exists.
 
 5. Verify that your notebooks look similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
 
@@ -247,13 +247,13 @@ When you create a lakehouse and define tables in it, an SQL endpoint is automati
 
 While many data professionals are familiar with SQL, data analysts with Power BI experience can apply their Power Query skills to create visual queries.
 
-1. On the toolbar, select **New visual query**.
+1. On the toolbar, use the **New SQL query** drop-down and select **New visual query**.
 
 2. Drag the **sales** table to the new visual query editor pane that opens to create a Power Query as shown here: 
 
     ![Screenshot of a Visual query.](./Images/visual-query.png)
 
-3. In the **Manage columns** menu, select **Choose columns**. Then select only the **SalesOrderNumber** and **SalesOrderLineNumber** columns and click on **OK**.
+3. In the **Manage columns (1)** menu, select **Choose columns (2)**. Then select only the **SalesOrderNumber** and **SalesOrderLineNumber** columns and click on **OK**.
 
     ![Account-manager-start](./Images/lab1-image22.png)
 
@@ -263,12 +263,12 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
     ![Screenshot of a Visual query with results.](./Images/01/Pg3-VisQuery-S4.0.png)
 
-5. Then group the data by using the following **Basic** settings and click on **OK**.
+5. Then group the data by using the following **Basic** settings and click on **OK (5)**.
 
-    - **Group by**: SalesOrderNumber
-    - **New column name**: LineItems
-    - **Operation**: Count distinct values
-    - **Column**: SalesOrderLineNumber
+    - **Group by (1)**: SalesOrderNumber
+    - **New column name (2)**: LineItems
+    - **Operation (3)**: Count distinct values
+    - **Column (4)**: SalesOrderLineNumber
 
         ![Screenshot of a Visual query with results.](./Images/01/Pg3-VisQuery-S4.01.png)
 
@@ -280,9 +280,9 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
 The tables in your lakehouse are automatically added to a default dataset that defines a data model for reporting with Power BI.
 
-1. At the bottom of the SQL Endpoint page, select the **Model** tab. The data model schema for the dataset is shown.
+1. From the left-navigation pane of the SQL Endpoint page, select the **Model layouts** tab. The data model schema for the dataset is shown.
 
-    ![Screenshot of a data model.](./Images/data-model.png)
+    ![Screenshot of a data model.](./Images/modellayouts.png)
 
     > **Note**: In this exercise, the data model consists of a single table. In a real-world scenario, you would likely create multiple tables in your lakehouse, each of which would be included in the model. You could then define relationships between these tables in the model.
 
@@ -290,19 +290,22 @@ The tables in your lakehouse are automatically added to a default dataset that d
 
     ![Screenshot of the report designer.](./Images/report-designer.png)
 
+    >**Note:** On the **New report with all available data** select **Continue**.
+
 3. In the **Data** pane on the right, expand the **sales** table. Then select the following fields:
     - **Item**
     - **Quantity**
 
-    A table visualization is added to the report:
+        >**Note:** A table visualization is added to the report:
 
-    ![Screenshot of a report containing a table.](./Images/table-visualization.png)
+        ![Screenshot of a report containing a table.](./Images/table-visualization.png)
 
 4. Hide the **Data** and **Filters** panes to create more space. Then ensure the table visualization is selected and in the **Visualizations** pane, change the visualization to a **Clustered bar chart** and resize it as shown here.
 
     ![Screenshot of a report containing a clustered bar chart.](./Images/clustered-bar-chart.png)
 
 5. On the **File** menu, select **Save**. Then save the report as **Item Sales Report** in the workspace you created previously.
+
 6. Close the browser tab containing the report to return to the SQL endpoint for your lakehouse. Then, in the hub menu bar on the left, select your workspace to verify that it contains the following items:
     - Your lakehouse.
     - The SQL endpoint for your lakehouse.
@@ -313,17 +316,17 @@ The tables in your lakehouse are automatically added to a default dataset that d
 
 1. Click on Copilot button at the right of the screen to open the copilot chat window.
 
-   ![New dataflow.](./Images/Copilot-gettingstarted.png)
+   ![New dataflow.](./Images/item-sales-report.png)
 
-2. Select the first input to copilot as **Give me an executive summary of this page**.
+2. Select the first input to copilot as **Give me an executive summary**.
 
 3. Ask copilot **Split the Item column on the ' ', creating three new fields called Description, Color and Size** or **Publish the Report** and analyze the output. 
 
-   ![New dataflow.](./Images/Copilot-gettingstarted1.png)
+   ![New dataflow.](./Images/publishreport.png)
 
 4. After a few seconds, ask diffrent question to copilot **provide me insights of sales on Mountain-200, Silver 46** and read the output to understand the data gathered by copilot.
 
-   ![New dataflow.](./Images/Copilot-gettingstarted2.png)
+   ![New dataflow.](./Images/provide200.png)
 
 
 6. Provide another prompt to copilot **what all insights will be valuable from the data we have to double the products sales** and wait for the result. it sometimes take 2 to 5 min.
