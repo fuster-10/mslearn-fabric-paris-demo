@@ -1,4 +1,4 @@
-# Lab 1: Ingest data with a pipeline in Microsoft Fabric
+# Exercise 2: Ingest data with a pipeline in Microsoft Fabric
 
 ### Estimated Duration: 90 minutes
 
@@ -43,7 +43,7 @@ Now that you have created a workspace in the previous step, it's time to switch 
 
 3. On the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** tab in the pane on the left, in the **...** menu for the **Files (1)** node, select **New subfolder (2)** and create a subfolder named **new_data**
 
-   ![02](./Images/01/01.png)
+   ![02](./Images/file-subfolder.png)
 
 ### Task 2: Explore shortcuts
 
@@ -77,7 +77,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 1. In the **Connection settings** pane, enter the following settings for the connection to your data source:
     - **URL (1)**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
     - **Connection (2)**: Create new connection
-    - **Connection name (3)**: *Specify a unique name*
+    - **Connection name (3)**: **Connection<inject key="DeploymentID" enableCopy="false"/>**
     - **Authentication kind (4)**: Anonymous
     - Click on **Next (5)**
   
@@ -314,7 +314,7 @@ The tables in your lakehouse are automatically added to a default dataset that d
 
 ### Task 8: Analyze report using Fabric Copilot
 
-1. Click on Copilot button at the right of the screen to open the copilot chat window.
+1. Click on **Copilot (1)** button at the right of the screen to open the copilot chat window, and select **Get Started (2)**.
 
    ![New dataflow.](./Images/item-sales-report.png)
 
@@ -341,4 +341,4 @@ The tables in your lakehouse are automatically added to a default dataset that d
 
 In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL, and are included in a default dataset to support data visualizations.
 
-### You have successfully completed the lab. Click on Next >> to procced with next exercise.
+### You have successfully completed the lab. Click on **Next >>** to procced with next exercise.
