@@ -1,4 +1,4 @@
-# Getting Started
+# Getting Started with Microsoft Fabric with Copilot
  
 Welcome to your Microsoft Fabric with Copilot Workshop! A unified data platform designed to simplify data management, analytics, and AI integration. Powered by Copilot, it allows users to effortlessly create, analyze, and visualize data through natural language commands, enhancing productivity and collaboration. With features that span data engineering, real-time analytics, and machine learning, Microsoft Fabric helps streamline workflows and provides a seamless experience for data professionals and business users alike. Let's begin by making the most of this experience:
  
@@ -14,7 +14,7 @@ Welcome to your Microsoft Fabric with Copilot Workshop! A unified data platform 
  
 ## Exploring Your Lab Resources
  
-1. To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
+1. To get a better understanding of your lab resources and credentials, navigate to the **Environment** details tab.
 
  
    ![](./Images/env.png)
@@ -40,8 +40,6 @@ Welcome to your Microsoft Fabric with Copilot Workshop! A unified data platform 
 1. You can also validate the task by navigating to the **Lab Validation** tab, from the upper right corner in the lab guide section.
 
    ![New dataflow.](./Images/lab-validation.png)
-
-1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
 ## **Lab Duration Extension**
 

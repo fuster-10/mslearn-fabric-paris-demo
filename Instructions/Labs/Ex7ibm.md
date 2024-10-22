@@ -1,8 +1,16 @@
-# Lab 2: Data Engineering Ingest Data in Fabric with Fabric Copilot
+# Exercise 3: Data Engineering Ingest Data in Fabric with Fabric Copilot
 
- In the labs, you'll create a simple data pipeline to bring in customer sales data. You are using the KiZAN Fabric Tenant - where we have Copilot enabled, demonstrate doing the same thing, but by using a new Data Flow Gen2 And leveraging the native integration of Copilot to use natural language to ingest and transform your data.
+In the exercise, you will create a simple data pipeline to bring in customer sales data. You are using the KiZAN Fabric Tenant - where we have Copilot enabled, demonstrate doing the same thing, but by using a new Data Flow Gen2 And leveraging the native integration of Copilot to use natural language to ingest and transform your data.
+
+### Estimated Duration: 80 minutes
+
+## Lab objectives
+
+You will be able to complete the following tasks:
+
+- Task 1: Create New - Dataflow Gen2
  
-# Create New - Dataflow Gen2
+### Task 1: Create New - Dataflow Gen2
 
 1. Select the workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** (this is the workspace that mimics the lab environment)
 
