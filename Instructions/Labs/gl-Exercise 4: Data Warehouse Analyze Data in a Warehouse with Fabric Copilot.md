@@ -1,4 +1,4 @@
-# Exercise 7: Data Warehouse Analyze Data in a Warehouse with Fabric Copilot
+# Exercise 4: Data Warehouse Analyze Data in a Warehouse with Fabric Copilot
 
 ### Estimated Duration: 60 minutes
 
