@@ -24,19 +24,19 @@ You will be able to complete the following tasks:
 
 3. In the **Roles and administrators** page, type **Fabric Administrators (1)** in the search box and select **Fabric Administrators (2)** from the results.
 
-   ![search-fabric-admin](./Images/ws/entra02.png)
+   ![search-fabric-admin](./Images/ws/E1-T1-S3.png)
 
 4. This will take you to the **Fabric Administrator | Assignments** page where you will have to assign yourself the **Fabric Administrator role**. Now, click on **+ Add assignments (1)**.
 
-   ![click-add-assignments](./Images/ws/04.png)
+   ![click-add-assignments](./Images/ws/E1-T1-S4.png)
 
 5. Make sure to **check the box (1)** next to your username, confirm if it is **Selected (2)** and click on **Add (3)**.
 
-   ![check-and-add-role](./Images/ws/05.png)
+   ![check-and-add-role](./Images/ws/E1-T1-S5.png)
 
 6. You can confirm the **Fabric Administrator** role has been added successfully by **Refresh (1)** Fabric Administrators | Assignments page. After **confirming (2)** it has been added successfully, navigate back to **Home (3)**.
 
-   ![check-and-navigate-back-to-home](./Images/ws/06.png)
+   ![check-and-navigate-back-to-home](./Images/ws/E1-T1-S6.png)
 
 ### Task 2: Sign up for Microsoft Fabric Trial
 
@@ -48,21 +48,23 @@ You will be able to complete the following tasks:
 
    >**Note**: In case a sign-up page asks for a phone number, you can enter a dummy phone number to proceed.
 
-2. Select **Account manager (1)**, and click on **Start trial (2)**.
+2. Enter <inject key="AzureAdUserEmail"></inject> as the username/Email and <inject key="AzureAdUserPassword"></inject> as the password when prompted.
 
-   ![Account-manager-start](./Images/ws/07.png)
+3. Select **Account manager (1)**, and click on **Free trial (2)**.
 
-3. A new prompt will appear asking you to **Upgrade to a free Microsoft Fabric trial**, click on **Start trial (1)**.
+   ![Account-manager-start](./Images/ws/E1-T2-S3.png)
 
-   ![Start-trial](./Images/ws/08.png)
+4. A new prompt will appear asking you to **Activate your 60-day free Fabric trail Capacity**, click on **Activate**.
 
-4. Once your trial capacity is ready, you receive a confirmation message. Select **Got it (1)** to begin working in Fabric.
+   ![Start-trial](./Images/ws/E1-T2-S4.png)
 
-   ![Got-it](./Images/ws/09.png)
+5. Once successfully upgraded to a free Microsoft Fabric trial, you receive a confirmation message. Select **Stay on Current Page** to begin working in Fabric.
+
+   ![Got-it](./Images/ws/E1-T2-S5.png)
 
 6. Now, open **Account manager (1)** again, and verify **Trial Status (2)**.
 
-   ![Verify-trial-status](./Images/ws/10.png)
+   ![Verify-trial-status](./Images/ws/E1-T2-S6.png)
 
 ### Task 3: Create a workspace
 
@@ -70,17 +72,17 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
 
 1.  Now, select **Workspaces** and click on **+ New workspace**.
 
-    ![New Workspace](./Images/ws/11.png)
+    ![New Workspace](./Images/ws/E1-T3-S1.png)
 
 2. Fill out the **Create a workspace** form with the following details:
 
    - **Name:** Enter **Fabric-<inject key="DeploymentID" enableCopy="false"/>**
 
-      ![name-and-desc-of-workspc](./Images/ws/12.png)
+      ![name-and-desc-of-workspc](./Images/ws/E1-T3-S2a.png)
 
    - **Advanced:** Expand it and Under **License mode**, select **Trial capacity (1)** and click on **Apply (2)** to create and open the workspace.
 
-      ![advanced-and-apply](./Images/ws/13.png)
+      ![advanced-and-apply](./Images/ws/E1-T3-S2b.png)
 
 ### Summary
 
