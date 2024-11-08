@@ -26,11 +26,20 @@ In this task, you will design and implement a data warehouse by organizing data 
 
 2. In the **Data Warehouse** home page, create a new **Warehouse**.
    
-   - **Name:** Enter **Data Warehouse<inject key="DeploymentID" enableCopy="false"/>** **(1)**
+   - **Name:** Enter **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/>** **(1)**
 
    - Click on **Create (2)**
 
         ![01](./Images/lab2-image2.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      
+   - If you receive an InProgress message, you can hit refresh to see the final status.
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="ed927a03-5062-4d23-bf52-d57ae336f0eb" />
 
 ### Task 2: Create tables and insert data
 
