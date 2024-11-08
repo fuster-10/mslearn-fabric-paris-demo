@@ -85,11 +85,11 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
 
    ![Empty data pipeline.](./Images/dataflow_1.png)
 
-4. With the new **Dataflow1** activity selected, go to the **Settings** tab. In the **Dataflow** drop-down list, choose **Transform Orders Dataflow**
+4. With the new **Dataflow1** activity selected, go to the **Settings (1)** tab. In the **Dataflow** drop-down list, choose **fabric-<inject key="DeploymentID" enableCopy="false"/>** or my workspace (2) and select **Transform Orders Dataflow (3)** 
 
    ![Empty data pipeline.](./Images/transform.png)
    
-6. **Save** the pipeline.
+6. **Save** the pipeline from the top left corner.
 
 7. Use the **Run** button to run the pipeline, and wait for it to complete. It may take a few minutes.
 
