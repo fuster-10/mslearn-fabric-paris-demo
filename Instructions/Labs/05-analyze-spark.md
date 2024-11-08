@@ -43,7 +43,7 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
 1. On the **Home** page while viewing the contents of the **orders** folder in your datalake, in the **Open notebook (1)** menu, select **New notebook (2)**.
 
    ![](./Images/Pg7-Notebook-S1.png)
-
+    > If you get a &#10006; **error** while directly creating notebook from the LakeHouse, Navigate back to Home Page of the MS Fabric and click on **NoteBook** from Recommended Items to create a new notebook.
     >**Note**: After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
 2. Select the first cell (currently a *code* cell), and then click the **M&#8595;** button in the dynamic toolbar at the top-right to convert it to a **markdown** cell.
