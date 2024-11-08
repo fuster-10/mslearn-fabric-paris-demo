@@ -18,11 +18,11 @@ You will be able to complete the following tasks:
 
 In this task, you will create a Dataflow (Gen2) to efficiently ingest and transform data from multiple sources for analysis. This process streamlines data preparation, enabling you to prepare the data for further processing and insights.
 
-1. On **fabric-<inject key="DeploymentID" enableCopy="false"/>** home page, select **New Dataflow Gen2**. After a few moments, the Power Query editor for your new dataflow will open, as illustrated below.
+1. On **fabric-<inject key="DeploymentID" enableCopy="false"/>** home page, select Data Factory from the bottom left corner and select **New Dataflow Gen2**. After a few moments, the Power Query editor for your new dataflow will open, as illustrated below.
 
    ![New dataflow.](./Images/lak5.1.png)
 
-1. Select **Import from a Text/CSV file**, and create a new data source with the following settings:
+1. Select **Get data**, select **test/csv** and create a new data source with the following settings:
     - **Link to file**: *Selected*
     - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv`
     - **Connection**: Create new connection
@@ -42,7 +42,7 @@ In this task, you will create a Dataflow (Gen2) to efficiently ingest and transf
 
    ![Query with a custom column step.](./Images/lak4.png)
 
-1. Go to the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** , Delete the **orders** files from the table.
+1. Duplicate the existing tabe, Go to the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** , Delete the **orders** files from the table.
 
 ### Task 2: Add data destination for Dataflow
 
