@@ -194,23 +194,23 @@ In this task, you will create a notebook to document your data analysis process.
      ![](./Images/E2-T4-S9.png) 
 
     ```python
-   from pyspark.sql.functions import *
-
-   # Read the new sales data
-   df = spark.read.format("csv").option("header","true").option("inferSchema","true").load("Files/new_data/*.csv")
-
-   ## Add month and year columns
-   df = df.withColumn("Year", year(col("OrderDate"))).withColumn("Month", month(col("OrderDate")))
-
-   # Derive FirstName and LastName columns
-   df = df.withColumn("FirstName", split(col("CustomerName"), " ").getItem(0)).withColumn("LastName", split(col("CustomerName"), " ").getItem(1))
-
-   # Filter and reorder columns
-   df = df["SalesOrderNumber", "SalesOrderLineNumber", "OrderDate", "Year", "Month", "FirstName", "LastName", "EmailAddress", "Item", "Quantity", "UnitPrice", "TaxAmount"]
-
-   # Load the data into a managed table
-   #Managed tables are tables for which both the schema metadata and the data files are managed by Fabric. The data files for the table are created in the Tables folder.
-   df.write.format("delta").mode("append").saveAsTable(table_name)
+       from pyspark.sql.functions import *
+    
+       # Read the new sales data
+       df = spark.read.format("csv").option("header","true").option("inferSchema","true").load("Files/new_data/*.csv")
+    
+       ## Add month and year columns
+       df = df.withColumn("Year", year(col("OrderDate"))).withColumn("Month", month(col("OrderDate")))
+    
+       # Derive FirstName and LastName columns
+       df = df.withColumn("FirstName", split(col("CustomerName"), " ").getItem(0)).withColumn("LastName", split(col("CustomerName"), " ").getItem(1))
+    
+       # Filter and reorder columns
+       df = df["SalesOrderNumber", "SalesOrderLineNumber", "OrderDate", "Year", "Month", "FirstName", "LastName", "EmailAddress", "Item", "Quantity", "UnitPrice", "TaxAmount"]
+    
+       # Load the data into a managed table
+       #Managed tables are tables for which both the schema metadata and the data files are managed by Fabric. The data files for the table are created in the Tables folder.
+       df.write.format("delta").mode("append").saveAsTable(table_name)
     ```
 
     This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a **managed table** - appending the data if the table already exists.
