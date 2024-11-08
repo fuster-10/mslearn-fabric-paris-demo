@@ -272,7 +272,7 @@ In this task, you will save your notebook with a meaningful name to preserve you
 
 1. Set the **Name** of the notebook to **Train and compare models notebook**, and then close the settings pane.
 
-1. On the notebook menu, select **Stop session** to end the Spark session.
+1. On the notebook menu, select &#9645;**Stop session** to end the Spark session.
 
    >**Note:** If you can't see the **Stop Session** option, it means the spark session has already ended.
 
