@@ -1,4 +1,4 @@
-# Exercise 9: Create a Dataflow (Gen2) in Microsoft Fabric
+# Exercise 7: Create a Dataflow (Gen2) in Microsoft Fabric
 
 ### Estimated Duration: 30 minutes
 
@@ -108,3 +108,4 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
 In this exercise, you have created a Dataflow (Gen2) to ingest data , added data destination for Dataflow and a dataflow to a pipeline.
 
 ### You have successfully completed the lab
+

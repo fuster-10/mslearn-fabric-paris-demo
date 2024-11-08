@@ -22,15 +22,24 @@ In this task, you will design and implement a data warehouse by organizing data 
 
 1. At the bottom left of the Power BI portal, switch to the **Data Warehouse** experience.
 
-   ![01](./Images/lab2-image1.png)
+   ![](./Images/E3-T1-S1.png)
 
 2. In the **Data Warehouse** home page, create a new **Warehouse**.
    
-   - **Name:** Enter **Data Warehouse<inject key="DeploymentID" enableCopy="false"/>** **(1)**
+   - **Name:** Enter **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/>** **(1)**
 
    - Click on **Create (2)**
 
         ![01](./Images/lab2-image2.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      
+   - If you receive an InProgress message, you can hit refresh to see the final status.
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="ed927a03-5062-4d23-bf52-d57ae336f0eb" />
 
 ### Task 2: Create tables and insert data
 
@@ -38,9 +47,9 @@ In this task, you will create database tables by defining their structure with a
 
 1. In your new warehouse, select the **Create tables with T-SQL** tile.
 
-   ![01](./Images/02/Pg4-T2-S1.png)
+   ![](./Images/E3-T2-S1.png)
 
-2. Replace the default SQL code with the following CREATE TABLE statement:
+2. Replace the default SQL code with the following **CREATE TABLE statement (1)** and Use the **&#9655; Run (2)** button to run the SQL script, which creates a new table named **DimProduct** in the **dbo** schema of the data warehouse.
 
     ```SQL
    CREATE TABLE dbo.DimProduct
@@ -54,13 +63,11 @@ In this task, you will create database tables by defining their structure with a
    GO
     ```
 
-    ![01](./Images/02/Pg4-T2-S2.png)
+   ![](./Images/E3-T2-S2.png)
 
-3. Use the **&#9655; Run** button to run the SQL script, which creates a new table named **DimProduct** in the **dbo** schema of the data warehouse.
+3. Use the **Refresh** button on the toolbar to refresh the view. Then, in the **Explorer** pane, expand **Schemas** > **dbo** > **Tables** and verify that the **DimProduct** table has been created.
 
-4. Use the **Refresh** button on the toolbar to refresh the view. Then, in the **Explorer** pane, expand **Schemas** > **dbo** > **Tables** and verify that the **DimProduct** table has been created.
-
-5. On the **Home** menu tab, use the **New SQL Query** button and from the drop down select **New SQL Query**  to create a new query, and enter the following INSERT statement:
+4. On the **Home** menu tab, use the **New SQL Query** button and from the drop down select **New SQL Query**  to create a new query, and enter the following INSERT statement:
 
     ```SQL
    INSERT INTO dbo.DimProduct
@@ -75,9 +82,11 @@ In this task, you will create database tables by defining their structure with a
 
 7. When the query has finished, select the **Data** tab at the bottom of the page in the data warehouse. In the **Explorer** pane, select the **DimProduct** table and verify that the three rows have been added to the table.
 
-8. On the Home menu tab, use the New SQL Query button to create a new query for each table. Open the first text file, from **C:\LabFiles\Files\create-dw-01.txt**, and copy the Transact-SQL code related to the 'DimProduct' table. Paste the 'DimProduct' table code into the query pane you created and similarily copy code from file **C:\LabFiles\Files\create-dw-02.txt** and **C:\LabFiles\Files\create-dw-03.txt** one after the other in same code editor and execute the query.
+8. On the Home menu tab, use the New SQL Query button to create a new query for each table. In the Lab Vm, Open the first text file, from **C:\LabFiles\Files\create-dw-01.txt**, and copy the Transact-SQL code related to the 'DimProduct' table. Paste the 'DimProduct' table code into the query pane you created and similarily copy code from file **C:\LabFiles\Files\create-dw-02.txt** and **C:\LabFiles\Files\create-dw-03.txt** one after the other in same code editor and execute the query.
 
      ![01](./Images/02/Pg4-T2-S7.png)
+
+     ![01](./Images/02/E3-T2-S8.png)
 
 9. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
 
@@ -111,6 +120,8 @@ In this task, you will create a relational data warehouse consisting of fact and
     - **Make this relationship active**: Selected
     - **Assume referential integrity**: Unselected
 
+     ![](./Images/E3-T3-S3.png)
+
 4. Repeat the process to create many-to-one relationships between the following tables and click on **Save**.
 
     - **FactSalesOrder.CustomerKey** &#8594; **DimCustomer.CustomerKey**
@@ -141,7 +152,8 @@ In this task, you will query data warehouse tables using SQL to retrieve and ana
    GROUP BY d.[Year], d.[Month], d.MonthName
    ORDER BY CalendarYear, MonthOfYear;
     ```
-
+    ![](./Images/E3-T4-S1.png)
+   
 2. Note that the attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
 
 3. Modify the query as follows to add a second dimension to the aggregation.
@@ -182,10 +194,11 @@ In this task, you will create a view in the data warehouse to encapsulate SQL lo
    JOIN DimCustomer AS c ON so.CustomerKey = c.CustomerKey
    GROUP BY d.[Year], d.[Month], d.MonthName, c.CountryRegion;
     ```
+    ![](./Images/E3-T5-S1.png)
 
 2. Run the query to create the view. Then refresh the data warehouse schema and verify that the new view is listed in the **Explorer** pane.
 
-   ![](./Images/02/fab2.png)
+    ![](./Images/E3-T5-S2.png)
 
 3. Create a new SQL query and run the following SELECT statement:
 
@@ -213,11 +226,13 @@ In this task, you will create a visual query using the graphical query designer 
 
    ![02](./Images/fabric15.png)
 
-1. In the **Preview**, note that the new **DimProduct** column has been added to the FactSalesOrder table. Expand the column by clicking the arrow to the right of the column name. Select **ProductName** and click **OK**.
+1. In the **Preview**, note that the new **DimProduct** column has been added to the FactSalesOrder table. Expand the column by clicking the **arrow (1)** to the right of the column name. Select **ProductName (2)** and click **OK (3)**.
 
-   ![Screenshot of the preview pane with the DimProduct column expanded, with ProductName selected.](./Images/visual-query-preview1.png)
+    ![](./Images/E3-T6-S6.png)
 
 1. If you're interested in looking at data for a single product, per a manager's request, you can now use the **ProductName** column to filter the data in the query. Filter the **ProductName** column to look at **Cable Lock** data only.
+
+    ![](./Images/E3-T6-S7.png)
 
 1. From here, you can analyze the results of this single query by selecting **Visualize results** or **Open in Excel**. You can now see exactly what the manager was asking for, so we don't need to analyze the results further.
 
@@ -253,11 +268,13 @@ In this task, you will visualize your data from a single query or your data ware
 
 1. In the **Data** pane, expand **FactSalesOrder**. Note that the columns you hide are no longer visible. 
 
+    ![](./Images/E3-T7-S4.png)
+
 1. Select **SalesTotal**. This will add the column to the **Report canvas**. Because the column is a numeric value, the default visual is a **column chart**.
 1. Ensure that the column chart on the canvas is active (with a grey border and handles), and then select **Category** from the **DimProduct** table to add a category to your column chart.
 1. In the **Visualizations** pane, change the chart type from a column chart to a **clustered bar chart**. Then resize the chart as necessary to ensure that the categories are readable.
 
-    ![Screenshot of the Visualizations pane with the bar chart selected.](./Images/visualizations-pane.png)
+    ![](./Images/E3-T7-S7.png)
 
 1. In the **Visualizations** pane, select the **Format your visual (1)** tab and in the **General** sub-tab, in the **Title** section, change the **Text** to **Total Sales by Category (2)**.
 

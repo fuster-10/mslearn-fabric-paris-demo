@@ -244,6 +244,15 @@ In this task, you will explore your experiments in Microsoft Fabric, which track
 
 By plotting the accuracy per logged estimator, you can review which algorithm resulted in a better model.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      
+   - If you receive an InProgress message, you can hit refresh to see the final status.
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="67d8cbeb-e9b6-495c-8631-ae0dfe4775fa" />
+
 ### Task 7: Save the model
 
 In this task, you will save the best-performing machine learning model after comparing the results from various experiment runs. This saved model can then be utilized to generate predictions for future data analysis.
@@ -272,7 +281,7 @@ In this task, you will save your notebook with a meaningful name to preserve you
 
 1. Set the **Name** of the notebook to **Train and compare models notebook**, and then close the settings pane.
 
-1. On the notebook menu, select **Stop session** to end the Spark session.
+1. On the notebook menu, select &#9645;**Stop session** to end the Spark session.
 
    >**Note:** If you can't see the **Stop Session** option, it means the spark session has already ended.
 

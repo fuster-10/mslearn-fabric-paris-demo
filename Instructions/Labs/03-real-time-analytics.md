@@ -19,11 +19,13 @@ You will be able to complete the following tasks:
 
 In this task, you will create a KQL database to facilitate querying of static or streaming data. You will define a table within the KQL database and ingest sales data from a file to enable effective analysis using Kusto Query Language (KQL).
 
-1. In the **Microsoft Fabric** experience portal, select the **Real-Time Intelligence** experience image as shown here:
+1. In the **Microsoft Fabric (1)** experience portal, select the **Real-Time Intelligence (2)** experience image as shown here:
 
-    ![Screenshot of selected Fabric Experience home with RTA selected](./Images/fabric-experience-home.png)
+    ![](./Images/E4-T1-S1.png)
 
 2. Create a new **Eventhouse** with the name **Eventhouse-<inject key="DeploymentID" enableCopy="false"/>**.
+
+    ![](./Images/E4-T1-S2.png)
 
 3. Once the Eventhouse gets created, in the settings pane, create a **+ New Database** for the **KQL Databases**.
 
@@ -61,7 +63,9 @@ In this task, you will create a KQL database to facilitate querying of static or
 
 In this task, you will use Kusto Query Language (KQL) to query the sales table in your KQL database. With the data now available, you can write KQL code to extract insights and perform analysis on the sales data.
 
-1. Make sure you have the **sales** table highlighted. From the menu bar, select the **Query table** drop-down, and from there select **Show any 100 records**.
+1. Make sure you have the **sales** table highlighted. From the ellipses ... of **sales (1)** table, select the **Query table (2)** drop-down, and from there select **Show any 100 records (3)**.
+
+    ![](./Images/E4-T2-S1.png)
 
 2. A new pane will open with the query and its result. 
 
@@ -74,6 +78,8 @@ In this task, you will use Kusto Query Language (KQL) to query the sales table i
 
 4. Run the query. Then review the results, which should contain only the rows for sales orders for the *Road-250 Black, 48* product.
 
+    ![](./Images/E4-T2-S4.png)
+   
 5. Modify the query as follows:
 
     ```kusto
@@ -95,7 +101,9 @@ In this task, you will use Kusto Query Language (KQL) to query the sales table i
 
 8. Run the query and review the results, which should contain the total net revenue for each product between January 1st and December 31st 2020 in ascending order of product name.
 
-9. Select **Save as KQL queryset** and save the query as **Revenue by Product** and click on **Create**.
+9. From the top left corner select the KQL Queryset and save the query as **Revenue by Product** in your workspace.
+
+    ![](./Images/E4-T2-S9.png)
 
 ### Task 3: Create a Power BI report from a KQL Queryset
 
@@ -120,6 +128,15 @@ In this task, you will create a Power BI report using your KQL Queryset as the f
     >**Note**:Refresh the Workspace page if necessary to view all of the items it contains.
 
 7. In the list of items in your workspace, note that the **Revenue by Item** report is listed.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      
+   - If you receive an InProgress message, you can hit refresh to see the final status.
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="3e3b6775-5941-4063-965e-9f1d3a6baa2e" />
 
 ### Task 4: Use delta tables for streaming data
 
