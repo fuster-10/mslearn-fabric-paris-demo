@@ -84,6 +84,15 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
 
       ![advanced-and-apply](./Images/E1-T3-S2b.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      
+   - If you receive an InProgress message, you can hit refresh to see the final status.
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="796cb471-1103-4bc8-8e98-9e6dd3e8c025" />
+
 ### Summary
 
 In this exercise, you have assigned Fabric Administrator Role, signed up for the for Microsoft Fabric Trial and created a workspace
