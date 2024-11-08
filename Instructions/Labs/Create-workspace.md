@@ -20,7 +20,7 @@ You will be able to complete the following tasks:
 
 2. Navigate to **Roles and administrators (1)**.
 
-   ![Roles-and-Administrator](./Images/ws/E1-T1-S2.png)
+   ![Roles-and-Administrator](./Images/E1-T1-S2.png)
 
 3. In the **Roles and administrators** page, type **Fabric Administrators (1)** in the search box and select **Fabric Administrators (2)** from the results.
 
