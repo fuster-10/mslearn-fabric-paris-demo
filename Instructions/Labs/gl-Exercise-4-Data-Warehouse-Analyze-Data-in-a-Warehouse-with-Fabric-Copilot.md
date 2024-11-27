@@ -23,7 +23,7 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
    The Data Warehouse home page includes a shortcut to create a new warehouse:
 
-   ![01](./Images/01/warehouse1.png)
+   ![01](./Images/warehouse1.png)
 
 2. In the **Data Warehouse** home page, create a new **Warehouse**.
    
@@ -37,7 +37,7 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="5caad8b0-f48a-4825-afec-241126f46d98" />
+<validation step="0ef77b08-2998-4a99-ab87-d97b737e97d7" />
 
 ## Task 2: Create tables and insert data
 
@@ -130,20 +130,20 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
     - **Make this relationship active**: Selected
     - **Assume referential integrity**: Unselected
 
-    ![Screenshot of the data warehouse model page.](./media/note3a.png)
-    ![Screenshot of the data warehouse model page.](./media/note3b.png)
+    ![Screenshot of the data warehouse model page.](./Images/note3a.png)
+    ![Screenshot of the data warehouse model page.](./Images/note3b.png)
 
 4. Repeat the process to create many-to-one relationships between the following tables:
 
     - **FactSalesOrder.CustomerKey** &#8594; **DimCustomer.CustomerKey**
 
-    ![Screenshot of the data warehouse model page.](./media/note3c.png)
-    ![Screenshot of the data warehouse model page.](./media/note3b.png)
+    ![Screenshot of the data warehouse model page.](./Images/note3c.png)
+    ![Screenshot of the data warehouse model page.](./Images/note3b.png)
 
     - **FactSalesOrder.SalesOrderDateKey** &#8594; **DimDate.DateKey**
 
-    ![Screenshot of the data warehouse model page.](./media/note3d.png)
-    ![Screenshot of the data warehouse model page.](./media/note3b.png)
+    ![Screenshot of the data warehouse model page.](./Images/note3d.png)
+    ![Screenshot of the data warehouse model page.](./Images/note3b.png)
 
 5. When all of the relationships have been defined, the model should look like this:
 
