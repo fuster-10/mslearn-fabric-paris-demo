@@ -10,10 +10,10 @@ Fabric also supports Apache Spark, enabling you to write and run code to process
 
 You will be able to complete the following tasks:
 
-- Task 1: Enable Copilot inside a Codespace
+- Task 1: Create a Lakehouse
 - Task 2: Explore shortcuts
 - Task 3: Create a pipeline
-- Task 4:Create a notebook
+- Task 4: Create a notebook
 - Task 5: Use SQL to query tables
 - Task 6: Create a visual query
 - Task 7: Create a report
@@ -312,6 +312,14 @@ The tables in your lakehouse are automatically added to a default dataset that d
     - A default dataset for the tables in your lakehouse.
     - The **Item Sales Report** report.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="d21cafee-3ca1-4848-b6d2-04c021e4fce3" />
+
 ### Task 8: Analyze report using Fabric Copilot
 
 1. Click on **Copilot (1)** button at the right of the screen to open the copilot chat window, and select **Get Started (2)**.
@@ -340,5 +348,18 @@ The tables in your lakehouse are automatically added to a default dataset that d
 ### Summary
 
 In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL, and are included in a default dataset to support data visualizations.
+
+### Review
+
+In this lab, you have completed:
+
+ + Task 1: Create a Lakehouse
+ + Task 2: Explore shortcuts
+ + Task 3: Create a pipeline
+ + Task 4: Create a notebook
+ + Task 5: Use SQL to query tables
+ + Task 6: Create a visual query
+ + Task 7: Create a report
+ + Task 8: Analyze report using Fabric Copilot
 
 ### You have successfully completed the lab. Click on **Next >>** to procced with next exercise.

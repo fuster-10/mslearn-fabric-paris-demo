@@ -140,4 +140,9 @@ Call out that the quantities for all items are 1.
 
 In this exercise, you learned how to ingest data into Microsoft Fabric using Fabric Copilot. The lab covered setting up data pipelines, automating data ingestion processes, and leveraging Fabric Copilot to streamline data operations. You practiced loading datasets into Fabric, explored different ingestion methods, and understood best practices for managing large-scale data workflows. By the end of the lab, you gained hands-on experience in efficient data ingestion within Fabric.
 
-### You have successfully completed the lab.
+### Review
+In this lab, you have completed:
+
+  + Create New - Dataflow Gen2
+
+### You have successfully completed the lab. Click on Next >> to procced with next exercise.

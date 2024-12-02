@@ -8,38 +8,148 @@ In this lab, you will analyze data in a warehouse using Fabric Copilot by connec
 
 You will be able to complete the following tasks:
 
-- Connect to the Data Warehouse  
-- Explore Data Sources  
-- Run Data Queries  
-- Visualize Data Insights  
-- Generate Reports  
-- Collaborate on Findings  
+- Task 1: Create a data warehouse
+- Task 2: Create tables and insert data
+- Task 3: Define a data model
+- Task 4: Generate reports using Copilot
 
-1. Select the workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** (this is the workspace that mimics the lab environment)
+## Task 1: Create a data warehouse
 
-   ![New dataflow.](./Images/26.png)
- 
-1. Select **Data Warehouse<inject key="DeploymentID" enableCopy="false"/>** from the list.
+In this task, you'll create a new data warehouse in the Data Warehouse experience of the Power BI portal.
 
-   ![New dataflow.](./Images/33.png)
+Now that you already have a workspace, it's time to switch to the *Data Warehouse* experience in the portal and create a data warehouse.
 
-1. In the **Explorer** pane, verify that the **dbo** schema in the data warehouse contains the following four tables:
+1. At the bottom left of the Power BI portal, switch to the **Data Warehouse** experience.
+
+   The Data Warehouse home page includes a shortcut to create a new warehouse:
+
+   ![01](./Images/warehouse1.png)
+
+2. In the **Data Warehouse** home page, create a new **Warehouse**.
    
+   - **Name:** Enter **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/>** .
+
+   - After a minute or so, a new warehouse will be created
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="0ef77b08-2998-4a99-ab87-d97b737e97d7" />
+
+## Task 2: Create tables and insert data
+
+In this task, you'll create and populate tables in your data warehouse using T-SQL, then verify that the tables have been created and data has been inserted successfully.
+
+A warehouse is a relational database in which you can define tables and other objects.
+
+1. In your new warehouse, select the **Create tables with T-SQL** tile.
+
+   ![01](./Images/02/Pg4-T2-S1.png)
+
+2. Replace the default SQL code with the following CREATE TABLE statement:
+
+   ```sql
+   CREATE TABLE dbo.DimProduct
+   (
+       ProductKey INTEGER NOT NULL,
+       ProductAltKey VARCHAR(25) NULL,
+       ProductName VARCHAR(50) NOT NULL,
+       Category VARCHAR(50) NULL,
+       ListPrice DECIMAL(5,2) NULL
+   );
+   GO
+   ```
+
+   ![01](./Images/02/Pg4-T2-S2.png)
+
+3. Use the **&#9655; Run** button to run the SQL script, which creates a new table named **DimProduct** in the **dbo** schema of the data warehouse.
+
+4. Use the **Refresh** button on the toolbar to refresh the view. Then, in the **Explorer** pane, expand **Schemas** > **dbo** > **Tables** and verify that the **DimProduct** table has been created.
+
+   ![01](./Images/02/warehouse2.png)
+
+5. On the **Home** menu tab, use the **New SQL Query** button to create a new query, and enter the following INSERT statement:
+
+    ```sql
+   INSERT INTO dbo.DimProduct
+   VALUES
+   (1, 'RING1', 'Bicycle bell', 'Accessories', 5.99),
+   (2, 'BRITE1', 'Front light', 'Accessories', 15.49),
+   (3, 'BRITE2', 'Rear light', 'Accessories', 15.49);
+   GO
+    ```
+
+    ![01](./Images/02/warehouse3.png)
+
+6. **&#9655; Run** the new query to insert three rows into the **DimProduct** table.
+
+7. When the query has finished. Go to the **Explorer** pane, select the **DimProduct** table and verify that the three rows have been added to the table.
+
+   ![01](./Images/02/Datatabbottom1.png)
+
+8. On the Home menu tab, use the New SQL Query button to create a new query for each table. Open the first text file, located at **C:\LabFiles\Files\create-dw-01.txt,** and copy the Transact-SQL code related to the 'DimProduct' table. Paste the 'DimProduct' table code into the query pane you created. Next, copy the code for the 'DimCustomer', 'DimDate', and 'FactSalesOrder' tables using the respective files, **C:\LabFiles\Files\create-dw-02.txt** and **C:\LabFiles\Files\create-dw-03.txt.** Place all the code sequentially and ensure that each query is executed in one query pane for the respective table.
+
+   ![01](./Images/02/Pg4-T2-S7.png)
+
+9. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
+
+10. Use the **Refresh** button on the toolbar to refresh the view. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
+
     - **DimCustomer**
-
     - **DimDate**
-
     - **DimProduct**
-
     - **FactSalesOrder**
 
-      ![01](./Images/02/Pg4-T2-S9.png)  
+    ![01](./Images/02/Pg4-T2-S9.png)  
 
     > **Tip**: If the schema takes a while to load, just refresh the browser page.
- 
-1. Clicking on the **Model** view allows you to view the relationships between different tables within the data warehouse.
 
-    ![](./Images/pg-8.png)
+## Task 3: Define a data model
+
+In this task, you'll define a data model in your data warehouse by creating relationships between fact and dimension tables. You'll establish many-to-one relationships between FactSalesOrder and DimProduct, DimCustomer, and DimDate using the Model tab.
+
+A relational data warehouse typically consists of *fact* and *dimension* tables. The fact tables contain numeric measures you can aggregate to analyze business performance (for example, sales revenue), and the dimension tables contain attributes of the entities by which you can aggregate the data (for example, product, customer, or time). In a Microsoft Fabric data warehouse, you can use these keys to define a data model that encapsulates the relationships between the tables.
+
+1. Scroll down the page and select **Model layouts**.
+
+2. In the model pane, rearrange the tables in your data warehouse so that the **FactSalesOrder** table is in the middle, like this:
+
+   ![Screenshot of the data warehouse model page.](./Images/model-dw1a.png)
+
+3. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details:
+
+    - **Table 1**: FactSalesOrder
+    - **Column**: ProductKey
+    - **Table 2**: DimProduct
+    - **Column**: ProductKey
+    - **Cardinality**: Many to one (*:1)
+    - **Cross filter direction**: Single
+    - **Make this relationship active**: Selected
+    - **Assume referential integrity**: Unselected
+
+    ![Screenshot of the data warehouse model page.](./Images/note3a.png)
+    ![Screenshot of the data warehouse model page.](./Images/note3b.png)
+
+4. Repeat the process to create many-to-one relationships between the following tables:
+
+    - **FactSalesOrder.CustomerKey** &#8594; **DimCustomer.CustomerKey**
+
+    ![Screenshot of the data warehouse model page.](./Images/note3c.png)
+    ![Screenshot of the data warehouse model page.](./Images/note3b.png)
+
+    - **FactSalesOrder.SalesOrderDateKey** &#8594; **DimDate.DateKey**
+
+    ![Screenshot of the data warehouse model page.](./Images/note3d.png)
+    ![Screenshot of the data warehouse model page.](./Images/note3b.png)
+
+5. When all of the relationships have been defined, the model should look like this:
+
+   ![Screenshot of the model with relationships.](./Images/dw-relationships1a.png)
+
+## Task 4: Generate reports using Copilot
 
 1. When you click on the relationship between **FactSalesOrder** and **DimCustomer** and access its properties, you're essentially examining how these two tables are linked together. This relationship defines how data from these tables can be combined or related when querying or visualizing in Power BI.
 
@@ -130,4 +240,4 @@ You will be able to complete the following tasks:
 
 In this lab, you connected to a data warehouse using Fabric Copilot and explored the available datasets. You ran queries to extract insights and created visualizations for effective analysis. Finally, you compiled your findings into reports and collaborated with team members on the results.
 
-### You have successfully completed the lab. Click on Next >> to procced with next exercise.
+### You have successfully completed the lab.

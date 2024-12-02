@@ -56,10 +56,14 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
  
       ![advanced-and-apply](./Images/32.png)
 
-Congratulations! You have successfully learned to create a Fabric workspace.
-
 ### Summary
 
 In this exercise, you have signed up for Microsoft Fabric Trial and created a workspace.
+
+### Review 
+In this lab, you have completed:
+
+ + Signed up for Microsoft Fabric Trial
+ + Created a workspace
 
 ### You have successfully completed the lab. Click on Next >> to procced with next exercise.
