@@ -278,7 +278,7 @@ In this task, you will create a visual query in Power BI using Power Query. Youâ
 
     ![](./Images/E2-T6-S1.png)
 
-2. In the **sales (1)** table, click on **&#x22EE;** and select **Insert into Canvas (2)** it in the new visual query editor pane that opens to create a Power Query as shown here: 
+2. In the **sales (1)** table, click on **&#8230;** and select **Insert into Canvas (2)** it in the new visual query editor pane that opens to create a Power Query as shown here: 
 
     ![Screenshot of a Visual query.](./Images/E2-T6-S2.png)
 
