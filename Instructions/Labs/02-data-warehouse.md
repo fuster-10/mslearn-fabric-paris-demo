@@ -39,7 +39,7 @@ In this task, you will design and implement a data warehouse by organizing data 
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="ed927a03-5062-4d23-bf52-d57ae336f0eb" />
+<validation step="ae9ea1a1-6466-459b-87da-12cb0f83b186" />
 
 ### Task 2: Create tables and insert data
 
@@ -82,11 +82,11 @@ In this task, you will create database tables by defining their structure with a
 
 7. When the query has finished, select the **Data** tab at the bottom of the page in the data warehouse. In the **Explorer** pane, select the **DimProduct** table and verify that the three rows have been added to the table.
 
-8. On the Home menu tab, use the New SQL Query button to create a new query for each table. In the Lab Vm, Open the first text file, from **C:\LabFiles\Files\create-dw-01.txt**, and copy the Transact-SQL code related to the 'DimProduct' table. Paste the 'DimProduct' table code into the query pane you created and similarily copy code from file **C:\LabFiles\Files\create-dw-02.txt** and **C:\LabFiles\Files\create-dw-03.txt** one after the other in same code editor and execute the query.
+8. On the Home menu tab, use the **New SQL Query** button to create a new query for the table. In the Lab VM, Open the first text file, from **C:\LabFiles\Files\create-dw-01.txt**, and copy the Transact-SQL code related to the 'DimProduct' table. Paste the 'DimProduct' table code into the new query pane you created and similarily copy code from file **C:\LabFiles\Files\create-dw-02.txt** and **C:\LabFiles\Files\create-dw-03.txt** one after the other in same query pane and execute the query.
 
      ![01](./Images/02/Pg4-T2-S7.png)
 
-     ![01](./Images/02/E3-T2-S8.png)
+     ![01](./Images/E3-T2-S8.png)
 
 9. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
 
@@ -110,7 +110,7 @@ In this task, you will create a relational data warehouse consisting of fact and
 
     ![Screenshot of the data warehouse model page.](./Images/fab1.png)
 
-3. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details and click on **Ok**.
+3. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details and click on **Save**.
     - **Table 1**: FactSalesOrder
     - **Column**: ProductKey
     - **Table 2**: DimProduct
@@ -135,8 +135,6 @@ In this task, you will create a relational data warehouse consisting of fact and
     ![Screenshot of the model with relationships.](./Images/dw-relationships-1.png)
 
 ### Task 4: Query data warehouse tables
-
-## Query fact and dimension tables
 
 In this task, you will query data warehouse tables using SQL to retrieve and analyze data. Most queries will involve aggregating and grouping data with functions and GROUP BY clauses, as well as joining related fact and dimension tables using JOIN clauses.
 
@@ -240,7 +238,7 @@ In this task, you will create a visual query using the graphical query designer 
 
 In this task, you will visualize your data from a single query or your data warehouse to gain insights and present findings effectively. Before creating visualizations, it's important to hide any columns or tables that may clutter the report and are not user-friendly for report designers.
 
-1. In the **Explorer** pane, select the **Model** view.
+1. In the **Explorer** pane, select the **Model layout** view.
 
    ![03](./Images/pg-8.png)
 
@@ -255,14 +253,17 @@ In this task, you will visualize your data from a single query or your data ware
    1. DimCustomer
       - **CustomerKey**
       - **CustomerAltKey**
+
    1. DimDate
       - **DateKey**
       - **DateAltKey**
+
    1. DimProduct
       - **ProductKey**
       - **ProductAltKey** 
 
-1. On the Home menu, select **New report (1)** from the reporting tab. This will open a new window, where you can create a Power BI report.
+
+1. On the Home menu, select **New report (2)** from the **reporting(1)** tab. This will open a new window, where you can create a Power BI report.
 
     ![03](./Images/pg-08-1.png)
 
@@ -282,7 +283,7 @@ In this task, you will visualize your data from a single query or your data ware
 
 1. In the **File** menu, select **Save**. Then save the report as **Sales Report** in the workspace you created previously.
 
-1. In the menu hub on the left, navigate back to the workspace. Notice that you now have three items saved in your workspace: your data warehouse, its default dataset, and the report you created.
+1. In the menu hub on the left, navigate back to the **workspace**. Notice that you now have three items saved in your workspace: your data warehouse, its default dataset, and the report you created.
 
    ![Screenshot of the workspace with the three items listed.](./Images/workspace-items1.png)
 

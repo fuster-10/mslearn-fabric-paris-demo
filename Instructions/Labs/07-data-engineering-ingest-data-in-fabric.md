@@ -34,7 +34,6 @@ You will be able to complete the following tasks:
 
 1. Select **Import from a Text/CSV file**, and create a new data source with the following settings:
 
-    - **Create new connection**
     - **Link to file**: *Selected*
     - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
     - **Connection**: Create new connection
@@ -108,7 +107,7 @@ You will be able to complete the following tasks:
  
    >**Note:** Copilot can do more than transform the table, we can actually change data as well.
 
-1. Scenario: think Red bikes are going to be a big seller, so increase the quantity in Inventory
+1. **Scenario:** think Red bikes are going to be a big seller, so increase the quantity in Inventory
 Call out that the quantities for all items are 1.
  
 1. Add a step to the query:
