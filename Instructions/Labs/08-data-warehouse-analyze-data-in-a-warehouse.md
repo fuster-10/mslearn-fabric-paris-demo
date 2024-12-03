@@ -19,7 +19,7 @@ You will be able to complete the following tasks:
 
    ![New dataflow.](./Images/26.png)
  
-1. Select **Data Warehouse<inject key="DeploymentID" enableCopy="false"/>** from the list.
+1. Select **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/>** from the list.
 
    ![New dataflow.](./Images/33.png)
 

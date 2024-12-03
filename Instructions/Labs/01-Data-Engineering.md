@@ -13,7 +13,7 @@ You will be able to complete the following tasks:
 - Task 1: Enable Copilot inside a Codespace
 - Task 2: Explore shortcuts
 - Task 3: Create a pipeline
-- Task 4:Create a notebook
+- Task 4: Create a notebook
 - Task 5: Use SQL to query tables
 - Task 6: Create a visual query
 - Task 7: Create a report
@@ -83,7 +83,7 @@ In this task, you will create a pipeline to automate data processing workflows. 
     
     - URL: **`https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`**  **(1)**
     - Connection: **Create new connection (2)**
-    - Connection name: **Connection<inject key="DeploymentID" enableCopy="false"/>** (3)
+    - Connection name: **Connection<inject key="DeploymentID" enableCopy="false"/> (3)**
     - Authentication kind : **Anonymous (4)**
     - Click on **Next (5)**
   
@@ -145,7 +145,7 @@ In this task, you will create a pipeline to automate data processing workflows. 
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/Pg3-CpyOutput.png)
 
-15. In the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** page, expand **Files (1)** and select the **new_data (2)** folder, **refresh the page(3)** and verify that the **sales.csv (4)** file has been copied.
+15. In the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** page, expand **Files (1)** and select the **new_data (2)** folder, refresh the page and verify that the **sales.csv (3)** file has been copied.
 
     ![Account-manager-start](./Images/lab1-image16.png)
 
@@ -153,7 +153,7 @@ In this task, you will create a pipeline to automate data processing workflows. 
 
 In this task, you will create a notebook to document your data analysis process. Youâ€™ll set up the notebook environment, import necessary libraries, and structure your code to include data exploration, visualization, and insights. This will help you organize your workflow and enhance reproducibility in your analysis.
 
-1. From the left pane, select the workspace named Fabric-2762.
+1. From the left pane, select the workspace named Fabric-<inject key="DeploymentID" enableCopy="false"/>.
 
     ![](./Images/E2-T4-S1.png) 
 
@@ -169,11 +169,11 @@ In this task, you will create a notebook to document your data analysis process.
 
     ![](./Images/E2-T4-S4.png) 
 
-6. Choose the **Existing Lakehouse (1)** option and click **Add (2)**.
+6. Choose the **Existing Lakehouse without Schema(1)** option and click **Add (2)**.
 
     ![](./Images/E2-T4-S5.png) 
 
-7. Select the lakehouse named **Lakehouse-76322 (1)** and click **Add (2)**.
+7. Select the lakehouse named **Lakehouse-<inject key="DeploymentID" enableCopy="false"/> (1)** and click **Add (2)**.
  
     ![](./Images/E2-T4-S6.png) 
 
@@ -194,23 +194,23 @@ In this task, you will create a notebook to document your data analysis process.
      ![](./Images/E2-T4-S9.png) 
 
     ```python
-       from pyspark.sql.functions import *
+    from pyspark.sql.functions import *
     
-       # Read the new sales data
-       df = spark.read.format("csv").option("header","true").option("inferSchema","true").load("Files/new_data/*.csv")
-    
-       ## Add month and year columns
-       df = df.withColumn("Year", year(col("OrderDate"))).withColumn("Month", month(col("OrderDate")))
-    
-       # Derive FirstName and LastName columns
-       df = df.withColumn("FirstName", split(col("CustomerName"), " ").getItem(0)).withColumn("LastName", split(col("CustomerName"), " ").getItem(1))
-    
-       # Filter and reorder columns
-       df = df["SalesOrderNumber", "SalesOrderLineNumber", "OrderDate", "Year", "Month", "FirstName", "LastName", "EmailAddress", "Item", "Quantity", "UnitPrice", "TaxAmount"]
-    
-       # Load the data into a managed table
-       #Managed tables are tables for which both the schema metadata and the data files are managed by Fabric. The data files for the table are created in the Tables folder.
-       df.write.format("delta").mode("append").saveAsTable(table_name)
+    # Read the new sales data
+    df = spark.read.format("csv").option("header","true").option("inferSchema","true").load("Files/new_data/*.csv")
+
+    ## Add month and year columns
+    df = df.withColumn("Year", year(col("OrderDate"))).withColumn("Month", month(col("OrderDate")))
+
+    # Derive FirstName and LastName columns
+    df = df.withColumn("FirstName", split(col("CustomerName"), " ").getItem(0)).withColumn("LastName", split(col("CustomerName"), " ").getItem(1))
+
+    # Filter and reorder columns
+    df = df["SalesOrderNumber", "SalesOrderLineNumber", "OrderDate", "Year", "Month", "FirstName", "LastName", "EmailAddress", "Item", "Quantity", "UnitPrice", "TaxAmount"]
+
+    # Load the data into a managed table
+    #Managed tables are tables for which both the schema metadata and the data files are managed by Fabric. The data files for the table are created in the Tables folder.
+    df.write.format("delta").mode("append").saveAsTable(table_name)
     ```
 
     This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a **managed table** - appending the data if the table already exists.
@@ -278,7 +278,7 @@ In this task, you will create a visual query in Power BI using Power Query. Youâ
 
     ![](./Images/E2-T6-S1.png)
 
-2. Drag the **sales (1)** table and **drop (2)** it in the new visual query editor pane that opens to create a Power Query as shown here: 
+2. In the **sales (1)** table, click on **&#8230;** and select **Insert into Canvas (2)** it in the new visual query editor pane that opens to create a Power Query as shown here: 
 
     ![Screenshot of a Visual query.](./Images/E2-T6-S2.png)
 
@@ -325,8 +325,11 @@ In this task, you will create a report to visualize and present your data findin
     ![](./Images/E2-T7-S3.png)
 
 4. In the **Data** pane on the right, expand the **sales** table. Then select the following fields:
+
     - **Item (1)**
+
     - **Quantity (2)**
+
    Then a **table visualization (3)** is added to the report.
 
      ![Screenshot of a report containing a table.](./Images/E2-T7-S4.png)
@@ -355,7 +358,7 @@ In this task, you will create a report to visualize and present your data findin
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="b28817e6-75d8-40fd-9c33-0a408a962f8e" />
+<validation step="478b8d65-837a-4b29-b792-922fe3c10580" />
 
 ### Summary
 

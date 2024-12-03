@@ -39,11 +39,17 @@ In this task, you will create a notebook to facilitate model training and experi
 
 1. At the bottom left of the Power BI portal, switch to the **Data science** experience.
 
+    ![](./Images/E5-T2-S1.png)
+
 1. In the **Data science** home page, create a new **Notebook**.
+
+    ![](./Images/E5-T2-S2.png)
 
 1. After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
 1. Select the first cell (which is currently a *code* cell), and then in the dynamic toolbar at its top-right, use the **M&#8595;** button to convert the cell to a *markdown* cell.
+
+    ![](./Images/E5-T2-S3.png)
 
 1. When the cell changes to a markdown cell, the text it contains is rendered.
 
@@ -63,7 +69,7 @@ In this task, you will load data into a dataframe to prepare for model training.
 
    ![](./Images/lakehouse_1.png)
 
-1. In the **Add lakehouse** pane, select **Add** to add a lakehouse.
+1. In the **Add lakehouse** pane, select **Add** to add a lakehouse. A popup window will show up and choose **Existing Lakehouse without Schema**.
 
    ![](./Images/Pg6-Edit-S4.png)
 
@@ -251,7 +257,7 @@ By plotting the accuracy per logged estimator, you can review which algorithm re
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="67d8cbeb-e9b6-495c-8631-ae0dfe4775fa" />
+<validation step="9bc2b595-c7f5-4276-93dc-2293e35d87e2" />
 
 ### Task 7: Save the model
 

@@ -18,7 +18,7 @@ You will be able to complete the following tasks:
 
 In this task, you will create a Dataflow (Gen2) to efficiently ingest and transform data from multiple sources for analysis. This process streamlines data preparation, enabling you to prepare the data for further processing and insights.
 
-1. On **fabric-<inject key="DeploymentID" enableCopy="false"/>** home page, select Data Factory from the bottom left corner and select **New Dataflow Gen2**. After a few moments, the Power Query editor for your new dataflow will open, as illustrated below.
+1. On **fabric-<inject key="DeploymentID" enableCopy="false"/>** home page, select **Data Factory** from the bottom left corner and select **New Dataflow Gen2**. After a few moments, the Power Query editor for your new dataflow will open, as illustrated below.
 
    ![New dataflow.](./Images/lak5.1.png)
 
@@ -29,6 +29,8 @@ In this task, you will create a Dataflow (Gen2) to efficiently ingest and transf
     - **data gateway**: (none)
     - **Authentication kind**: Anonymous
     - **Privacy level**: None
+
+   1[Get data](./Images/29.png)
 
 1. Select **Next** to preview the file data, and then **Create** the data source. The Power Query editor shows the data source and an initial set of query steps to format the data, as shown below:
 
@@ -42,7 +44,7 @@ In this task, you will create a Dataflow (Gen2) to efficiently ingest and transf
 
    ![Query with a custom column step.](./Images/lak4.png)
 
-1. Duplicate the existing tabe, Go to the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** , Delete the **orders** files from the table.
+1. Duplicate the existing tab, Go to the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** , Delete the **orders** files from the table.
 
 ### Task 2: Add data destination for Dataflow
 
@@ -75,29 +77,29 @@ In this task, you’ll add a data destination for the Dataflow to determine wher
 
 In this task, you’ll add a dataflow to a pipeline to streamline the data processing workflow and enable automated data transformations.
 
-1. Ensure you are in the **Data Engineering** experience within the workspace. Then, select **Data pipeline** and create a new pipeline named **Load Orders pipeline**. This will open the pipeline editor.
+1. Ensure you are in the **Data Engineering (1)** experience within the workspace. Then, select **Data pipeline (2)** and create a new pipeline named **Load Orders pipeline**. This will open the pipeline editor.
 
     ![Empty data pipeline.](./Images/lak3.png)
 
    > **Note**: If the Copy Data wizard opens automatically, close it!
 
-3. Select **pipeline activity**, and add a **Dataflow** activity to the pipeline.
+1. Select **pipeline activity (1)**, and add a **Dataflow (2)** activity to the pipeline.
 
    ![Empty data pipeline.](./Images/dataflow_1.png)
 
-4. With the new **Dataflow1** activity selected, go to the **Settings (1)** tab. In the **Dataflow** drop-down list, choose **fabric-<inject key="DeploymentID" enableCopy="false"/>** or my workspace (2) and select **Transform Orders Dataflow (3)** 
+1. With the new **Dataflow1** activity selected, go to the **Settings (1)** tab. In the **Workspace** drop-down list, choose **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** and in **Dataflow** drop-down list, choose **Dataflow 2 (3)**. 
 
-   ![Empty data pipeline.](./Images/transform.png)
+   ![Empty data pipeline.](./Images/transform1.png)
    
-6. **Save** the pipeline from the top left corner.
+1. **Save** the pipeline from the top left corner.
 
-7. Use the **Run** button to run the pipeline, and wait for it to complete. It may take a few minutes.
+1. Use the **Run** button to run the pipeline, and wait for it to complete. It may take a few minutes.
 
    ![Pipeline with a dataflow that has completed successfully.](./Images/lak8.png)
 
-8. In the menu bar on the left edge, select **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>**
+1. In the menu bar on the left edge, select **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>**
 
-9. Expand the **Tables** section and select the **orders** table created by your dataflow.
+1. Expand the **Tables** section and select the **orders** table created by your dataflow.
 
    ![Table loaded by a dataflow.](./Images/orders_1.png)
 

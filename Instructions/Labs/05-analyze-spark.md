@@ -45,9 +45,9 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
 
 2. Select **Lakehouses** from **Explorer** on the left Panel.
 
-3. Click on **Add** to add the previously created Lakehouse.
+3. Click on **Add** to add the previously created Lakehouse. A popup window will show up and choose **Existing Lakehouse without Schema**.
 
-4. Select **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** from the options and click on Add.
+4. Select **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** from the options and click on **Add**.
     > Note: Reload the page to get the files and folders.
 
 2. Select the first cell (currently a *code* cell), and then click the **M&#8595;** button in the dynamic toolbar at the top-right to convert it to a **markdown** cell.
@@ -322,6 +322,15 @@ In this task, you will use Spark to transform data files into a desired format f
 
 1. Run the cell and verify that the results show the order data for sales in 2021. Note that the partitioning columns specified in the path (**Year** and **Month**) are not included in the dataframe.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      
+   - If you receive an InProgress message, you can hit refresh to see the final status.
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="c2a9bb5d-2eb6-45b7-8b8a-2145f7f1d7e2" />
+
 ### Task 7: Work with tables and SQL
 
 As you've seen, the native methods of the dataframe object enable you to query and analyze data from a file quite effectively. However, many data analysts are more comfortable working with tables that they can query using SQL syntax. Spark provides a *metastore* in which you can define relational tables. The Spark SQL library that provides the dataframe object also supports the use of SQL statements to query tables in the metastore. By using these capabilities of Spark, you can combine the flexibility of a data lake with the structured data schema and SQL-based queries of a relational data warehouse - hence the term "data lakehouse".
@@ -406,7 +415,7 @@ In this task, you will visualize data using Spark to enhance understanding and i
 
 5. Verify that the chart looks similar to this:
 
-    ![Screenshot of a bar chart of products by total order quantiies](./Images/chart_final.png)
+    ![Screenshot of a bar chart of products by total order quantiies](./Images/chart_final_1.png)
 
 #### Get started with **matplotlib**
 
