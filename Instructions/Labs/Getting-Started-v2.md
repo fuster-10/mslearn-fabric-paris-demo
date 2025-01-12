@@ -1,4 +1,4 @@
-# Migrate .Net Apps to Azure App Service
+# Microsoft Fabric with Copilot
 
 ### Overall Estimated Duration: 4 hours
 
