@@ -1,3 +1,32 @@
+# Migrate .Net Apps to Azure App Service
+
+### Overall Estimated Duration: 4 hours
+
+## Overview
+
+In this hands-on lab, you will establish a Microsoft Fabric workspace to explore its comprehensive data integration, analytics, and visualization tools. You'll ingest data into a Lakehouse using pipelines and Apache Spark, facilitating efficient data processing and transformation. Leveraging Fabric Copilot, you'll create dataflows with natural language inputs, streamlining data ingestion and transformation processes. Additionally, you'll analyze data within a warehouse, utilizing Copilot to generate SQL queries and insightful reports, thereby enhancing decision-making capabilities. 
+
+## Objective
+
+This lab is designed to provide participants with practical experience in utilizing Microsoft Fabric and its Copilot feature to create workspaces, ingest and transform data, and analyze data within a warehouse.
+
+- **Create a Fabric workspace**: Sign up for the Microsoft Fabric Trial and set up a workspace to explore data integration, analytics, and visualization tools..
+- **Ingest data with a pipeline in Microsoft Fabric**: Implement ETL/ELT solutions using pipelines and Apache Spark to load and transform data into a Lakehouse for analysis.
+- **Data Engineering - Ingest Data in Fabric with Fabric Copilot**: Utilize Fabric Copilot and Dataflow Gen2 to create a data pipeline, leveraging natural language for data ingestion and transformation.
+- **Data Warehouse - Analyze Data in a Warehouse with Fabric Copilot**: Analyze data in a warehouse by connecting to data sources, running queries, and visualizing insights using Fabric Copilot to enhance decision-making.
+
+## Prerequisites
+
+Participants should have the following prerequisites:
+
+- **Basic understanding of data management and analytics**: Familiarity with data concepts and terminology will aid in navigating Microsoft Fabric's features.
+- **Familiarity with Microsoft 365 tools**: Experience with common Microsoft 365 applications, such as Excel and Power BI, will be beneficial.
+- **Azure subscription with appropriate permissions**: Access to an Azure account with the necessary permissions to create and manage resources within Microsoft Fabric is required.
+- **Access to Microsoft Fabric**: Participants should have access to Microsoft Fabric with Copilot enabled to perform the exercises.
+- **Knowledge of SQL and data visualization**: Understanding SQL queries and data visualization techniques will assist in executing the lab tasks effectively.
+
+## Architechture
+
 # Getting Started with Lab
  
 Welcome to your Microsoft Fabric with Copilot Workshop! A unified data platform designed to simplify data management, analytics, and AI integration. Powered by Copilot, it allows users to effortlessly create, analyze, and visualize data through natural language commands, enhancing productivity and collaboration. With features that span data engineering, real-time analytics, and machine learning, Microsoft Fabric helps streamline workflows and provides a seamless experience for data professionals and business users alike. Let's begin by making the most of this experience:
@@ -50,11 +79,11 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
     >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
 
-2. Click **OK** to extend your lab duration.
+1. Click **OK** to extend your lab duration.
  
     ![New dataflow.](./Images/gext2.png)
 
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed. 
+1. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed. 
 
 ## Let's Get Started with Azure Portal
 

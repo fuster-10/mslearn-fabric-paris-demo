@@ -13,6 +13,8 @@ You will be able to complete the following tasks:
 
 ### Task 1: Sign up for Microsoft Fabric Trial
 
+In this task, you will initiate your 60-day free trial of Microsoft Fabric by signing up through the Fabric app, providing access to its comprehensive suite of data integration, analytics, and visualization tools
+
 1. Copy the **Power BI homepage link**, and open this link inside the VM in a new tab.
 
    ```
@@ -65,4 +67,4 @@ In this lab, you have completed:
  + Signed up for Microsoft Fabric Trial
  + Created a workspace
 
-### You have successfully completed the lab. Click on Next >> to procced with next exercise.
+### You have successfully completed the lab. Click on Next >> to procced with next Exercise.
