@@ -125,11 +125,11 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
 
 1. Scroll down the page and select **Model layouts**.
 
-2. In the model pane, rearrange the tables in your data warehouse so that the **FactSalesOrder** table is in the middle, like this:
+1. In the model pane, rearrange the tables in your data warehouse so that the **FactSalesOrder** table is in the middle, like this:
 
    ![Screenshot of the data warehouse model page.](./Images/model-dw1a.png)
 
-3. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details:
+1. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details:
 
     - **From table**: FactSalesOrder
     - **Column**: ProductKey
@@ -143,7 +143,7 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
     ![Screenshot of the data warehouse model page.](./Images/note3a.png)
     ![Screenshot of the data warehouse model page.](./Images/note3b.png)
 
-4. Repeat the process to create many-to-one relationships between the following tables:
+1. Repeat the process to create many-to-one relationships between the following tables:
 
     - **FactSalesOrder.CustomerKey** &#8594; **DimCustomer.CustomerKey**
 
@@ -155,7 +155,7 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
     ![Screenshot of the data warehouse model page.](./Images/note3d.png)
     ![Screenshot of the data warehouse model page.](./Images/note3b.png)
 
-5. When all of the relationships have been defined, the model should look like this:
+1. When all of the relationships have been defined, the model should look like this:
 
    ![Screenshot of the model with relationships.](./Images/dw-relationships1a.png)
 

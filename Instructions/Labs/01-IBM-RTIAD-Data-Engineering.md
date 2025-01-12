@@ -253,7 +253,7 @@ When you create a lakehouse and define tables in it, an SQL endpoint is automati
 
     ![.](./Images/f17.png)
 
-2. Use the **New SQL query (1)** button to open a new query editor, and enter the following SQL query **(2)**:
+1. Use the **New SQL query (1)** button to open a new query editor, and enter the following SQL query **(2)**:
 
     ```SQL
    SELECT Item, SUM(Quantity * UnitPrice) AS Revenue
@@ -264,7 +264,7 @@ When you create a lakehouse and define tables in it, an SQL endpoint is automati
 
    ![.](./Images/f18.png)
 
-3. Use the **&#9655; Run** button to run the query and view the results, which should show the total revenue for each product.
+1. Use the **&#9655; Run** button to run the query and view the results, which should show the total revenue for each product.
 
     ![Screenshot of a SQL query with results.](./Images/f-19.png)
 
@@ -280,17 +280,17 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
     ![Screenshot of a Visual query.](./Images/f21.png)
 
-3. In the **Manage columns (1)** menu, select **Choose columns (2)**. Then select only the **SalesOrderNumber** and **SalesOrderLineNumber** **(3)** columns and click on **OK (4)**.
+1. In the **Manage columns (1)** menu, select **Choose columns (2)**. Then select only the **SalesOrderNumber** and **SalesOrderLineNumber** **(3)** columns and click on **OK (4)**.
 
     ![Account-manager-start](./Images/lab1-image22.png)
 
     ![Account-manager-start](./Images/lab1-image23.png)
 
-4. Click on **+ (1)**, in the **Transform table** menu, select **Group by (2)**.
+1. Click on **+ (1)**, in the **Transform table** menu, select **Group by (2)**.
 
     ![Screenshot of a Visual query with results.](./Images/01/Pg3-VisQuery-S4.0.png)
 
-5. Then group the data by using the following **Basic** settings and click on **OK (5)**.
+1. Then group the data by using the following **Basic** settings and click on **OK (5)**.
 
     - **Group by**: Select **SalesOrderNumber (1)**
     - **New column name**: Enter **LineItems (2)**
@@ -299,7 +299,7 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
         ![Screenshot of a Visual query with results.](./Images/01/Pg3-VisQuery-S4.01.png)
 
-6. When you're done, the results pane under the visual query shows the number of line items for each sales order.
+1. When you're done, the results pane under the visual query shows the number of line items for each sales order.
 
     ![Screenshot of a Visual query with results.](./Images/visual-query-results.png)
 
