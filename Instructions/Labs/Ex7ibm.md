@@ -16,9 +16,9 @@ You will be able to complete the following tasks:
 
    ![New dataflow.](./Images/26.png)
 
-1. Select **Data Factory** Object in the workspace.
+1. Click on **Data Engineering (1)** icon from the botton left corner, Select **Data Factory (2)** Object in the workspace.
 
-    ![New dataflow.](./Images/27.png)
+    ![New dataflow.](./Images/f32.png)
 
 1. In the home page for your workspace, select **Dataflow Gen2**. 
 
@@ -28,15 +28,18 @@ You will be able to complete the following tasks:
 
    ![New dataflow.](./Images/new-dataflow.png)
 
-1. Select **Import from a Text/CSV file**, and create a new data source with the following settings:
+1. Select **Import from a Text/CSV file**.
 
-    - **Create new connection**
-    - **Link to file**: *Selected*
-    - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
-    - **Connection**: Create new connection
-    - **data gateway**: (none)
-    - **Authentication kind**: Anonymous
-    - Click on **Next**.
+   ![New dataflow.](./Images/f33.png)
+
+1. On the **Connect to data source** page, create a new data source with the following settings:
+
+    - Connection settings: Select **Link to file (1)**
+    - File path or URL: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv` **(2)**
+    - Connection: **Create new connection (3)**
+    - data gateway: **(none) (4)**
+    - Authentication kind: **Anonymous (5)**
+    - Click on **Next (6)**.
 
       ![New dataflow.](./Images/29.png)
 
@@ -52,26 +55,26 @@ You will be able to complete the following tasks:
 
 1. Expand **Query Settings** (these are the steps in the query that bring in the data)
 
-1. **View menu**: Look for the option or menu labeled "View" in the toolbar or menu bar. Click on it to reveal a dropdown menu.
+1. **View menu**: Look for the option or menu labeled **View** in the toolbar or menu bar. Click on it to reveal a dropdown menu.
 
-1. **Diagram View**: From the dropdown menu, select "Diagram View." This will switch your view to a visual representation of your code.
+1. **Diagram View**: From the dropdown menu, select **Diagram View**. This will switch your view to a visual representation of your code.
 
 1. **Script View**: Once you're in Script View, you should be able to see the M-Code that Copilot has generated. This is the underlying code representation of the actions or commands depicted in the Diagram View.
 
    ![New dataflow.](./Images/1.png)
 
-1. Looking at the data… Notice the Item Column.
+1. Looking at the data… Notice the **Item** Column. This is really three different fields -- It contains a short **description of the item, a color and a size**.
 
-1. This is really three different fields -- It contains a short description of the item, a color and a size.
+   ![New dataflow.](./Images/f35.png)
 
 1.	The fields are not consistently delimited (' ' and then ',')
 
-1. Let's use Copilot to clean this up:
+1. Let's use Copilot to clean this up, click on **Prmptflow (1)** icon and select **Add a step that (2)**:
 
     ```
    	Add a step that
     ```
-    ![New dataflow.](./Images/3.png)
+    ![New dataflow.](./Images/f36.png)
 
 1. Type the following into Copilot:
  
@@ -90,16 +93,14 @@ You will be able to complete the following tasks:
    ```
    ![New dataflow.](./Images/3.png)
 
-1. Type the following into Copilot:
+1. Type the following into Copilot. Three new fields are now created to replace the Item Column.
  
     ```
     Split the Item column on the ' ', creating three new fields called Description, Color and Size
     ```
- 
-1. Three new fields are now created to replace the Item Column.
 
-   ![New dataflow.](./Images/5.png)
- 
+   ![New dataflow.](./Images/f37.png)
+
 1. Show the m-code and new query step that the copilot generated
  
    >**Note:** Copilot can do more than transform the table, we can actually change data as well.

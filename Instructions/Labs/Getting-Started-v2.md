@@ -4,9 +4,15 @@ Welcome to your Microsoft Fabric with Copilot Workshop! A unified data platform 
  
 ## Accessing Your Lab Environment
  
-1. Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Lab guide** will be right at your fingertips within your web browser.
 
-     ![](./Images/microsoft-fabric.png)
+   ![Lab guide.](Images/g1.png)  
+
+## Utilizing the Zoom In/Out Feature
+
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment. 
+
+   ![Zoom In/Out.](Images/g2.png)  
 
  ### Virtual Machine & Lab Guide
  
@@ -15,7 +21,6 @@ Welcome to your Microsoft Fabric with Copilot Workshop! A unified data platform 
 ## Exploring Your Lab Resources
  
 1. To get a better understanding of your lab resources and credentials, navigate to the **Environment** details tab.
-
  
    ![](./Images/env.png)
  
@@ -23,13 +28,13 @@ Welcome to your Microsoft Fabric with Copilot Workshop! A unified data platform 
  
 1. For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
-   ![New dataflow.](./Images/spl.png)
+   ![New dataflow.](./Images/g6.png)
  
 ## Managing Your Virtual Machine
 
 1. Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
 
-   ![New dataflow.](./Images/res.png)
+   ![New dataflow.](./Images/g3.png)
 
 ## Lab Validation
 
@@ -37,15 +42,11 @@ Welcome to your Microsoft Fabric with Copilot Workshop! A unified data platform 
 
    ![New dataflow.](./Images/inline-validation.png)
 
-1. You can also validate the task by navigating to the **Lab Validation** tab, from the upper right corner in the lab guide section.
-
-   ![New dataflow.](./Images/lab-validation.png)
-
 ## **Lab Duration Extension**
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 
-   ![New dataflow.](./Images/gext.png)
+   ![New dataflow.](./Images/g7.png)
 
     >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
 
@@ -81,12 +82,7 @@ Welcome to your Microsoft Fabric with Copilot Workshop! A unified data platform 
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
 
-1. Click **"Next"** from the bottom right corner to embark on your Lab journey!
-
-   ![New dataflow.](./Images/next.png)
-
 This hands-on-lab will help you to gain insights on how Azure OpenAI’s content filtering mechanisms contribute to responsible AI deployment, and how you can leverage these filters to ensure that your AI models adhere to appropriate content standards.
-
 
 ## **Support Contact**
 
@@ -98,6 +94,8 @@ This hands-on-lab will help you to gain insights on how Azure OpenAI’s content
     - Live Chat Support: https://cloudlabs.ai/labs-support
 
 
-2. Click **"Next"** from the bottom right corner to embark on your Lab journey!
+1. Click **Next** from the bottom right corner to embark on your Lab journey!
  
+   ![New dataflow.](./Images/g4.png)
+
 ### Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
