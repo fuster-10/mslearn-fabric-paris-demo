@@ -2,6 +2,8 @@
 
 ### Estimated Duration: 90 minutes
 
+## Overview
+
 A data lakehouse is a common analytical data store for cloud-scale analytics solutions. One of the core tasks of a data engineer is to implement and manage the ingestion of data from multiple operational data sources into the lakehouse. In Microsoft Fabric, you can implement *extract, transform, and load* (ETL) or *extract, load, and transform* (ELT) solutions for data ingestion through the creation of *pipelines*.
 
 Fabric also supports Apache Spark, enabling you to write and run code to process data at scale. By combining the pipeline and Spark capabilities in Fabric, you can implement complex data ingestion logic that copies data from external sources into the OneLake storage on which the lakehouse is based and then uses Spark code to perform custom data transformations before loading it into tables for analysis.
@@ -67,7 +69,7 @@ In many scenarios, the data you need to work within your lakehouse may be stored
 
 ### Task 3: Create a pipeline
 
-A simple way to ingest data is to use a **Copy data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
+In this task, you will create a data pipeline in Microsoft Fabric to ingest data by configuring a **Copy Data** activity, which extracts data from a specified source and loads it into your lakehouse.  
 
 1. On the **Home** page for your lakehouse, select **New data pipeline**.
 
@@ -162,6 +164,8 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
 ### Task 4: Create a notebook
 
+In this task, you will create a notebook within Microsoft Fabric to develop and execute code for data processing and analysis. Notebooks provide an interactive environment for writing and running code in multiple languages, facilitating data engineering and data science workflows.
+
 1. On the **Home** page for your lakehouse, in the **Open notebook (1)** menu, select **New notebook (2)**.
 
       ![11](./Images/01/11.png)
@@ -247,6 +251,8 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
 ### Task 5: Use SQL to query tables
 
+In this task, you will utilize the SQL analytics endpoint automatically created for your lakehouse to execute SQL queries on your defined tables.  
+
 When you create a lakehouse and define tables in it, an SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
 1. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL analytics endpoint**. Click on the **Lakehouse (1)** drop down and then select **SQL analytics endpoint (2)**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables, as shown here:
@@ -270,7 +276,7 @@ When you create a lakehouse and define tables in it, an SQL endpoint is automati
 
 ### Task 6: Create a visual query
 
-While many data professionals are familiar with SQL, data analysts with Power BI experience can apply their Power Query skills to create visual queries.
+In this task, you will utilize the visual query editor in Microsoft Fabric to create queries without writing code. This approach leverages Power Query skills, enabling data analysts familiar with Power BI to design visual queries efficiently. 
 
 1. On the toolbar, use the **New SQL query (1)** drop-down and select **New visual query (2)**.
 
@@ -305,7 +311,7 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
 ### Task 7: Create a report
 
-The tables in your lakehouse are automatically added to a default dataset that defines a data model for reporting with Power BI.
+In this task, you will create a Power BI report by leveraging the default dataset automatically generated from your lakehouse tables. This process enables you to visualize and analyze your data effectively using Power BI's reporting capabilities.  
 
 1. From the left-navigation pane of the SQL Endpoint page, select the **Model layouts** tab. The data model schema for the dataset is shown.
 
@@ -363,6 +369,8 @@ The tables in your lakehouse are automatically added to a default dataset that d
 
 ### Task 8: Analyze report using Fabric Copilot
 
+In this task, you will utilize Fabric Copilot to analyze your report, enabling you to gain deeper insights and enhance your data-driven decision-making process.
+
 1. Click on **Copilot (1)** button at the right of the screen to open the copilot chat window, and select **Get Started (2)**.
 
    ![New dataflow.](./Images/item-sales-report.png)
@@ -413,4 +421,4 @@ In this lab, you have completed:
  + Task 7: Create a report
  + Task 8: Analyze report using Fabric Copilot
 
-### You have successfully completed the lab. Click on **Next >>** to procced with next exercise.
+### You have successfully completed the lab. Click on **Next >>** to procced with next Exercise.

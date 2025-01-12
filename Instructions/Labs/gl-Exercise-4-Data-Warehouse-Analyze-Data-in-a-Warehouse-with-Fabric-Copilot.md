@@ -2,7 +2,9 @@
 
 ### Estimated Duration: 60 minutes
 
-In this lab, you will analyze data in a warehouse using Fabric Copilot by connecting to your data source, running queries, and visualizing insights to drive informed decision-making.
+## Overview
+
+In this Exercise, you will analyze data in a warehouse using Fabric Copilot by connecting to your data source, running queries, and visualizing insights to drive informed decision-making.
 
 ## Lab objectives
 
@@ -161,6 +163,8 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
 
 ## Task 4: Generate reports using Copilot
 
+In this task, you will utilize Microsoft Fabric's Copilot feature to generate comprehensive reports by leveraging natural language inputs. Copilot assists in transforming raw data into actionable insights, enabling you to create detailed reports efficiently. 
+
 1. When you click on the relationship between **FactSalesOrder** and **DimCustomer** and access its properties, you're essentially examining how these two tables are linked together. This relationship defines how data from these tables can be combined or related when querying or visualizing in Power BI.
 
      ![](./Images/10.png)
@@ -258,6 +262,14 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
 
 ## Summary
 
-In this lab, you connected to a data warehouse using Fabric Copilot and explored the available datasets. You ran queries to extract insights and created visualizations for effective analysis. Finally, you compiled your findings into reports and collaborated with team members on the results.
+In this Exercise, you connected to a data warehouse using Fabric Copilot and explored the available datasets. You ran queries to extract insights and created visualizations for effective analysis. Finally, you compiled your findings into reports and collaborated with team members on the results.
+
+### Review
+In this lab, you have completed:
+
+- Task 1: Create a data warehouse
+- Task 2: Create tables and insert data
+- Task 3: Define a data model
+- Task 4: Generate reports using Copilot
 
 ### You have successfully completed the lab.
