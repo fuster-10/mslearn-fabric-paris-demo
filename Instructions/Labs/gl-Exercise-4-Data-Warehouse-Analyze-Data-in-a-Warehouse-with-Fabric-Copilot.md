@@ -86,9 +86,9 @@ A warehouse is a relational database in which you can define tables and other ob
 
     ![01](./Images/f41.png)
 
-1. When the query has finished. Go to the **Explorer** pane, select the **DimProduct** table and verify that the three rows have been added to the table.
+1. When the query has finished. Go to the **Explorer** pane, select the **DimProduct** table and verify that the **three** rows have been added to the table.
 
-   ![01](./Images/02/Datatabbottom1.png)
+   ![01](./Images/f56.png)
 
 1. On the **Home (1)** menu tab, use the **New SQL Query (2)** button to create a new query for each table. 
 

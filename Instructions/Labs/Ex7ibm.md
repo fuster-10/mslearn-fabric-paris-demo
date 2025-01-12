@@ -76,15 +76,15 @@ You will be able to complete the following tasks:
     ```
     ![New dataflow.](./Images/f36.png)
 
-1. Type the following into Copilot:
+1. Type the following into Copilot **(1)**:
  
     ```
     In the Item column, remove the ','
     ```
  
-1. The Item column now consistently has a delimiter of **' '**.
+1. The Item column now consistently has a delimiter of **' '**. **(2)**
 
-   ![New dataflow.](./Images/4.png)
+   ![New dataflow.](./Images/f55.png)
 
 1. Show the m-code and new query step that the copilot generated.
  
