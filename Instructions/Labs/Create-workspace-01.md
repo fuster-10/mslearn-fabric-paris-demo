@@ -43,7 +43,7 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
 
 Here, you create a Fabric workspace. The workspace contains all the items needed for this lakehouse tutorial, which includes lakehouse, dataflows, Data Factory pipelines, notebooks, Power BI datasets, and reports.
 
-1.  Now, select **Workspaces (1)** and click on **+ New workspace (2)**.
+1. Now, select **Workspaces (1)** and click on **+ New workspace (2)**.
  
     ![New Workspace](./Images/f2.png)
  
