@@ -13,6 +13,8 @@ You will be able to complete the following tasks:
 
 ### Task 1: Sign up for Microsoft Fabric Trial
 
+In this task, you will initiate your 60-day free trial of Microsoft Fabric by signing up through the Fabric app, providing access to its comprehensive suite of data integration, analytics, and visualization tools
+
 1. Copy the **Power BI homepage link**, and open this link inside the VM in a new tab.
 
    ```
@@ -23,38 +25,37 @@ You will be able to complete the following tasks:
 
 1. Select **Account manager (1)**, and click on **Free trial (2)**.
 
-     ![Account-manager-start](./Images/lab1-image3.png)
+     ![Account-manager-start](./Images/f1.png)
 
 1. A new prompt will appear asking you to **Activate your 60-day free Fabric trial capacity**, click on **Activate**.
 
       ![Account-manager-start](./Images/fabric-3.png)
 
-1. Click on S**tay on current page** when prompted.
+1. Click on **Stay on current page** when prompted.
 
       ![Account-manager-start](./Images/fabric-2.png)
 
 1. Now, open **Account manager (1)** again, and verify **Trial Status (2)**.
 
       ![Account-manager-start](./Images/lab1-image5.png)
-
+      
 ### Task 2: Create a workspace
 
 Here, you create a Fabric workspace. The workspace contains all the items needed for this lakehouse tutorial, which includes lakehouse, dataflows, Data Factory pipelines, notebooks, Power BI datasets, and reports.
 
-1.  Now, select **Workspaces (1)** and click on **+ New workspace (2)**.
- 
-    ![New Workspace](./Images/ws/11.png)
- 
+1. Now, select **Workspaces (1)** and click on **+ New workspace (2)**.
 
-2. Fill out the **Create a workspace** form with the following details:
+    ![New Workspace](./Images/f2.png)
+
+1. Fill out the **Create a workspace** form with the following details:
  
    - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**
  
-      ![name-and-desc-of-workspc](./Images/ws/12.png)
+      ![name-and-desc-of-workspc](./Images/f3.png)
  
-   - **Advanced:** Expand it and Under **License mode**, select **Fabric capacity (1)**, Under **Capacity** Select available **fabric<inject key="DeploymentID" enableCopy="false"/> - <inject key="Location"></inject>(2)** and click on **Apply (3)** to create and open the workspace.
+   - **Advanced:** Expand it and Under **License mode**, select **Fabric capacity (1)**, Under **Capacity** Select available **fabric<inject key="DeploymentID" enableCopy="false"/> - <inject key="Region"></inject>(2)** and click on **Apply (3)** to create and open the workspace.
  
-      ![advanced-and-apply](./Images/32.png)
+      ![advanced-and-apply](./Images/f4.png)
 
 ### Summary
 
@@ -66,4 +67,4 @@ In this lab, you have completed:
  + Signed up for Microsoft Fabric Trial
  + Created a workspace
 
-### You have successfully completed the lab. Click on Next >> to procced with next exercise.
+### You have successfully completed the lab. Click on Next >> to procced with next Exercise.

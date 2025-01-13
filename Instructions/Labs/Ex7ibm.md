@@ -1,8 +1,10 @@
 # Exercise 3: Data Engineering Ingest Data in Fabric with Fabric Copilot
 
-In the exercise, you will create a simple data pipeline to bring in customer sales data. You are using the KiZAN Fabric Tenant - where we have Copilot enabled, demonstrate doing the same thing, but by using a new Data Flow Gen2 And leveraging the native integration of Copilot to use natural language to ingest and transform your data.
-
 ### Estimated Duration: 80 minutes
+
+## Overview
+
+In the exercise, you will create a simple data pipeline to bring in customer sales data. You are using the KiZAN Fabric Tenant - where we have Copilot enabled, demonstrate doing the same thing, but by using a new Data Flow Gen2 And leveraging the native integration of Copilot to use natural language to ingest and transform your data.
 
 ## Lab objectives
 
@@ -12,13 +14,15 @@ You will be able to complete the following tasks:
  
 ### Task 1: Create New - Dataflow Gen2
 
+In this task, you will create a new **Dataflow Gen2** in Microsoft Fabric's Data Factory, utilizing Copilot's natural language capabilities to ingest and transform data efficiently.
+
 1. Select the workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** (this is the workspace that mimics the lab environment)
 
    ![New dataflow.](./Images/26.png)
 
-1. Select **Data Factory** Object in the workspace.
+1. Click on **Data Engineering (1)** icon from the botton left corner, Select **Data Factory (2)** Object in the workspace.
 
-    ![New dataflow.](./Images/27.png)
+    ![New dataflow.](./Images/f32.png)
 
 1. In the home page for your workspace, select **Dataflow Gen2**. 
 
@@ -28,15 +32,18 @@ You will be able to complete the following tasks:
 
    ![New dataflow.](./Images/new-dataflow.png)
 
-1. Select **Import from a Text/CSV file**, and create a new data source with the following settings:
+1. Select **Import from a Text/CSV file**.
 
-    - **Create new connection**
-    - **Link to file**: *Selected*
-    - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
-    - **Connection**: Create new connection
-    - **data gateway**: (none)
-    - **Authentication kind**: Anonymous
-    - Click on **Next**.
+   ![New dataflow.](./Images/f33.png)
+
+1. On the **Connect to data source** page, create a new data source with the following settings:
+
+    - Connection settings: Select **Link to file (1)**
+    - File path or URL: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv` **(2)**
+    - Connection: **Create new connection (3)**
+    - data gateway: **(none) (4)**
+    - Authentication kind: **Anonymous (5)**
+    - Click on **Next (6)**.
 
       ![New dataflow.](./Images/29.png)
 
@@ -52,36 +59,36 @@ You will be able to complete the following tasks:
 
 1. Expand **Query Settings** (these are the steps in the query that bring in the data)
 
-1. **View menu**: Look for the option or menu labeled "View" in the toolbar or menu bar. Click on it to reveal a dropdown menu.
+1. **View menu**: Look for the option or menu labeled **View** in the toolbar or menu bar. Click on it to reveal a dropdown menu.
 
-1. **Diagram View**: From the dropdown menu, select "Diagram View." This will switch your view to a visual representation of your code.
+1. **Diagram View**: From the dropdown menu, select **Diagram View**. This will switch your view to a visual representation of your code.
 
 1. **Script View**: Once you're in Script View, you should be able to see the M-Code that Copilot has generated. This is the underlying code representation of the actions or commands depicted in the Diagram View.
 
    ![New dataflow.](./Images/1.png)
 
-1. Looking at the data… Notice the Item Column.
+1. Looking at the data… Notice the **Item** Column. This is really three different fields -- It contains a short **description of the item, a color and a size**.
 
-1. This is really three different fields -- It contains a short description of the item, a color and a size.
+   ![New dataflow.](./Images/f35.png)
 
 1.	The fields are not consistently delimited (' ' and then ',')
 
-1. Let's use Copilot to clean this up:
+1. Let's use Copilot to clean this up, click on **Prmptflow (1)** icon and select **Add a step that (2)**:
 
     ```
    	Add a step that
     ```
-    ![New dataflow.](./Images/3.png)
+    ![New dataflow.](./Images/f36.png)
 
-1. Type the following into Copilot:
+1. Type the following into Copilot **(1)**:
  
     ```
     In the Item column, remove the ','
     ```
  
-1. The Item column now consistently has a delimiter of **' '**.
+1. The Item column now consistently has a delimiter of **' '**. **(2)**
 
-   ![New dataflow.](./Images/4.png)
+   ![New dataflow.](./Images/f55.png)
 
 1. Show the m-code and new query step that the copilot generated.
  
@@ -90,16 +97,14 @@ You will be able to complete the following tasks:
    ```
    ![New dataflow.](./Images/3.png)
 
-1. Type the following into Copilot:
+1. Type the following into Copilot. Three new fields are now created to replace the Item Column.
  
     ```
     Split the Item column on the ' ', creating three new fields called Description, Color and Size
     ```
- 
-1. Three new fields are now created to replace the Item Column.
 
-   ![New dataflow.](./Images/5.png)
- 
+   ![New dataflow.](./Images/f37.png)
+
 1. Show the m-code and new query step that the copilot generated
  
    >**Note:** Copilot can do more than transform the table, we can actually change data as well.
@@ -132,7 +137,7 @@ Call out that the quantities for all items are 1.
    - **Streamlines data exploration**: Visual Query tools offer intuitive interfaces, enabling users to interact with data visually, and facilitating quicker insights without extensive coding.
    - **Enhances accessibility**: With Visual Query, users with varying technical expertise can extract insights from data, reducing reliance on specialized programming skills and promoting broader data utilization across teams.
 
-2. **M-Query/M-Code scripting**:
+1. **M-Query/M-Code scripting**:
    - **Enables advanced data manipulation**: M-Query/M-Code scripting provides a robust framework for performing intricate data transformations and analysis, empowering users to tailor processes to specific requirements beyond the capabilities of visual tools.
    - **Facilitates automation and customization**: Through M-Query/M-Code scripting, users can automate repetitive tasks, build custom functions, and create tailored solutions, increasing efficiency and flexibility in data workflows.
 
@@ -145,4 +150,4 @@ In this lab, you have completed:
 
   + Create New - Dataflow Gen2
 
-### You have successfully completed the lab. Click on Next >> to procced with next exercise.
+### You have successfully completed the lab. Click on Next >> to procced with next Exercise.
