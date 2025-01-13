@@ -79,19 +79,19 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![Zoom In/Out.](Images/g2.png)  
 
- ### Virtual Machine & Lab Guide
+### Virtual Machine & Lab Guide
  
-   Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
+Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
 ## Exploring Your Lab Resources
  
-1. To get a better understanding of your lab resources and credentials, navigate to the **Environment** details tab.
+To get a better understanding of your lab resources and credentials, navigate to the **Environment** details tab.
  
    ![](./Images/env.png)
  
 ## Utilizing the Split Window Feature
  
-1. For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
+For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
    ![New dataflow.](./Images/g6.png)
  
