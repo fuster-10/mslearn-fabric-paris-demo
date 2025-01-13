@@ -38,15 +38,15 @@ In this task, you will initiate your 60-day free trial of Microsoft Fabric by si
 1. Now, open **Account manager (1)** again, and verify **Trial Status (2)**.
 
       ![Account-manager-start](./Images/lab1-image5.png)
-
+      
 ### Task 2: Create a workspace
 
 Here, you create a Fabric workspace. The workspace contains all the items needed for this lakehouse tutorial, which includes lakehouse, dataflows, Data Factory pipelines, notebooks, Power BI datasets, and reports.
 
 1. Now, select **Workspaces (1)** and click on **+ New workspace (2)**.
- 
+
     ![New Workspace](./Images/f2.png)
- 
+
 1. Fill out the **Create a workspace** form with the following details:
  
    - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**
