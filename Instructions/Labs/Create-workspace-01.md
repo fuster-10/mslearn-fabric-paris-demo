@@ -53,7 +53,7 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
  
       ![name-and-desc-of-workspc](./Images/f3.png)
  
-   - **Advanced:** Expand it and Under **License mode**, select **Fabric capacity (1)**, Under **Capacity** Select available **fabric<inject key="DeploymentID" enableCopy="false"/> - <inject key="Location"></inject>(2)** and click on **Apply (3)** to create and open the workspace.
+   - **Advanced:** Expand it and Under **License mode**, select **Fabric capacity (1)**, Under **Capacity** Select available **fabric<inject key="DeploymentID" enableCopy="false"/> - <inject key="Region"></inject>(2)** and click on **Apply (3)** to create and open the workspace.
  
       ![advanced-and-apply](./Images/f4.png)
 
