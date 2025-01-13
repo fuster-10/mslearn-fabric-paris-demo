@@ -239,11 +239,11 @@ In this task, you will utilize Microsoft Fabric's Copilot feature to generate co
 
 1. Click on **Create** on any suggestion **(1)**. You can see the report **(2)**.   
 
-    ![](./Images/f51.png)
+    ![](./Images/f-51.png)
  
     >**Note:** Click **Edit** to demonstrate that you can adjust the query and customize the report.
 
-   ![](./Images/f52.png)
+   ![](./Images/f-52.png)
 
 1. **Clear the input box** and select:
 
@@ -252,7 +252,7 @@ In this task, you will utilize Microsoft Fabric's Copilot feature to generate co
     ```
     ![](./Images/23.png)
 
-    ![](./Images/f53.png)    
+    ![](./Images/f-53.png)    
 
 1. Click on **File -> Save** from the top left corner. Enter the report name as **Sample (1)** and click on **Save (2)**.
 
