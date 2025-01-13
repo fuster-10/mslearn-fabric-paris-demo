@@ -151,16 +151,15 @@ This hands-on-lab will help you to gain insights on how Azure OpenAI’s content
 
 ## **Support Contact**
 
-1. The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
-   Learner Support Contacts:
+Learner Support Contacts:
+- Email Support: cloudlabs-support@spektrasystems.com
+- Live Chat Support: https://cloudlabs.ai/labs-support
+  
+Now, click on **Next** from the lower right corner to move on to the next page.
 
-    - Email Support: cloudlabs-support@spektrasystems.com
-    - Live Chat Support: https://cloudlabs.ai/labs-support
-
-
-1. Click **Next** from the bottom right corner to embark on your Lab journey!
- 
    ![New dataflow.](./Images/g4.png)
+
 
 ### Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
