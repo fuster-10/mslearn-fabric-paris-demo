@@ -19,21 +19,22 @@ You will be able to complete the following tasks:
 
 In this task, you will create a KQL database to facilitate querying of static or streaming data. You will define a table within the KQL database and ingest sales data from a file to enable effective analysis using Kusto Query Language (KQL).
 
-1. In the **Microsoft Fabric (1)** experience portal, select the **Real-Time Intelligence (2)** experience image as shown here:
+1. Navigate to your workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, click on **+ New item (2)** to create a new Eventhouse.
 
-    ![](./Images/E4-T1-S1.png)
+    ![](./Images/E1T1S2.png)
+   
 
-2. Create a new **Eventhouse** with the name **Eventhouse-<inject key="DeploymentID" enableCopy="false"/>**.
+2. In the All items search for Eventhouse (1) and select Eventhouse (2) from the list. Create a new **Eventhouse** with the name **Eventhouse-<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![](./Images/E4-T1-S2.png)
+    ![](./Images/E4T1S2.png)
 
-3. Once the Eventhouse gets created, in the settings pane, create a **+ New Database** for the **KQL Databases**.
+3. Once the Eventhouse gets created, in the settings pane, create a **+ Database** for the **KQL Databases**.
 
    - **Name:** Enter **KQL-Database<inject key="DeploymentID" enableCopy="false"/> (1)**.
 
    - Click on **Create (2)**.
 
-     ![](./Images/fabric16.png)
+   ![](./Images/fabric16.png)
 
 4. When the new database has been created, select the option to **Get data (1)** from **Local file (2)**.
 
@@ -46,18 +47,18 @@ In this task, you will create a KQL database to facilitate querying of static or
         - **Source type:** File
         - **Upload files:** Drag or Browse for the file from **C:\LabFiles\Files\sales.csv**
 
-            ![01](./Images/fabric17.png)
+    ![01](./Images/fabric17.png)
 
     - **Inspect:** Preview the data and click on **Finish**.
 
-        ![01](./Images/fabric18.png)
+     ![01](./Images/fabric18.png)
 
     - **Summary:**
         - *Review the preview of the table and close the wizard.*
 
-            ![01](./Images/fabric19.png)
+     ![01](./Images/fabric19.png)
 
-            > **Note:** In this example, you imported a very small amount of static data from a file, which is fine for this exercise. In reality, you can use Kusto to analyze much larger volumes of data; including real-time data from a streaming source such as Azure Event Hubs.
+   > **Note:** In this example, you imported a very small amount of static data from a file, which is fine for this exercise. In reality, you can use Kusto to analyze much larger volumes of data; including real-time data from a streaming source such as Azure Event Hubs.
 
 ### Task 2: Use KQL to query the sales table
 
