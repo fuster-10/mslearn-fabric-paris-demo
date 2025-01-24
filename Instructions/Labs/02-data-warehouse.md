@@ -112,13 +112,14 @@ In this task, you will create database tables by defining their structure with a
 
 In this task, you will create a relational data warehouse consisting of fact and dimension tables, where fact tables hold numeric measures for analysis and dimension tables store entity attributes. You'll define relationships between tables in Microsoft Fabric to build a data model for efficient business performance analysis.
 
-1. In the data warehouse, from the top navigation pane, select the **Model Layouts** option.
+1. In the warehouse, from the top navigation pane, select the **Model Layouts** option.
 
 2. In the model pane, rearrange the tables in your data warehouse so that the **FactSalesOrder** table is in the middle, like this:
 
     ![Screenshot of the data warehouse model page.](./Images/fab1.png)
 
 3. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details and click on **Save**.
+   
     - **Table 1**: FactSalesOrder
     - **Column**: ProductKey
     - **Table 2**: DimProduct
@@ -136,7 +137,7 @@ In this task, you will create a relational data warehouse consisting of fact and
 
    ![Screenshot of the data warehouse model page.](./Images/fabric12.1.png)
 
-    - **FactOrderSales.SalesOrderDateKey** &#8594; **DimDate.DateKey**
+    - **FactSalesOrder.SalesOrderDateKey** &#8594; **DimDate.DateKey**
 
 5. When all of the relationships have been defined, the model should look like this:
 
@@ -251,7 +252,9 @@ In this task, you will visualize your data from a single query or your data ware
    ![03](./Images/pg-8.png)
 
 1. Hide the following columns in your Fact and Dimension tables that are not necessary to create a report. Note that this does not remove the columns from the model, it simply hides them from view on the report canvas.
+   
    1. FactSalesOrder
+      
       - **SalesOrderDateKey**
       - **CustomerKey**
       - **ProductKey**
