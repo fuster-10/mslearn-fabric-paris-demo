@@ -26,25 +26,31 @@ In Microsoft Fabric, a lakehouse provides highly scalable file storage in a *One
 
 Now that you have created a workspace in the previous step, it's time to switch to the *Data engineering* experience in the portal and create a data lakehouse into which you will ingest data.
 
-1. At the bottom left of the Power BI portal, select the **Power BI (1)** icon and switch to the **Data Engineering (2)** experience.
+1. At the bottom left of the Power BI portal, select the **Fabric (1)** icon and switch to the **Fabric (2)** experience.
 
-   ![02](./Images/E2-T1-S1.png)
+   ![](./Images/E2T1S1.png)
+
+   ![](./Images/E1T1S1-1.png)
    
-2. In the **Data engineering** home page, click on **Lakehouse** to create a new lakehouse.
+3. Navigate to your workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, click on **+ New item (2)** to create a new lakehouse.
 
-    ![](./Images/E2-T1-S2.png)
+    ![](./Images/E1T1S2.png)
 
-3. Enter the **Name** as **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** and Click on **Create (2)**.
+4. In the All items search for Lakehouse (1) and select Lakehouse (2) from the list.
+
+    ![](./Images/E1T1S3.png)
+
+6. Enter the **Name** as **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** and Click on **Create (2)**.
 
     ![](./Images/E2-T1-S3.png)
 
-4. After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
+7. After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
 
-5. On the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** tab in the pane on the left, click the **Ellipsis(...)** menu for the **Files (1)** node, select **New subfolder (2)**.
+8. On the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** tab in the pane on the left, click the **Ellipsis(...)** menu for the **Files (1)** node, select **New subfolder (2)**.
 
     ![](./Images/E2-T1-S5.png)
 
-6. Create a subfolder named **new_data (1)** and click on **Create (2)**.
+9. Create a subfolder named **new_data (1)** and click on **Create (2)**.
 
     ![](./Images/E2-T1-S6.png)
 
@@ -63,9 +69,9 @@ In many scenarios, the data you need to work within your lakehouse may be stored
 
 In this task, you will create a pipeline to automate data processing workflows. Youâ€™ll define the sequence of data transformation steps, configure the necessary components, and set up triggers for execution. This will streamline your data integration processes and improve efficiency in handling data tasks. A simple way to ingest data is to use a **Copy data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
 
-1. Navigate back to the home page, on the **Home** page for your lakehouse, select **Data pipeline**.
+1. Navigate back to the workspace, click on **+ New item** and select **Data pipeline**.
 
-    ![03](./Images/E2-T3-S1.png)
+    ![](./Images/E1T3S1.png)
 
 2. Create a new data pipeline named **Ingest Sales Data Pipeline (1)** and click on **Create (2)**. 
    
@@ -75,9 +81,9 @@ In this task, you will create a pipeline to automate data processing workflows. 
 
    ![03](./Images/E2-T3-S3.png)
 
-4. In the **Copy Data** wizard, on the **Choose a data source** page, search for **HTTP (2)** and **select (2)** it.
+4. In the **Copy Data** wizard, on the **Choose a data source** page, search for **Http (1)** and select it.
 
-   ![Screenshot of the Choose data source page.](./Images/data-source.png)
+   ![Screenshot of the Choose data source page.](./Images/E1T1S4.png)
 
 5. In the **Connection settings** pane, enter the following settings for the connection to your data source:
     
@@ -87,7 +93,7 @@ In this task, you will create a pipeline to automate data processing workflows. 
     - Authentication kind : **Anonymous (4)**
     - Click on **Next (5)**
   
-       ![Account-manager-start](./Images/lab1-image11.png)
+   ![Account-manager-start](./Images/lab1-image11.png)
     
 6. Make sure the following settings are selected and click on **Next** :
     
@@ -98,7 +104,7 @@ In this task, you will create a pipeline to automate data processing workflows. 
     - Request timeout: **Leave blank**
     - Max concurrent connections: **Leave blank**
   
-        ![05](./Images/fabric4.png)
+   ![05](./Images/fabric4.png)
    
 7. Wait for the data to be sampled and then ensure that the following settings are selected:
     
@@ -107,15 +113,15 @@ In this task, you will create a pipeline to automate data processing workflows. 
     - Row delimiter: **Line feed (\n) (3)**
     - Select **Preview data (4)** to see a sample of the data that will be ingested.
 
-      ![Account-manager-start](./Images/lab1-image12.png)
+   ![Account-manager-start](./Images/lab1-image12.png)
 
 8. Observe the sample of the data that will be ingested. Then close the data preview and click on **Next**.
 
-     ![Account-manager-start](./Images/lab1-image13.png)
+   ![Account-manager-start](./Images/lab1-image13.png)
 
-9. On the **Choose data destination** page, click on **OneLake data hub (1)** and select the lakehouse **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (2)**.
+9. On the **Choose data destination** page, click on **OneLake (1)** and select the lakehouse **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-     ![Account-manager-start](./Images/E2-T3-S9.png)
+   ![Account-manager-start](./Images/E1T3S9.png)
 
 10. Set the following data destination options, and then select **Next (4)**:
 
@@ -123,7 +129,7 @@ In this task, you will create a pipeline to automate data processing workflows. 
     - Folder path: **new_data (2)**
     - File name: **sales.csv  (3)**
    
-        ![08](./Images/fabric9.png)
+    ![08](./Images/fabric9.png)
 
 11. Set the following file format options and then select **Next (4)**:
 
@@ -131,7 +137,7 @@ In this task, you will create a pipeline to automate data processing workflows. 
     - Column delimiter: **Comma (,) (2)**
     - Row delimiter: **Line feed (\n) (3)**
    
-      ![09](./Images/fabric10.png)
+    ![09](./Images/fabric10.png)
 
 12. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
 
@@ -139,7 +145,7 @@ In this task, you will create a pipeline to automate data processing workflows. 
 
 13. A new pipeline containing a **Copy data** activity is created, as shown here:
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/copy-data-pipeline.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/E1T3S13.png)
 
 14. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
@@ -278,7 +284,7 @@ In this task, you will create a visual query in Power BI using Power Query. Youâ
 
     ![](./Images/E2-T6-S1.png)
 
-2. In the **sales (1)** table, click on **&#8230;** and select **Insert into Canvas (2)** it in the new visual query editor pane that opens to create a Power Query as shown here: 
+2. In the Lakehouse, navigate to Schemas, then to dbo, and select the **sales (1)** table. In the sales table click on **&#8230;** and select **Insert into Canvas (2)** it in the new visual query editor pane that opens to create a Power Query as shown here: 
 
     ![Screenshot of a Visual query.](./Images/E2-T6-S2.png)
 
@@ -309,7 +315,7 @@ In this task, you will create a visual query in Power BI using Power Query. Youâ
 
 In this task, you will create a report to visualize and present your data findings. You'll gather relevant data, select appropriate visualizations, and structure the report for clarity and insight. This process will help you effectively communicate your analysis and support data-driven decision-making.
 
-1.  At the top of the SQL Endpoint page, select the **Model Layouts (1)** tab. Click on **sales (2)** and select the **insert into canvas (3)** , the data model schema for the dataset will be shown as **follows (4)**:
+1.  At the top of the SQL analytics endpoint page, select the **Model Layouts (1)** tab. Click on **sales (2)** and select the **insert into canvas (3)** , the data model schema for the dataset will be shown as **follows (4)**:
 
     ![Screenshot of a data model.](./Images/fab20.png)
 
