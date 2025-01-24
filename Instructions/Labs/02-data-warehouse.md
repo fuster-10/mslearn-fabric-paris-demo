@@ -104,7 +104,7 @@ In this task, you will create database tables by defining their structure with a
     - **DimProduct**
     - **FactSalesOrder**
 
-      ![01](./Images/02/Pg4-T2-S9.png)  
+    ![01](./Images/02/Pg4-T2-S9.png)  
 
         > **Tip**: If the schema takes a while to load, just refresh the browser page.
 
@@ -134,7 +134,7 @@ In this task, you will create a relational data warehouse consisting of fact and
 
     - **FactSalesOrder.CustomerKey** &#8594; **DimCustomer.CustomerKey**
 
-      ![Screenshot of the data warehouse model page.](./Images/fabric12.1.png)
+   ![Screenshot of the data warehouse model page.](./Images/fabric12.1.png)
 
     - **FactOrderSales.SalesOrderDateKey** &#8594; **DimDate.DateKey**
 
@@ -256,7 +256,7 @@ In this task, you will visualize your data from a single query or your data ware
       - **CustomerKey**
       - **ProductKey**
 
-        ![03](./Images/02/03.png)
+    ![03](./Images/02/03.png)
 
    1. DimCustomer
       - **CustomerKey**
