@@ -1,4 +1,4 @@
-# Exercise 3: Analyze data in a data warehouse
+Exercise 3: Analyze data in a data warehouse
 
 ### Estimated Duration: 60 minutes
 
@@ -20,17 +20,25 @@ You will be able to complete the following tasks:
 
 In this task, you will design and implement a data warehouse by organizing data from multiple sources, creating ETL processes, and optimizing for performance. The goal is to enable efficient querying and reporting while ensuring security, compliance, and scalability.
 
-1. At the bottom left of the Power BI portal, switch to the **Data Warehouse** experience.
+1. At the bottom left of the Power BI portal, select the **Fabric (1)** icon and switch to the **Fabric (2)** experience.
 
-   ![](./Images/E3-T1-S1.png)
+   ![](./Images/E2T1S1.png)
 
-2. In the **Data Warehouse** home page, create a new **Warehouse**.
+   ![](./Images/E1T1S1-1.png)
+
+2. Navigate to your workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, click on **+ New item (2)** to create a new warehouse.
+
+    ![](./Images/E1T1S2.png)
+   
+4. In the All items search for Warehouse (1) and select Warehouse (2) from the list.
+
+   ![](./Images/E3T1S1.png)
    
    - **Name:** Enter **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/>** **(1)**
 
    - Click on **Create (2)**
 
-        ![01](./Images/lab2-image2.png)
+    ![01](./Images/lab2-image2.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
       
@@ -78,7 +86,7 @@ In this task, you will create database tables by defining their structure with a
    GO
     ```
 
-6. Run the new query to insert three rows into the **DimProduct** table.
+6. Run the above query to insert three rows into the **DimProduct** table.
 
 7. When the query has finished, select the **Data** tab at the bottom of the page in the data warehouse. In the **Explorer** pane, select the **DimProduct** table and verify that the three rows have been added to the table.
 
