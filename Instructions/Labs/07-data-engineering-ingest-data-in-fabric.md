@@ -16,17 +16,9 @@ You will be able to complete the following tasks:
    
 # Create New - Dataflow Gen2
 
-1. Select the workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** (this is the workspace that mimics the lab environment)
+1. Navigate back to your workspace, click on + New item. Select Dataflow Gen2.
 
-   ![New dataflow.](./Images/26.png)
-
-1. Select **Data Factory** Object in the workspace.
-
-    ![New dataflow.](./Images/27.png)
-
-1. In the home page for your workspace, select **New Dataflow Gen2**. 
-
-   ![New dataflow.](./Images/28.png)
+   ![New dataflow.](./Images/E6T1S1.png)
 
 1. After a few seconds, the Power Query editor for your new dataflow opens as shown here.
 
@@ -41,7 +33,7 @@ You will be able to complete the following tasks:
     - **Authentication kind**: Anonymous
     - Click on **Next**.
 
-      ![New dataflow.](./Images/29.png)
+   ![New dataflow.](./Images/29.png)
 
 1. On **Preview file data** page, Click on **Create**.
 
@@ -49,7 +41,7 @@ You will be able to complete the following tasks:
 
 1. Click **Copilot** button on Ribbon. 
 
-    ![New dataflow.](./Images/31.png)
+    ![New dataflow.](./Images/E6T1S6.png)
 
 1. To better illustrate all that Copilot is doing for you, let me expand the UI a little to see what's going on behind the scenes.
 
