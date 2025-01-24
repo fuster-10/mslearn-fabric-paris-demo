@@ -1,4 +1,4 @@
-# Exercise 7: Data Warehouse Analyze Data in a Warehouse with Fabric Copilot
+# Exercise 7: Analyze Data in a Warehouse with Fabric Copilot
 
 ### Estimated Duration: 60 minutes
 
@@ -8,7 +8,7 @@ In this lab, you will analyze data in a warehouse using Fabric Copilot by connec
 
 You will be able to complete the following tasks:
 
-- Connect to the Data Warehouse  
+- Connect to the Warehouse  
 - Explore Data Sources  
 - Run Data Queries  
 - Visualize Data Insights  
@@ -33,7 +33,7 @@ You will be able to complete the following tasks:
 
     - **FactSalesOrder**
 
-      ![01](./Images/02/Pg4-T2-S9.png)  
+   ![01](./Images/02/Pg4-T2-S9.png)  
 
     > **Tip**: If the schema takes a while to load, just refresh the browser page.
  
@@ -63,7 +63,7 @@ You will be able to complete the following tasks:
 
    ![](./Images/14.png)
 
-1. Locate the logo or icon associated with Copilot, then click on it to access its menu or interface.
+1. Locate the logo or icon associated with Copilot, then click on it to access its menu from the prompt guide.
 
    ![](./Images/15.png)
 
