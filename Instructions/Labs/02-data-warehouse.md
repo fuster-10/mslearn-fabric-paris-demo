@@ -1,4 +1,4 @@
-# Exercise 3: Analyze data in a data warehouse
+Exercise 3: Analyze data in a data warehouse
 
 ### Estimated Duration: 60 minutes
 
@@ -20,17 +20,25 @@ You will be able to complete the following tasks:
 
 In this task, you will design and implement a data warehouse by organizing data from multiple sources, creating ETL processes, and optimizing for performance. The goal is to enable efficient querying and reporting while ensuring security, compliance, and scalability.
 
-1. At the bottom left of the Power BI portal, switch to the **Data Warehouse** experience.
+1. At the bottom left of the Power BI portal, select the **Fabric (1)** icon and switch to the **Fabric (2)** experience.
 
-   ![](./Images/E3-T1-S1.png)
+   ![](./Images/E2T1S1.png)
 
-2. In the **Data Warehouse** home page, create a new **Warehouse**.
+   ![](./Images/E1T1S1-1.png)
+
+2. Navigate to your workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, click on **+ New item (2)** to create a new warehouse.
+
+    ![](./Images/E1T1S2.png)
+   
+4. In the All items search for Warehouse (1) and select Warehouse (2) from the list.
+
+   ![](./Images/E3T1S1.png)
    
    - **Name:** Enter **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/>** **(1)**
 
    - Click on **Create (2)**
 
-        ![01](./Images/lab2-image2.png)
+    ![01](./Images/lab2-image2.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
       
@@ -78,7 +86,7 @@ In this task, you will create database tables by defining their structure with a
    GO
     ```
 
-6. Run the new query to insert three rows into the **DimProduct** table.
+6. Run the above query to insert three rows into the **DimProduct** table.
 
 7. When the query has finished, select the **Data** tab at the bottom of the page in the data warehouse. In the **Explorer** pane, select the **DimProduct** table and verify that the three rows have been added to the table.
 
@@ -96,7 +104,7 @@ In this task, you will create database tables by defining their structure with a
     - **DimProduct**
     - **FactSalesOrder**
 
-      ![01](./Images/02/Pg4-T2-S9.png)  
+    ![01](./Images/02/Pg4-T2-S9.png)  
 
         > **Tip**: If the schema takes a while to load, just refresh the browser page.
 
@@ -104,13 +112,14 @@ In this task, you will create database tables by defining their structure with a
 
 In this task, you will create a relational data warehouse consisting of fact and dimension tables, where fact tables hold numeric measures for analysis and dimension tables store entity attributes. You'll define relationships between tables in Microsoft Fabric to build a data model for efficient business performance analysis.
 
-1. In the data warehouse, from the top navigation pane, select the **Model Layouts** option.
+1. In the warehouse, from the top navigation pane, select the **Model Layouts** option.
 
 2. In the model pane, rearrange the tables in your data warehouse so that the **FactSalesOrder** table is in the middle, like this:
 
     ![Screenshot of the data warehouse model page.](./Images/fab1.png)
 
 3. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details and click on **Save**.
+   
     - **Table 1**: FactSalesOrder
     - **Column**: ProductKey
     - **Table 2**: DimProduct
@@ -126,9 +135,9 @@ In this task, you will create a relational data warehouse consisting of fact and
 
     - **FactSalesOrder.CustomerKey** &#8594; **DimCustomer.CustomerKey**
 
-      ![Screenshot of the data warehouse model page.](./Images/fabric12.1.png)
+   ![Screenshot of the data warehouse model page.](./Images/fabric12.1.png)
 
-    - **FactOrderSales.SalesOrderDateKey** &#8594; **DimDate.DateKey**
+    - **FactSalesOrder.SalesOrderDateKey** &#8594; **DimDate.DateKey**
 
 5. When all of the relationships have been defined, the model should look like this:
 
@@ -243,12 +252,14 @@ In this task, you will visualize your data from a single query or your data ware
    ![03](./Images/pg-8.png)
 
 1. Hide the following columns in your Fact and Dimension tables that are not necessary to create a report. Note that this does not remove the columns from the model, it simply hides them from view on the report canvas.
+   
    1. FactSalesOrder
+      
       - **SalesOrderDateKey**
       - **CustomerKey**
       - **ProductKey**
 
-        ![03](./Images/02/03.png)
+    ![03](./Images/02/03.png)
 
    1. DimCustomer
       - **CustomerKey**
