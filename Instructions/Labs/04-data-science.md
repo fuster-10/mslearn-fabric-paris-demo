@@ -8,7 +8,7 @@ In this lab, we will use Microsoft Fabric to create a notebook and train a machi
 
 You will be able to complete the following tasks:
 
-- Task 1: Create a lakehouse and upload files
+- Task 1: Upload files into the lakehouse
 - Task 2: Create a notebook
 - Task 3: Load data into a dataframe
 - Task 4: Train a machine learning model
@@ -17,7 +17,7 @@ You will be able to complete the following tasks:
 - Task 7: Save the model
 - Task 8: Save the notebook and end the Spark session
 
-### Task 1: Create a lakehouse and upload files
+### Task 1: Upload files into the lakehouse
 
 In this task, you will create a lakehouse and upload files to facilitate data storage and analysis. Using the same workspace, you'll switch to the *Data Science* experience in the portal to manage and utilize the data effectively.
 
@@ -37,13 +37,13 @@ In this task, you will create a lakehouse and upload files to facilitate data st
 
 In this task, you will create a notebook to facilitate model training and experimentation. Notebooks offer an interactive environment where you can write and execute code in multiple languages, allowing you to conduct experiments effectively.
 
-1. At the bottom left of the Power BI portal, switch to the **Data science** experience.
+1. From the left pane, select the workspace named Fabric-<inject key="DeploymentID" enableCopy="false"/>.
 
-    ![](./Images/E5-T2-S1.png)
+    ![](./Images/E2-T4-S1.png) 
 
-1. In the **Data science** home page, create a new **Notebook**.
+2. In the workspace, click on **+ New Item**. In the New Item panel, search for **Notebook** and select it.
 
-    ![](./Images/E5-T2-S2.png)
+    ![](./Images/E2-T4-S2.png) 
 
 1. After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
@@ -79,7 +79,7 @@ In this task, you will load data into a dataframe to prepare for model training.
 
 1. Select the lakehouse you created in a previous section.
 
-1. Expand the **Files (1)** folder so that the CSV file is listed next to the notebook editor.
+1. Click the **Files (1)** folder so that the CSV file is listed next to the notebook editor.
 
 1. In the **Ellipses** menu for **churn.csv (2)**, select **Load data (3)** > **Pandas (4)**.
 
@@ -222,7 +222,7 @@ In this task, you will use MLflow to search for and view your experiments relate
 
 In this task, you will explore your experiments in Microsoft Fabric, which tracks all your training activities. The platform allows for visual exploration of these experiments, enabling you to analyze and compare results effectively.
 
-1. Navigate to your **Workspace (1)**, select **Data Science (2)**  you will see the **experiment-churn (3)** Experiment created.
+1. Navigate to your **Workspace (1)**, you will see the **experiment-churn (3)** Experiment created.
 
    ![](./Images/Pg6-ExpChurn-S1.png)
 
