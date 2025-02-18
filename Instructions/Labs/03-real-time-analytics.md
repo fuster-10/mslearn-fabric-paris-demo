@@ -36,11 +36,12 @@ In this task, you will create a KQL database to facilitate querying of static or
 
    ![](./Images/fabric16.png)
 
-4. When the new database has been created, select the option to **Get data (1)** from **Local file (2)**.
+4. When the new database has been created, select the option to **Get data** then **Local file**.
 
-   ![01](./Images/03/01.png)
+   ![01](./Images/03/E4T1S4.png)
 
 5. Use the wizard to import the data into a new table by selecting the following options:
+   
     - **Source**:
         - **Database:** *The database you created is already selected*
         - **Table:** *Create a new table named* **sales**.
@@ -49,9 +50,9 @@ In this task, you will create a KQL database to facilitate querying of static or
 
     ![01](./Images/fabric17.png)
 
-    - **Inspect:** Preview the data and click on **Finish**.
+    - **Inspect:** Preview the data, enable **First row header** and click on **Finish**.
 
-     ![01](./Images/fabric18.png)
+     ![01](./Images/E4T2S5.png)
 
     - **Summary:**
         - *Review the preview of the table and close the wizard.*
@@ -66,7 +67,7 @@ In this task, you will use Kusto Query Language (KQL) to query the sales table i
 
 1. Make sure you have the **sales** table highlighted. From the ellipses ... of **sales (1)** table, select the **Query table (2)** drop-down, and from there select **Show any 100 records (3)**.
 
-    ![](./Images/E4-T2-S1.png)
+    ![](./Images/E4T2S1.png)
 
 2. A new pane will open with the query and its result. 
 
@@ -232,7 +233,7 @@ In this task, you will use Delta tables to handle streaming data, leveraging the
    deltastream.stop()
     ```
 
-    >**Note**:This code stops the stream.
+    >**Note**: This code stops the stream.
 
 
 ### Summary
