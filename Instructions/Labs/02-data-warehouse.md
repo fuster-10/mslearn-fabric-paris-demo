@@ -1,4 +1,4 @@
-Exercise 3: Analyze data in a data warehouse
+# Exercise 3: Analyze data in a data warehouse
 
 ### Estimated Duration: 60 minutes
 
@@ -30,7 +30,7 @@ In this task, you will design and implement a data warehouse by organizing data 
 
     ![](./Images/E1T1S2.png)
    
-4. In the All items search for Warehouse (1) and select Warehouse (2) from the list.
+4. In the **All items** search for Warehouse (1) and select **Warehouse** (2) from the list.
 
    ![](./Images/E3T1S1.png)
    
@@ -99,14 +99,16 @@ In this task, you will create database tables by defining their structure with a
 9. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
 
 10. Use the **Refresh** button on the toolbar to refresh the view. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
+    
     - **DimCustomer**
     - **DimDate**
     - **DimProduct**
     - **FactSalesOrder**
 
+
     ![01](./Images/02/Pg4-T2-S9.png)  
 
-        > **Tip**: If the schema takes a while to load, just refresh the browser page.
+    > **Tip**: If the schema takes a while to load, just refresh the browser page.
 
 ### Task 3: Define a data model
 
@@ -120,24 +122,26 @@ In this task, you will create a relational data warehouse consisting of fact and
 
 3. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details and click on **Save**.
    
-    - **Table 1**: FactSalesOrder
+    - **From table**: FactSalesOrder
     - **Column**: ProductKey
-    - **Table 2**: DimProduct
+    - **To table**: DimProduct
     - **Column**: ProductKey
     - **Cardinality**: Many to one (*:1)
     - **Cross filter direction**: Single
     - **Make this relationship active**: Selected
     - **Assume referential integrity**: Unselected
 
-     ![](./Images/E3-T3-S3.png)
+     ![](./Images/E3T3S3.png.png)
 
 4. Repeat the process to create many-to-one relationships between the following tables and click on **Save**.
 
     - **FactSalesOrder.CustomerKey** &#8594; **DimCustomer.CustomerKey**
 
-   ![Screenshot of the data warehouse model page.](./Images/fabric12.1.png)
+   ![Screenshot of the data warehouse model page.](./Images/E3T3S4.png)
 
     - **FactSalesOrder.SalesOrderDateKey** &#8594; **DimDate.DateKey**
+  
+    ![Screenshot of the data warehouse model page.](./Images/E3T3S5.png)
 
 5. When all of the relationships have been defined, the model should look like this:
 
@@ -161,7 +165,7 @@ In this task, you will query data warehouse tables using SQL to retrieve and ana
     ```
     ![](./Images/E3-T4-S1.png)
    
-2. Note that the attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
+2. Note that the attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels- in this case, year and month. This is a common pattern in data warehouses.
 
 3. Modify the query as follows to add a second dimension to the aggregation.
 
@@ -229,6 +233,8 @@ In this task, you will create a visual query using the graphical query designer 
 
    ![Screenshot of the canvas with the FactSalesOrder table selected.](./Images/visual-query-merge1.png)
 
+   > **Note:** If the + option is not visible, click on the three dots (i.e., the Actions button) to view the required options. 
+
 1. In the **Merge queries** window, select **DimProduct (1)** as the right table for merge. Select **ProductKey** in both queries, leave the default **Left outer** to join type, and click **OK (4)**.
 
    ![02](./Images/fabric15.png)
@@ -274,7 +280,7 @@ In this task, you will visualize your data from a single query or your data ware
       - **ProductAltKey** 
 
 
-1. On the Home menu, select **New report (2)** from the **reporting(1)** tab. This will open a new window, where you can create a Power BI report.
+1. On the Home menu, select **New report (2)** from the **Reporting(1)** tab. This will open a new window, where you can create a Power BI report.
 
     ![03](./Images/pg-08-1.png)
 
