@@ -209,6 +209,7 @@ In this task, you will explore data within a dataframe to gain insights and unde
     - Dataframes provide functions such as **count** and **distinct** that can be used to summarize and filter the data they contain.
     - The `dataframe['Field1', 'Field2', ...]` syntax is a shorthand way of defining a subset of columns. You can also use the **select** method, so the first line of the code above could be written as `customers = df.select("CustomerName", "Email")`
 
+
 3. Modify the code as follows:
 
     ```Python

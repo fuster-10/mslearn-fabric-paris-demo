@@ -16,7 +16,7 @@ You will be able to complete the following tasks:
    
 # Create New - Dataflow Gen2
 
-1. Navigate back to your workspace, click on + New item. Select Dataflow Gen2.
+1. Navigate back to your workspace, click on **+ New item**. Select **Dataflow Gen2**.
 
    ![New dataflow.](./Images/E6T1S1.png)
 
@@ -43,7 +43,7 @@ You will be able to complete the following tasks:
 
     ![New dataflow.](./Images/E6T1S6.png)
 
-1. To better illustrate all that Copilot is doing for you, let me expand the UI a little to see what's going on behind the scenes.
+1. To give you a clearer view of everything Copilot is doing, expand the UI slightly to reveal what’s happening behind the scenes.
 
 1. Expand **Query Settings** (these are the steps in the query that bring in the data)
 
