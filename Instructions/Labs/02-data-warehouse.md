@@ -106,9 +106,9 @@ In this task, you will create database tables by defining their structure with a
     - **FactSalesOrder**
 
 
-    ![01](./Images/02/Pg4-T2-S9.png)  
+        ![01](./Images/02/Pg4-T2-S9.png)  
 
-    > **Tip**: If the schema takes a while to load, just refresh the browser page.
+        > **Tip**: If the schema takes a while to load, just refresh the browser page.
 
 ### Task 3: Define a data model
 
@@ -131,7 +131,7 @@ In this task, you will create a relational data warehouse consisting of fact and
     - **Make this relationship active**: Selected
     - **Assume referential integrity**: Unselected
 
-     ![](./Images/E3T3S3.png.png)
+        ![](./Images/E3T3S3.png)
 
 4. Repeat the process to create many-to-one relationships between the following tables and click on **Save**.
 
