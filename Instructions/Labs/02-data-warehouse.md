@@ -99,12 +99,11 @@ In this task, you will create database tables by defining their structure with a
 9. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
 
 10. Use the **Refresh** button on the toolbar to refresh the view. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
-    
+
     - **DimCustomer**
     - **DimDate**
     - **DimProduct**
     - **FactSalesOrder**
-
 
         ![01](./Images/02/Pg4-T2-S9.png)
 
