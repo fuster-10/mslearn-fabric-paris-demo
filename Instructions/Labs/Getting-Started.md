@@ -52,24 +52,39 @@ In Microsoft Fabric, the workflow begins with creating a Fabric workspace to man
 
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the **Lab guide** to switch to different exercises of the lab guide.
 
-   ![07](./Images/gs/1a.png)
+   ![07](./Images/march-getting-started-1.png)
 
-1. To get the lab environment details, you can select the **Environment Details** tab. Additionally, the credentials will also be emailed to your registered email address. You can also open the Lab Guide on separate and full windows by selecting the **Split Window** from the lower right corner. Also, you can start, stop, and restart virtual machines from the **Resources** tab.
+1. To get the lab environment details, you can select the **Environment** tab. Additionally, the credentials will also be emailed to your registered email address.
 
-   ![08](./Images/gs/08.png)
+   ![08](./Images/march-getting-started-3.png)
+
+2. Utilizing the Split Window Feature: For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
+
+   ![08](./Images/march-getting-started-2.png)
+
+   > You will see the DeploymentID value on the **Environment** tab, use it wherever you see SUFFIX or DeploymentID in lab steps.
+
+## Utilizing the Zoom In/Out Feature
+
+To adjust the zoom level for the environment page, click the A↕ : 100% icon located next to the timer in the lab environment.
+
+   ![08](./Images/march-getting-started-6.png)
+
+## Managing Your Virtual Machine
  
-    > You will see the DeploymentID value on the **Environment Details** tab, use it wherever you see SUFFIX or DeploymentID in lab steps.
+Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
+   ![08](./Images/march-getting-started-5.png)
 
 ## Login to Azure Portal
 
 1. In the JumpVM, click on the **Azure portal** shortcut of the Microsoft Edge browser which is created on the desktop.
 
-   ![09](./Images/gs/09.png)
+   ![09](./Images/march-getting-started-04.png)
    
 1. On the **Sign-in into Microsoft Azure** tab you will see the login screen, in that enter the following email/username and then click on **Next**. 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
-   
+
      ![04](./Images/gs/lab1-image1.png)
      
 1. Now enter the following password and click on **Sign in**.
@@ -77,10 +92,32 @@ In Microsoft Fabric, the workflow begins with creating a Fabric workspace to man
    
      ![05](./Images/gs/lab1-image2.png)
      
-1. If you see the pop-up **Stay Signed in?**, click No
+1. If you see the pop-up **Stay Signed in?**, click **No**.
+
+## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
+
+1. At the **"More information required"** prompt, select **Next**.
+
+1. On the **"Keep your account secure"** page, select **Next** twice.
+
+1. **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
+
+   - Open **Google Play Store** (Android) or **App Store** (iOS).
+   - Search for **Microsoft Authenticator** and tap **Install**.
+   - Open the **Microsoft Authenticator** app, select **Add account**, then choose **Work or school account**.
+
+1. A **QR code** will be displayed on your computer screen.
+
+1. In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
+
+1. After scanning, click **Next** to proceed.
+
+1. On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
+       
+1. If prompted to stay signed in, you can click **No**.
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
-      
+ 
 1. Now, click on the **Next** from the lower right corner to move to the next page.
 
 This hands-on-lab demonstrates how to create and manage a workspace in Microsoft Fabric, including setting up data pipelines and using Apache Spark. You’ll also train a machine-learning model and explore dataflows for Power BI reports.
