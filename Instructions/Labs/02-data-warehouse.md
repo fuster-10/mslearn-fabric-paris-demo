@@ -106,7 +106,7 @@ In this task, you will create database tables by defining their structure with a
     - **FactSalesOrder**
 
 
-        ![01](./Images/02/Pg4-T2-S9.png)  
+        ![01](./Images/02/Pg4-T2-S9.png)
 
         > **Tip**: If the schema takes a while to load, just refresh the browser page.
 
