@@ -99,7 +99,7 @@ In this task, you will create database tables by defining their structure with a
 9. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
 
 10. Use the **Refresh** button on the toolbar to refresh the view. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
-
+   
     - **DimCustomer**
     - **DimDate**
     - **DimProduct**
@@ -107,7 +107,7 @@ In this task, you will create database tables by defining their structure with a
 
         ![01](./Images/02/Pg4-T2-S9.png)
 
-        > **Tip**: If the schema takes a while to load, just refresh the browser page.
+> **Tip**: If the schema takes a while to load, just refresh the browser page.
 
 ### Task 3: Define a data model
 
