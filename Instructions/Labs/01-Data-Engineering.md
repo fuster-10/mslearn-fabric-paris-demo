@@ -141,7 +141,7 @@ In this task, you will create a pipeline to automate data processing workflows. 
 
 12. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
 
-    ![09](./Images/fabric11.png)
+    ![09](./Images/b777.png)
 
 13. A new pipeline containing a **Copy data** activity is created, as shown here:
 
