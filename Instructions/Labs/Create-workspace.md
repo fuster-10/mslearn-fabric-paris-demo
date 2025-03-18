@@ -18,11 +18,11 @@ You will be able to complete the following tasks:
 
    ![Navigate-To-AAD](./Images/ws/entra01.png)
 
-2. Navigate to **Roles and administrators (1)**.
+2. Navigate to **Roles and administrators (1)** under the **Manage** section.
 
    ![Roles-and-Administrator](./Images/E1-T1-S2.png)
 
-3. In the **Roles and administrators** page, type **Fabric Administrators (1)** in the search box and select **Fabric Administrators (2)** from the results.
+3. In the **Roles and administrators** page, type **Fabric Administrator (1)** in the search box and select **Fabric Administrators (2)** from the results.
 
    ![search-fabric-admin](./Images/E1-T1-S3.png)
 
