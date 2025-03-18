@@ -115,6 +115,8 @@ In this task, you will create a relational data warehouse consisting of fact and
 
 1. In the warehouse, from the top navigation pane, select the **Model Layouts** option.
 
+    >**Note:** If you do not see the **Model Layouts** option, close and reopen the Data Warehouse from the left-most navigation pane.
+
 2. In the model pane, rearrange the tables in your data warehouse so that the **FactSalesOrder** table is in the middle, like this:
 
     ![Screenshot of the data warehouse model page.](./Images/fab1.png)
