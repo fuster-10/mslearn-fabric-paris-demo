@@ -36,7 +36,7 @@ In this task, you will create a KQL database to facilitate querying of static or
 
    ![](./Images/fabric16.png)
 
-4. When the new database has been created, select the option to **Get data** then **Local file**.
+4. Click on the newly created Database from the left pane, and from the middle screen,select the option to **Get data** then **Local file**.
 
    ![01](./Images/E4T1S4.png)
 
@@ -65,7 +65,7 @@ In this task, you will create a KQL database to facilitate querying of static or
 
 In this task, you will use Kusto Query Language (KQL) to query the sales table in your KQL database. With the data now available, you can write KQL code to extract insights and perform analysis on the sales data.
 
-1. Make sure you have the **sales** table highlighted. From the ellipses ... of **sales (1)** table, select the **Query table (2)** drop-down, and from there select **Show any 100 records (3)**.
+1. Make sure you have the **sales** table highlighted. From the ellipses ... of **sales (1)** table, select the **Query with code (2)** drop-down, and from there select **Show any 100 records (3)**.
 
     ![](./Images/E4T2S1.png)
 
@@ -123,7 +123,7 @@ In this task, you will create a Power BI report using your KQL Queryset as the f
 
     ![Screenshot of a report from a KQL query.](./Images/update3.png)
 
-5. In the **Power BI** window, in the **File** menu, select **Save**. Then save the report as **Revenue by Item** in the workspace where your lakehouse and KQL database are defined using a **Non-Business** sensitivity label.
+5. In the **Power BI** window, in the **File** menu, select **Save**. Then save the report as **Revenue by Item** in the workspace where your lakehouse and KQL database are defined using a **Non-Business** sensitivity label.Click on **Continue**
 
 6. Close the **Power BI** window, and in the bar on the left, select the icon for your workspace.
 
