@@ -607,7 +607,7 @@ While **matplotlib** enables you to create complex charts of multiple types, it 
 
 In this task, you will save your notebook with a meaningful name to preserve your work after processing the data. Additionally, you will end the Spark session to free up resources and complete your data engineering tasks.
 
-1. In the top left corner, set the **Name** of the notebook from Notebook 1 to **Explore Sales Orders Notebook**.
+1. In the top left corner, set the **Name** of the notebook from Notebook 2 to **Explore Sales Orders Notebook**.
 2. On the notebook menu, select **Stop session** to end the Spark session.
 
     > **Note:** The stop session icon is present next to the **Start Session** option.
