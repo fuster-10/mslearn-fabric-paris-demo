@@ -77,7 +77,7 @@ In this task, you will load data into a dataframe to prepare it for analysis. Da
 
 1. With the notebook open, expand the **Files** list and select the **orders** folder to display the CSV files alongside the notebook editor, as shown here:
 
-    ![Screenshot of a notebook with a Files pane.](./Images/notebook-files.png)
+    ![Screenshot of a notebook with a Files pane.](./Images/notebook123.png)
 
 1. In the **orders (1)** folder, click the **ellipses(2)** menu for **2019.csv**, then select **Load data (3)** > **Spark (4)**.
 
@@ -294,7 +294,7 @@ In this task, you will use Spark to transform data files into a desired format f
 
 2. Run the cell and wait for the message that the data has been saved. Then, in the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **Refresh**; and select the **transformed_data** folder to verify that it contains a new folder named **orders**, which in turn contains one or more Parquet files.
 
-    ![Screenshot of a folder containing parquet files.](./Images/saved-parquet.png)
+    ![Screenshot of a folder containing parquet files.](./Images/saved1234.png)
 
 3. Add a new cell with the following code to load a new dataframe from the parquet files in the **transformed_orders/orders** folder:
 
@@ -316,7 +316,7 @@ In this task, you will use Spark to transform data files into a desired format f
 
 1. Run the cell and wait for the message that the data has been saved. Then, in the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **Refresh**; and expand the **partitioned_data** folder to verify that it contains a hierarchy of folders named **Year=*xxxx***, each containing folders named **Month=*xxxx***. Each month's folder contains a parquet file with the orders for that month.
 
-    ![Screenshot of a hierarchy of partitioned data files.](./Images/partitioned-files.png)
+    ![Screenshot of a hierarchy of partitioned data files.](./Images/partitioned1234.png)
 
 1. Partitioning data files is a common way to optimize performance when dealing with large volumes of data. This technique can significantly improve performance and make it easier to filter data.
 
@@ -364,7 +364,7 @@ Tables in a Spark metastore are relational abstractions over files in the data l
 
 3. In the **Explorer** pane, in the **...** menu for the **Tables** folder, select **Refresh**. Then expand the **Tables** node and verify that the **salesorders** table has been created.
 
-    ![Screenshot of the salesorder table in Explorer.](./Images/table-view.png)
+    ![Screenshot of the salesorder table in Explorer.](./Images/table1234.png)
 
 4. In the **...** menu for the **salesorders** table, select **Load data** > **Spark**. A new code cell containing code similar to the following example is added to the notebook:
 
