@@ -22,26 +22,33 @@ You will be able to complete the following tasks:
 
 In this task, you will create a lakehouse to organize and analyze your data files. After setting up your workspace, you'll switch to the *Data Engineering* experience in the portal to initiate the creation of the data lakehouse.
 
-1. At the bottom left of the Power BI portal, select the **Power BI** icon and switch to the **Data Engineering** experience.
+1. Navigate to your workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left navigation pane, click on **+ New item (2)** to create a new lakehouse.
 
-2. In the **Synapse Data Engineering** home page, create a new **Lakehouse**.
+    ![](./Images/E1T1S2.png)
 
-   - **Name:** Enter **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>**
+2. In the All items search for Lakehouse (1) and select Lakehouse (2) from the list.
 
-   - Click on **Create**
+    ![](./Images/E1T1S3.png)
 
-3. Once you're in the lakehouse, navigate to the **Files** folder in the **Explorer** pane, click on the **ellipses** menu, and select **Upload** followed by **Upload folder**. Then, upload the **orders** folder located at **C:\LabFiles\Files\orders** to the lakehouse.
+3. Enter the **Name** as **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** and Click on **Create (2)**.
 
-4. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
+4. Once you're in the lakehouse, navigate to the **Files** folder in the **Explorer** pane, click on the **ellipses** menu, and select **Upload** followed by **Upload folder**. Then, upload the **orders** folder located at **C:\LabFiles\Files\orders** to the lakehouse.
 
-    ![Screenshot of uploaded files in a lakehouse.](./Images/uploaded-files.png)
+5. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
+
+    ![Screenshot of uploaded files in a lakehouse.](./Images/uploaded.png)
 
 ### Task 2: Create a notebook
 
 In this task, you will create a notebook to work with data in Apache Spark. Notebooks provide an interactive environment where you can write and run code in multiple languages, while also allowing you to add notes for documentation.
 
-1. Navigate back to Home Page of the MS Fabric and click on **NoteBook** from Recommended Items to create a new notebook.
-    > **Note**: After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
+1. From the left pane, select the workspace named Fabric-<inject key="DeploymentID" enableCopy="false"/>.
+   
+2. In the workspace, click on **+ New Item**. In the New Item panel, search for **Notebook** and select it.
+
+    ![](./Images/E2-T4-S2.png) 
+
+   > **Note**: After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
 2. Select **Lakehouses** from **Explorer** on the left Panel.
 
@@ -405,7 +412,7 @@ In this task, you will visualize data using Spark to enhance understanding and i
 
 2. Run the code and observe that it returns the data from the **salesorders** view you created previously.
 
-3. In the results section beneath the cell, change the View  from **Table** to **Chart**.
+3. In the results section beneath the cell, change the View  from **Table** to **Chart** by clicking on **+ New Chart**.
 
 4. Use the **Customize Chart** button at the top right of the chart to display the options pane for the chart. Then set the options as follows and select **Apply**:
     - **Chart type**: Bar chart
