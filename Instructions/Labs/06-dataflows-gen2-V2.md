@@ -18,9 +18,11 @@ You will be able to complete the following tasks:
 
 In this task, you will create a Dataflow (Gen2) to efficiently ingest and transform data from multiple sources for analysis. This process streamlines data preparation, enabling you to prepare the data for further processing and insights.
 
-1. On **fabric-<inject key="DeploymentID" enableCopy="false"/>** home page, select Data Factory from the bottom left corner and select **New Dataflow Gen2**. After a few moments, the Power Query editor for your new dataflow will open, as illustrated below.
+1. Navigate to your workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left navigation pane, click on **+ New item (2)** to create a Dataflow.
 
-   ![New dataflow.](./Images/lak5.1.png)
+    ![](./Images/E1T1S2.png)
+
+1. In the All items search for **Dataflow Gen2** and select it from the list.
 
 1. Select **Get data**, select **test/csv** and create a new data source with the following settings:
     - **Link to file**: *Selected*
@@ -48,7 +50,7 @@ In this task, you will create a Dataflow (Gen2) to efficiently ingest and transf
 
 In this task, you’ll add a data destination for the Dataflow to determine where the ingested and transformed data will be stored for future use.
 
-1. Choose **Lakehouse** from the **Add data destination** drop-down menu.
+1. From the bottom right corner, choose **Lakehouse** from the **Add data destination** drop-down menu.
 
    ![Empty data pipeline.](./Images/35.png)
 
@@ -75,10 +77,10 @@ In this task, you’ll add a data destination for the Dataflow to determine wher
 
 In this task, you’ll add a dataflow to a pipeline to streamline the data processing workflow and enable automated data transformations.
 
-1. Ensure you are in the **Data Engineering** experience within the workspace. Then, select **Data pipeline** and create a new pipeline named **Load Orders pipeline**. This will open the pipeline editor.
+1. Navigate back to the workspace, click on **+ New item** and select **Data pipeline**.Name the pipeline as **Load Orders pipeline**. This will open the pipeline editor.
 
-    ![Empty data pipeline.](./Images/lak3.png)
-
+    ![](./Images/E1T3S1.png)
+  
    > **Note**: If the Copy Data wizard opens automatically, close it!
 
 3. Select **pipeline activity**, and add a **Dataflow** activity to the pipeline.
