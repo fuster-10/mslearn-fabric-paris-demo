@@ -1,5 +1,13 @@
 # How to use Apache Spark in Microsoft Fabric
 
+## Overview
+
+This lab provides an introduction to Dataflows (Gen2) and Data Pipelines in Microsoft Fabric, focusing on their role in data ingestion, transformation, and automation. Participants will explore how Dataflows (Gen2) connect to various data sources, perform transformations using Power Query Online, and integrate with Data Pipelines to load data into a lakehouse or analytical store. The lab will also cover building and orchestrating pipelines using the Fabric user interface, enabling automation of extract, transform, and load (ETL) processes without extensive coding.
+
+## Lab Objectives
+
+- 
+
 ## Getting Started with the Lab
 
 1. Click on **Microsoft Edge** from the desktop.
