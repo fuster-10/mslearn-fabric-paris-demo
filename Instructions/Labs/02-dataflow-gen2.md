@@ -45,8 +45,6 @@ In this task, you will create a Dataflow (Gen2) to efficiently ingest and transf
 
    ![Query with a custom column step.](./Images/lak4.png)
 
-1. Duplicate the existing tabe, Go to the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** , Delete the **orders** files from the table.
-
 ### Task 2: Add data destination for Dataflow
 
 In this task, you’ll add a data destination for the Dataflow to determine where the ingested and transformed data will be stored for future use.
@@ -70,9 +68,9 @@ In this task, you’ll add a data destination for the Dataflow to determine wher
 6. On the Destination settings page, toggle off the **Use Automatic Settings** option. Then, right-click on the **MonthNo** column header and select **Change Type** to set **MonthNo** as a **Whole number**. Finally, click on **Save Settings**.
     ![Data destination settings page.](./Images/lak2.png)
 
-5. Select **Publish** to publish the dataflow. Then wait for the **Dataflow** to be created in the workspace.
+5. Select **Publish** to publish the dataflow from the bottom right.
 
-6. Once published,click on the **ellipse** next to the published dataflow in the workspace, select **Properties**, and rename the dataflow as **Transform Orders Dataflow**.
+6. Once published, click on the **ellipsis** next to the published dataflow in the workspace, select **Properties (1)**, rename the dataflow as **Transform Orders Dataflow (2)** and click on **save (3)**.
 
 ### Task 3: Add a dataflow to a pipeline
 
@@ -83,6 +81,10 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
     ![](./Images/E1T3S1.png)
   
    > **Note**: If the Copy Data wizard opens automatically, close it!
+
+
+2. Provide the name of the pipeline as 
+
 
 3. Select **pipeline activity**, and add a **Dataflow** activity to the pipeline.
 
@@ -110,4 +112,4 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
 
 In this exercise, you have created a Dataflow (Gen2) to ingest data , added data destination for Dataflow and a dataflow to a pipeline.
 
-### You have successfully completed the lab
+### You have successfully completed the lab.
