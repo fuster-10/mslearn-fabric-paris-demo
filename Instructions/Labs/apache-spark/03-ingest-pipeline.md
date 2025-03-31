@@ -1,4 +1,4 @@
-# Lab 03: Ingest data with a pipeline
+# Exercise 3: Ingest data with a pipeline
 
 ### Estimated Duration: 90 minutes
 
@@ -12,7 +12,6 @@ In this lab, you will complete the following tasks:
  - Task 1 : Create a pipeline
  - Task 2 : Create a notebook
  - Task 3 : Modify the pipeline
-
 
 ## _Architecture Diagram_
 
