@@ -18,13 +18,14 @@ You will be able to complete the following tasks:
 
 In this task, you will create a Dataflow (Gen2) to efficiently ingest and transform data from multiple sources for analysis. This process streamlines data preparation, enabling you to prepare the data for further processing and insights.
 
-1. Navigate to your workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left navigation pane, click on **+ New item (2)** to create a Dataflow.
+1. Click on **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace from the left navigation pane and click on **+ New item (2)** to create a Dataflow.
 
     ![](./Images/E1T1S2.png)
 
-1. In the All items search for **Dataflow Gen2** and select it from the list.
+1. Search for **Dataflow Gen2** and select it from the list.
 
-1. Select **Get data**, select **test/csv** and create a new data source with the following settings:
+1. Select **Get data**, click on **test/csv** and click on **Next**:
+
     - **Link to file**: *Selected*
     - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv`
     - **Connection**: Create new connection
@@ -32,13 +33,13 @@ In this task, you will create a Dataflow (Gen2) to efficiently ingest and transf
     - **Authentication kind**: Anonymous
     - **Privacy level**: None
 
-1. Select **Next** to preview the file data, and then **Create** the data source. The Power Query editor shows the data source and an initial set of query steps to format the data, as shown below:
+1. Click on **Create** to create the data source. The Power Query editor shows the data source and an initial set of query steps to format the data, as shown below:
 
    ![Query in the Power Query editor.](./Images/fabric23.png)
 
-1. Select the **Add column** tab on the toolbar ribbon. Then, choose **Custom column** and create a new column named **MonthNo** using the formula `Date.Month([OrderDate])`.
+1. Click on the **Add column** tab from the toolbar ribbon. Then, choose **Custom column**
 
-   ![Custom column in Power Query editor.](./Images/fabric24.png)
+1. On the dialpog box, provide the name of the New Coloumn as **MonthNo (1)**, the formula as `Date.Month([OrderDate])` **(2)** and click on **OK (3)**.
 
 1. The step to add the custom column is added to the query and the resulting column is displayed in the data pane:
 
@@ -56,11 +57,11 @@ In this task, you’ll add a data destination for the Dataflow to determine wher
 
    >**Note:** If this option is greyed out, you may already have a data destination set. Check the data destination at the bottom of the Query settings pane on the right side of the Power Query editor. If a destination is already set, you can change it using the gear.
 
-2. In the **Connect to data destination** dialog box, edit the connection by selecting **Create a new connection**. Then, sign in with your Power BI organizational account to establish the identity that the dataflow will use to access the lakehouse.
+2. In the **Connect to data destination** dialog box, keep everything as default and click on **Next**.
 
    ![Data destination configuration page.](./Images/lak1.png)
 
-4. Select **Next**, Select the **fabric-<inject key="DeploymentID" enableCopy="false"/>**. Choose the **lakehouse** then specify a new table named **orders**.
+4. Select the **fabric-<inject key="DeploymentID" enableCopy="false"/>** dropdow and choose the **lakehouse**, table named **orders** automatically shows up. Click on **Next**.
 
    ![Data destination configuration page.](./Images/fabric26.png)
 
