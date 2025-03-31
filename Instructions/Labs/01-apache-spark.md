@@ -24,19 +24,25 @@ You will be able to complete the following tasks:
 
 In this task, you will create a lakehouse to organize and analyze your data files. After setting up your workspace, you'll switch to the *Data Engineering* experience in the portal to initiate the creation of the data lakehouse.
 
-1. On the **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace, from the left navigation pane, click on **+ New item (2)** to create a new lakehouse.
+1. On the **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, click on **+ New item (2)** to create a new lakehouse.
 
     ![](./Images/E1T1S2.png)
 
-2. In the All items search for Lakehouse (1) and select Lakehouse (2) from the list.
+1. In the All items search for **Lakehouse (1)** and select **Lakehouse (2)** from the list.
 
     ![](./Images/E1T1S3.png)
 
-3. Enter the **Name** as **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** and Click on **Create (2)**.
+1. Enter the **Name** as **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** and click on **Create**.
 
-4. Once you're in the lakehouse, navigate to the **Files** folder in the **Explorer** pane, click on the **ellipses** menu, and select **Upload** followed by **Upload folder**. Then, upload the **orders** folder located at **C:\LabFiles\Files\orders** to the lakehouse.
+1. Once you're in the lakehouse, navigate to the **Files (1)** folder in the **Explorer** pane, click on the **ellipses (2)** menu, and select **Upload (3)** followed by **Upload folder (4)**.
 
-5. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
+1. Browse and navigate to `C:\LabFiles\Files`, select **orders (1)** and click on **Select Folder (2)**.
+
+1. Click on **Upload** from the pop-up.
+
+1. Click on **Upload** once again from the pop-up and close the window.
+
+1. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
 
     ![Screenshot of uploaded files in a lakehouse.](./Images/uploaded.png)
 
@@ -54,9 +60,11 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
 
 2. Select **Lakehouses** from **Explorer** on the left Panel.
 
-3. Click on **Add** to add the previously created Lakehouse.
+3. Click on **Add**.
 
-4. Select **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** from the options and click on Add.
+4. Ensure **Existing Lakehouse(s) without Schema is selected (1)** and click on **Add (2)**.
+
+5. Select **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** from the options and click on Add.
     > Note: Reload the page to get the files and folders.
 
 2. Select the first cell (currently a *code* cell), and then click the **M&#8595;** button in the dynamic toolbar at the top-right to convert it to a **markdown** cell.
@@ -341,8 +349,8 @@ In this task, you will use Spark to transform data files into a desired format f
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="17b4e545-1878-4b1e-8b41-f6d4401d997a" />
 
+        <validation step="fada4294-a938-4bc6-a505-c29d70f3506f" />
 
 ### Task 7: Work with tables and SQL
 
@@ -370,7 +378,7 @@ Tables in a Spark metastore are relational abstractions over files in the data l
 
     ![Screenshot of the salesorder table in Explorer.](./Images/table1234.png)
 
-4. In the **...** menu for the **salesorders** table, select **Load data** > **Spark**. A new code cell containing code similar to the following example is added to the notebook:
+4. In the **... (1)** menu for the **salesorders** table, select **Load data (2)** > **Spark (3)**. A new code cell containing code similar to the following example is added to the notebook:
 
     ```Python
    df = spark.sql("SELECT * FROM [your_lakehouse].salesorders LIMIT 1000")
@@ -416,17 +424,18 @@ In this task, you will visualize data using Spark to enhance understanding and i
 
 2. Run the code and observe that it returns the data from the **salesorders** view you created previously.
 
-3. In the results section beneath the cell, change the View  from **Table** to **Chart** by clicking on **+ New Chart**.
+3. In the results section, click on **+ New Chart**.
 
-4. Use the **Customize Chart** button at the top right of the chart to display the options pane for the chart. Then set the options as follows and select **Apply**:
-    - **Chart type**: Bar chart
-    - **Key**: Item
-    - **Values**: Quantity
-    - **Series Group**: *leave blank*
-    - **Aggregation**: Sum
-    - **Stacked**: *Unselected*
+4. Scroll right and click on **Start editing**.
 
-5. Verify that the chart looks similar to this:
+5. Then, set the options as follows:
+ 
+    - **Chart type**: **Bar chart (1)**
+    - **Series Group**: **leave blank (2)**
+    - **Aggregation**: **Sum (3)**
+    - **Stacked**: **Unselected (4)**
+
+6. Verify that the chart looks similar to this:
 
     ![Screenshot of a bar chart of products by total order quantiies](./Images/chart_final.png)
 
@@ -611,7 +620,8 @@ While **matplotlib** enables you to create complex charts of multiple types, it 
 
 In this task, you will save your notebook with a meaningful name to preserve your work after processing the data. Additionally, you will end the Spark session to free up resources and complete your data engineering tasks.
 
-1. In the top left corner, set the **Name** of the notebook from Notebook 2 to **Explore Sales Orders Notebook**.
+1. In the top left corner, set the **Name** of the notebook from Notebook 1 to **Explore Sales Orders Notebook**.
+
 2. On the notebook menu, select **Stop session** to end the Spark session.
 
     > **Note:** The stop session icon is present next to the **Start Session** option.
