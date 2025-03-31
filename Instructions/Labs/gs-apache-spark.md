@@ -23,6 +23,6 @@
 
 1. From the left pane, select **Workspaces (1)** and click on **+ New Workspace (2)**.
 
-1. On the Create a workspace dialog box. provide the name as **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** **(1)** and click on **Apply (2)**.
+1. On the Create a workspace dialog box. provide the name as **fabric-<inject key="DeploymentID" enableCopy="false"/>** **(1)** and click on **Apply (2)**.
    
 1. When your new workspace opens, it should be empty, as shown here:
