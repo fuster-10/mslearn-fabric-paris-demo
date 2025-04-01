@@ -46,9 +46,11 @@ In this task, you will create a lakehouse to organize and analyze your data file
 
 1. Click on **Upload** once again from the pop-up and close the window.
 
-    ![](./Images/ap8.png)
+    ![](./Images/ap1-1.png)
 
 1. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded.
+
+    ![](./Images/ap1-2.png)
 
 ### Task 2: Create a notebook
 
@@ -62,9 +64,15 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
 
 1. From the **Explorer** on the left Panel, click on **Inputs** tab. On the **Add sources (1)** dropdown, select **Existing data sources (2)**.
 
+    ![](./Images/ap1-3.png)
+
 1. Select the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** **(1)** and click on **Connect (2)**.
 
+    ![](./Images/ap1-4.png)
+
 1. Select the first cell (currently a *code* cell), and then click the **M&#8595;** button in the dynamic toolbar at the top-right to convert it to a **markdown** cell.
+
+    ![](./Images/ap1-5.png)
 
 1. Replace the code with the below:
 
@@ -84,7 +92,7 @@ In this task, you will load data into a dataframe to prepare it for analysis. Da
 
 1. With the notebook open, expand the **Files** list and select the **orders** folder to display the CSV files alongside the notebook editor, as shown here:
 
-    ![Screenshot of a notebook with a Files pane.](./Images/notebook123.png)
+    ![](./Images/ap1-66.png)
 
 1. In the **orders (1)** folder, click the **ellipses(2)** menu for **2019.csv**, then select **Load data (3)** > **Spark (4)**.
 
@@ -98,7 +106,9 @@ In this task, you will load data into a dataframe to prepare it for analysis. Da
    display(df)
     ```
 
-    > **Tip**: You can hide the Lakehouse Explorer panes on the left by using their **<<** icons. Doing so will help you focus on the notebook.
+    ![](./Images/ap1-7.png)
+
+    > **Note**: You can hide the Lakehouse Explorer panes on the left by using their **<<** icons. Doing so will help you focus on the notebook.
 
 1. Use the **&#9655; Run cell** button on the left of the cell to run it.
 
