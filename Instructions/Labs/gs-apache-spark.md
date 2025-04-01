@@ -102,6 +102,8 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 ## Steps to Proceed with MFA Setup if Ask Later Option is Not Visible
 
+   > **Note:** Continue with the exercises if MFA is already enabled or the option is unavailable.
+
 1. At the **"More information required"** prompt, select **Next**.
 
 1. On the **"Keep your account secure"** page, select **Next** twice.
