@@ -77,7 +77,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
    ![Account-manager-start](./Images/lab1-image13.png)
 
-9. On the **Choose data destination** page, click on **OneLake (1)** and select the lakehouse **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (2)**.
+9. On the **Choose data destination** page, click on **OneLake (1)** and select the lakehouse **Fabric_lakehouse_<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
    ![Account-manager-start](./Images/E1T3S9.png)
 
@@ -109,7 +109,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/Pg3-CpyOutput.png)
 
-15. In the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** page, expand **Files (1)** and select the **new_data (2)** folder, refresh the page and verify that the **sales.csv (3)** file has been copied.
+15. Navigate to **Fabric_lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** from the left pane, expand **Files (1)** and select the **new_data (2)** folder, refresh the page and verify that the **sales.csv (3)** file has been copied.
 
     ![Account-manager-start](./Images/lab1-image16.png)
 
@@ -119,52 +119,75 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
    ![](./Images/imag6.png)
 
-    After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
-
-2. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.
+1. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration and click on **&#9655; Run**.
 
     ```python
    table_name = "sales"
     ```
 
-3. In the **...** menu for the cell (at its top-right) select **Toggle parameter cell**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
+   ![11](./Images/01/Pg3-Notebook-S2.png) 
 
-    ![](./Images/imag11.png)
+1. In the **Ellipsis(...) (1)** menu for the cell (at its top-right) select **Toggle parameter cell (2)**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
 
-4. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
+     ![Account-manager-start](./Images/lab1-image17.png)
+
+1. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
+
+     ![](./Images/E2-T4-S9.png) 
 
     ```python
-   from pyspark.sql.functions import *
+    from pyspark.sql.functions import *
+    
+    # Read the new sales data
+    df = spark.read.format("csv").option("header","true").option("inferSchema","true").load("Files/new_data/*.csv")
 
-   # Read the new sales data
-   df = spark.read.format("csv").option("header","true").load("Files/new_data/*.csv")
+    ## Add month and year columns
+    df = df.withColumn("Year", year(col("OrderDate"))).withColumn("Month", month(col("OrderDate")))
 
-   ## Add month and year columns
-   df = df.withColumn("Year", year(col("OrderDate"))).withColumn("Month", month(col("OrderDate")))
+    # Derive FirstName and LastName columns
+    df = df.withColumn("FirstName", split(col("CustomerName"), " ").getItem(0)).withColumn("LastName", split(col("CustomerName"), " ").getItem(1))
 
-   # Derive FirstName and LastName columns
-   df = df.withColumn("FirstName", split(col("CustomerName"), " ").getItem(0)).withColumn("LastName", split(col("CustomerName"), " ").getItem(1))
+    # Filter and reorder columns
+    df = df["SalesOrderNumber", "SalesOrderLineNumber", "OrderDate", "Year", "Month", "FirstName", "LastName", "EmailAddress", "Item", "Quantity", "UnitPrice", "TaxAmount"]
 
-   # Filter and reorder columns
-   df = df["SalesOrderNumber", "SalesOrderLineNumber", "OrderDate", "Year", "Month", "FirstName", "LastName", "EmailAddress", "Item", "Quantity", "UnitPrice", "TaxAmount"]
-
-   # Load the data into a table
-   df.write.format("delta").mode("append").saveAsTable(table_name)
+    # Load the data into a managed table
+    #Managed tables are tables for which both the schema metadata and the data files are managed by Fabric. The data files for the table are created in the Tables folder.
+    df.write.format("delta").mode("append").saveAsTable(table_name)
     ```
 
-    This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a table - appending the data if the table already exists.
+    This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a **managed table** - appending the data if the table already exists.
 
-5. Verify that your notebooks looks similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
+1. Verify that your notebooks look similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
 
-    ![Screenshot of a notebook with a parameters cell and code to transform data.](./Images/notebook1.png)
+    ![Screenshot of a notebook with a parameters cell and code to transform data.](./Images/fab8.png)
 
-6. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
+    > **Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first cell can take a minute or so to complete.
 
-7. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales** and close the settings pane.
+1. (Optional) You can also create **external tables** for which the schema metadata is defined in the metastore for the lakehouse, but the data files are stored in an external location.
 
-8. In the hub menu bar on the left, select your lakehouse.
+    ```python
+    df.write.format("delta").saveAsTable("external_sales", path="<abfs_path>/external_sales")
 
-9. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
+    #In the Lakehouse explorer pane, in the ... menu for the Files folder, select Copy ABFS path.
+
+    #The ABFS path is the fully qualified path to the Files folder in the OneLake storage for your lakehouse - similar to this:
+
+    #abfss://workspace@tenant-onelake.dfs.fabric.microsoft.com/lakehousename.Lakehouse/Files
+    ```
+    > **Note**: To run the above code, you need to replace the <abfs_path> with your abfs path
+
+
+1. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **Ellipsis(...)** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
+
+    ![.](./Images/fab-6.png)
+
+1. Navigate to notebook menu bar, use the ⚙️ **Settings (1)** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook (2)** and close the settings pane.
+
+     ![.](./Images/fab-7.png)
+ 
+1. In the hub menu bar on the left, select your lakehouse.
+
+1. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
 
 ## Task 3 : Modify the pipeline
 
