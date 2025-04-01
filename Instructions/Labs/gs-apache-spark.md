@@ -47,7 +47,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. On the **Stay signed in?** pop-up, click on **No**.
 
-      > **Note**: If prompted with MFA, please follow the steps highlighted under - [Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible](#Steps-to-Proceed-with-MFA-Setup-if-"Ask-Later"-Option-is-Not-Visible)
+      > **Note**: If prompted with MFA, please follow the steps highlighted under - [Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible](Steps-to-Proceed-with-MFA-Setup-if-"Ask-Later"-Option-is-Not-Visible)
 
 1. Click on the Profile icon from the top right and select **Free Trial**.
 
