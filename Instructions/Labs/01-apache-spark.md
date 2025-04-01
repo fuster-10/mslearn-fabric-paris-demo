@@ -46,7 +46,7 @@ In this task, you will create a lakehouse to organize and analyze your data file
 
 1. Click on **Upload** once again from the pop-up and close the window.
 
-    ![](./Images/ap7.png)
+    ![](./Images/ap8.png)
 
 1. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded.
 
