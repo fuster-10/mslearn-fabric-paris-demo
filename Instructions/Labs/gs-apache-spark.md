@@ -72,33 +72,33 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. Click on the Profile icon from the top right and select **Free Trial**.
 
-  ![08](./Images/ap1.png)
+     ![08](./Images/ap1.png)
 
 1. On the Activate your 60-day free Fabric Trial capacity, click on **Activate**. 
 
-  ![08](./Images/ap2.png)
+      ![08](./Images/ap2.png)
    
 1. Once your trial capacity is ready, you will receive a confirmation message. Select **Got it** to begin working in Fabric.
 
-  ![08](./Images/ap3.png)
+      ![08](./Images/ap3.png)
    
 1. Open your **Account manager** again. Notice that you now have a heading for **Trial status**. Your Account manager keeps track of the number of days remaining in your trial.
 
-  ![08](./Images/ap4.png)
+    ![08](./Images/ap4.png)
 
       > **Note:** You now have a **Fabric (Preview) trial** that includes a **Power BI trial** and a **Fabric (Preview) trial capacity**.
 
 1. From the left pane, select **Workspaces (1)** and click on **+ New Workspace (2)**.
 
-  ![08](./Images/ap5.png)
+      ![08](./Images/ap5.png)
 
 1. On the Create a workspace dialog box. provide the name as **fabric-<inject key="DeploymentID" enableCopy="false"/>** **(1)** and click on **Apply (2)**.
 
-  ![08](./Images/ap5-1.png)
+     ![08](./Images/ap5-1.png)
    
 1. When your new workspace opens, it should be empty, as shown in the image.
 
-  ![08](./Images/ap5-2.png)
+    ![08](./Images/ap5-2.png)
 
 ## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
 
