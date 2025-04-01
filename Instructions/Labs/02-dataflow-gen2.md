@@ -2,6 +2,8 @@
 
 ### Estimated Duration: 30 minutes
 
+## Overview
+
 In Microsoft Fabric, Dataflows (Gen2) connect to various data sources and perform transformations in Power Query Online. They can then be used in Data Pipelines to ingest data into a lakehouse or other analytical store or to define a dataset for a Power BI report.
 
 This lab is designed to introduce the different elements of Dataflows (Gen2), and not create a complex solution that may exist in an enterprise.
@@ -18,11 +20,7 @@ You will be able to complete the following tasks:
 
 In this task, you will create a Dataflow (Gen2) to efficiently ingest and transform data from multiple sources for analysis. This process streamlines data preparation, enabling you to prepare the data for further processing and insights.
 
-1. Click on **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace from the left navigation pane and click on **+ New item (2)** to create a Dataflow.
-
-    ![](./Images/E1T1S2.png)
-
-1. Search for **Dataflow Gen2** and select it from the list.
+1. Click on **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace from the left navigation pane and click on **+ New item (2)** to create a Dataflow. Search (3) for **Dataflow Gen2** and select (4) it from the list.
 
 1. Select **Get data (1)** and click on **test/csv (2)**.
 
