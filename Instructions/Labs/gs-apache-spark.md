@@ -31,13 +31,13 @@ Welcome to your How to use Apache Spark in Microsoft Fabric Workshop! We've prep
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
- ![08](./Images/gs1.png)
+ ![08](./Images/gs2.png)
  
 ## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-  ![08](./Images/gs2.png)
+  ![08](./Images/gs1.png)
  
 ## Utilizing the Split Window Feature
  
