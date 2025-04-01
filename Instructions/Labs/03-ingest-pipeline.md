@@ -3,7 +3,8 @@
 ### Estimated Duration: 60 minutes
 
 ## Overview
-Data pipelines define a sequence of activities that orchestrate an overall process, usually by extracting data from one or more sources and loading it into a destination; often transforming it along the way. Pipelines are commonly used to automate extract, transform, and load (ETL) processes that ingest transactional data from operational data stores into an analytical data store, such as a lakehouse or data warehouse. The graphical pipeline canvas in the Fabric user interface enables you to build complex pipelines with minimal or no coding required.
+
+Data pipelines orchestrate data movement by extracting, transforming, and loading (ETL) or extracting, loading, and transforming (ELT) data into analytical stores like lakehouses or data warehouses. In Microsoft Fabric, the graphical pipeline canvas simplifies pipeline creation with minimal coding, enabling automation of data ingestion from operational sources. Fabric also integrates Apache Spark, allowing scalable data processing and custom transformations within OneLake storage. By combining pipelines and Spark, data engineers can efficiently implement complex ingestion workflows, ensuring transformed data is optimized for analysis.
 
 ## Lab Objectives
 
@@ -12,16 +13,6 @@ In this lab, you will complete the following tasks:
  - Task 1 : Create a pipeline
  - Task 2 : Create a notebook
  - Task 3 : Modify the pipeline
-
-## _Architecture Diagram_
-
-![Architecture Diagram](./Images/Ingest-Data-with-a-pipeline.png)
-
-## Use Data Factory pipelines in Microsoft Fabric
-
-A data lakehouse is a common analytical data store for cloud-scale analytics solutions. One of the core tasks of a data engineer is to implement and manage the ingestion of data from multiple operational data sources into the lakehouse. In Microsoft Fabric, you can implement *extract, transform, and load* (ETL) or *extract, load, and transform* (ELT) solutions for data ingestion through the creation of *pipelines*.
-
-Fabric also supports Apache Spark, enabling you to write and run code to process data at scale. By combining the pipeline and Spark capabilities in Fabric, you can implement complex data ingestion logic that copies data from external sources into the OneLake storage on which the lakehouse is based, and then uses Spark code to perform custom data transformations before loading it into tables for analysis.
 
 ## Task 1 : Create a pipeline
 
@@ -77,9 +68,9 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
    ![Account-manager-start](./Images/lab1-image13.png)
 
-9. On the **Choose data destination** page, click on **OneLake (1)** and select the lakehouse **Fabric_lakehouse_<inject key="DeploymentID" enableCopy="false"/> (2)**.
+9. On the **Choose data destination** page, click on **OneLake (1)** and select the lakehouse **fabric_lakehouse_<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-   ![Account-manager-start](./Images/E1T3S9.png)
+    ![](./Images/ap20.png)
 
 10. Set the following data destination options, and then select **Next (4)**:
 
@@ -109,7 +100,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/Pg3-CpyOutput.png)
 
-15. Navigate to **Fabric_lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** from the left pane, expand **Files (1)** and select the **new_data (2)** folder, refresh the page and verify that the **sales.csv (3)** file has been copied.
+15. Navigate to **fabric_lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** from the left pane, expand **Files (1)** and select the **new_data (2)** folder, refresh the page and verify that the **sales.csv (3)** file has been copied.
 
     ![Account-manager-start](./Images/lab1-image16.png)
 
@@ -181,7 +172,7 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
     ![](./Images/imag13.png)
 
-    ![Screenshot of a pipeline with Delete data and Copy data activities.](./Images/delete-data-activity1.png)
+    ![](./Images/ap22.png)
 
 3. Select the **Delete data** activity, and in the pane below the design canvas, set the following properties:
     - **General**:
@@ -190,14 +181,13 @@ Now that you've implemented a notebook to transform data and load it into a tabl
           ![](./Images/imag14.png)
 
     - **Source**
-        - **Data store type**: Workspace
-        - **Workspace data store**: *Your lakehouse*
-        - **File path type**: Wildcard file path
-        - **Folder path**: Files / **new_data**
-        - **Wildcard file name**: *.csv        
-        - **Recursively**: *Selected*
+        - **Connection**: **fabric_lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)**
+        - **File path type**: **Wildcard file path (2)**
+        - **Folder path**: **new_data** **(3)**
+        - **Wildcard file name**: **.csv (4)**    
+        - **Recursively**: **Selected (5)**
 
-          ![](./Images/imag15.png)
+          ![](./Images/ap23.png)
 
     - **Logging settings**:
         - **Enable logging**: *<u>Un</u>selected*
@@ -206,11 +196,13 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
     These settings will ensure that any existing .csv files are deleted before copying the **sales.csv** file.
 
-4. In the pipeline designer, on the **Activities** tab, select **Notebook** to add a **Notebook** activity to the pipeline.
+4. In the pipeline designer, on the **Activities (1)** tab, select **Notebook (2)** to add a **Notebook** activity to the pipeline.
+
+    ![](./Images/ap24.png)
 
 5. Select the **Copy data** activity and then connect its **On Completion** output to the **Notebook** activity as shown here:
 
-    ![Screenshot of a pipeline with Copy Data and Notebook activities.](./Images/pipeline1.png)
+    ![](./Images/ap25.png)
 
 6. Select the **Notebook** activity, and then in the pane below the design canvas, set the following properties:
     - **General**:
