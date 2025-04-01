@@ -24,7 +24,11 @@ In this task, you will create a Dataflow (Gen2) to efficiently ingest and transf
 
 1. Search for **Dataflow Gen2** and select it from the list.
 
-1. Select **Get data**, click on **test/csv** and click on **Next**:
+1. Select **Get data (1)** and click on **test/csv (2)**.
+
+    ![](./Images/ap15.png)
+
+1. Add the following and click on **Next**:
 
     - **Link to file**: *Selected*
     - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv`
@@ -37,7 +41,9 @@ In this task, you will create a Dataflow (Gen2) to efficiently ingest and transf
 
    ![Query in the Power Query editor.](./Images/fabric23.png)
 
-1. Click on the **Add column** tab from the toolbar ribbon. Then, choose **Custom column**
+1. Click on the **Add column (1)** tab from the toolbar ribbon. Then, choose **Custom column (2)**.
+
+    ![](./Images/ap16.png)
 
 1. On the dialpog box, provide the name of the New Coloumn as **MonthNo (1)**, the formula as `Date.Month([OrderDate])` **(2)** and click on **OK (3)**.
 
@@ -70,7 +76,13 @@ In this task, you’ll add a data destination for the Dataflow to determine wher
 
 5. Select **Publish** to publish the dataflow from the bottom right.
 
-6. Once published, click on the **ellipsis** next to the published dataflow in the workspace, select **Properties (1)**, rename the dataflow as **Transform Orders Dataflow (2)** and click on **save (3)**.
+    ![](./Images/ap17.png)
+
+6. Once published, click on the **ellipsis** next to the published dataflow in the workspace, select **Properties**, rename the dataflow as **Transform Orders Dataflow (1)** and click on **save (2)**.
+
+    ![](./Images/ap18.png)
+
+    ![](./Images/ap19.png)
 
 ### Task 3: Add a dataflow to a pipeline
 
