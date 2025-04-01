@@ -34,23 +34,27 @@ In this task, you will create a lakehouse to organize and analyze your data file
 
 1. Enter the **Name** as **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** and click on **Create**.
 
-1. Once you're in the lakehouse, navigate to the **Files (1)** folder in the **Explorer** pane, click on the **ellipses (2)** menu, and select **Upload (3)** followed by **Upload folder (4)**.
+1. Once you're in the lakehouse, navigate to the **Files (1)** folder in the **Explorer** pane, click on the **ellipses** menu, and select **Upload (2)** followed by **Upload folder (3)**.
 
-1. Browse and navigate to `C:\LabFiles\Files`, select **orders (1)** and click on **Select Folder (2)**.
+    ![](./Images/ap6.png)
+
+1. Browse and navigate to `C:\LabFiles\Files`, select **orders (1)** and click on **Upload (2)**.
+
+    ![](./Images/ap7.png)
 
 1. Click on **Upload** from the pop-up.
 
 1. Click on **Upload** once again from the pop-up and close the window.
 
-1. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
+    ![](./Images/ap7.png)
 
-    ![Screenshot of uploaded files in a lakehouse.](./Images/uploaded.png)
+1. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded.
 
 ### Task 2: Create a notebook
 
 In this task, you will create a notebook to work with data in Apache Spark. Notebooks provide an interactive environment where you can write and run code in multiple languages, while also allowing you to add notes for documentation.
 
-1. From the left pane, select the workspace named Fabric-<inject key="DeploymentID" enableCopy="false"/>.
+1. From the left pane, select the **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace .
    
 2. In the workspace, click on **+ New Item**. In the New Item panel, search for **Notebook** and select it.
 
@@ -256,8 +260,6 @@ In this task, you will aggregate and group data within a dataframe to summarize 
 
 4. Run the code cell you added, and note that the results show the number of sales orders per year. Note that the **select** method includes a SQL **year** function to extract the year component of the *OrderDate* field (which is why the code includes an **import** statement to import functions from the Spark SQL library). It then uses an **alias** method is used to assign a column name to the extracted year value. The data is then grouped by the derived *Year* column and the count of rows in each group is calculated before finally the **orderBy** method is used to sort the resulting dataframe.
 
-     <validation step="b02b49f0-3f15-4371-9832-00c1f09d2b09" />
-
 ### Task 6: Use Spark to transform data files
 
 In this task, you will use Spark to transform data files into a desired format for analysis and processing. This involves ingesting data in specific structures and applying transformations, a common responsibility for data engineers, to prepare the data for downstream applications.
@@ -380,6 +382,8 @@ Tables in a Spark metastore are relational abstractions over files in the data l
 
 4. In the **... (1)** menu for the **salesorders** table, select **Load data (2)** > **Spark (3)**. A new code cell containing code similar to the following example is added to the notebook:
 
+    ![](./Images/ap10.png)
+
     ```Python
    df = spark.sql("SELECT * FROM [your_lakehouse].salesorders LIMIT 1000")
    display(df)
@@ -426,6 +430,8 @@ In this task, you will visualize data using Spark to enhance understanding and i
 
 3. In the results section, click on **+ New Chart**.
 
+    ![](./Images/ap11.png)
+
 4. Scroll right and click on **Start editing**.
 
 5. Then, set the options as follows:
@@ -434,6 +440,10 @@ In this task, you will visualize data using Spark to enhance understanding and i
     - **Series Group**: **leave blank (2)**
     - **Aggregation**: **Sum (3)**
     - **Stacked**: **Unselected (4)**
+
+        ![](./Images/ap12.png)
+
+        ![](./Images/ap13.png)
 
 6. Verify that the chart looks similar to this:
 
@@ -623,6 +633,8 @@ In this task, you will save your notebook with a meaningful name to preserve you
 1. In the top left corner, set the **Name** of the notebook from Notebook 1 to **Explore Sales Orders Notebook**.
 
 2. On the notebook menu, select **Stop session** to end the Spark session.
+
+    ![](./Images/ap14.png)
 
     > **Note:** The stop session icon is present next to the **Start Session** option.
 
