@@ -163,20 +163,6 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     > **Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first cell can take a minute or so to complete.
 
-1. (Optional) You can also create **external tables** for which the schema metadata is defined in the metastore for the lakehouse, but the data files are stored in an external location.
-
-    ```python
-    df.write.format("delta").saveAsTable("external_sales", path="<abfs_path>/external_sales")
-
-    #In the Lakehouse explorer pane, in the ... menu for the Files folder, select Copy ABFS path.
-
-    #The ABFS path is the fully qualified path to the Files folder in the OneLake storage for your lakehouse - similar to this:
-
-    #abfss://workspace@tenant-onelake.dfs.fabric.microsoft.com/lakehousename.Lakehouse/Files
-    ```
-    > **Note**: To run the above code, you need to replace the <abfs_path> with your abfs path
-
-
 1. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **Ellipsis(...)** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
 
     ![.](./Images/fab-6.png)
@@ -184,10 +170,6 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 1. Navigate to notebook menu bar, use the ⚙️ **Settings (1)** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook (2)** and close the settings pane.
 
      ![.](./Images/fab-7.png)
- 
-1. In the hub menu bar on the left, select your lakehouse.
-
-1. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
 
 ## Task 3 : Modify the pipeline
 
