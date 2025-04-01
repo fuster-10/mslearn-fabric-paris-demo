@@ -54,26 +54,19 @@ In this task, you will create a lakehouse to organize and analyze your data file
 
 In this task, you will create a notebook to work with data in Apache Spark. Notebooks provide an interactive environment where you can write and run code in multiple languages, while also allowing you to add notes for documentation.
 
-1. From the left pane, select the **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace .
-   
-2. In the workspace, click on **+ New Item**. In the New Item panel, search for **Notebook** and select it.
+1. From the left pane, select the **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace . In the workspace, click on **+ New Item (1)**. In the New Item panel, search (2) for **Notebook** and select (3) it.
 
     ![](./Images/E2-T4-S2.png) 
 
    > **Note**: After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
-2. Select **Lakehouses** from **Explorer** on the left Panel.
+1. From the **Explorer** on the left Panel, click on **Inputs** tab. On the **Add sources (1)** dropdown, select **Existing data sources (2)**.
 
-3. Click on **Add**.
+1. Select the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** **(1)** and click on **Connect (2)**.
 
-4. Ensure **Existing Lakehouse(s) without Schema is selected (1)** and click on **Add (2)**.
+1. Select the first cell (currently a *code* cell), and then click the **M&#8595;** button in the dynamic toolbar at the top-right to convert it to a **markdown** cell.
 
-5. Select **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** from the options and click on Add.
-    > Note: Reload the page to get the files and folders.
-
-2. Select the first cell (currently a *code* cell), and then click the **M&#8595;** button in the dynamic toolbar at the top-right to convert it to a **markdown** cell.
-
-3. Use the **&#128393;** **(Edit)** button to switch the cell to editing mode, then modify the markdown as follows:
+1. Replace the code with the below:
 
     ```
    # Sales order data exploration
@@ -81,7 +74,7 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
    Use the code in this notebook to explore sales order data.
     ```
 
-4. Click anywhere in the notebook outside of the cell to exit editing mode and view the rendered markdown.
+1. Click anywhere in the notebook outside of the cell to exit editing mode and view the rendered markdown.
 
 ### Task 3: Load data into a dataframe
 
@@ -352,7 +345,7 @@ In this task, you will use Spark to transform data files into a desired format f
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-        <validation step="fada4294-a938-4bc6-a505-c29d70f3506f" />
+        <validation step="ca80df5c-5a46-4057-bc33-616462f99925" />
 
 ### Task 7: Work with tables and SQL
 
