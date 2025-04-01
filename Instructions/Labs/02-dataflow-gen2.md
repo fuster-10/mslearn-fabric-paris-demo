@@ -83,20 +83,19 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
    > **Note**: If the Copy Data wizard opens automatically, close it!
 
 
-2. Provide the name of the pipeline as 
+2. Provide the name of the pipeline as **pipeline<inject key="DeploymentID" enableCopy="false"/>** and click on **Create**.
 
-
-3. Select **pipeline activity**, and add a **Dataflow** activity to the pipeline.
+3. Select **pipeline activity (1)** and add a **Dataflow (2)** activity to the pipeline.
 
    ![Empty data pipeline.](./Images/dataflow_1.png)
 
-4. With the new **Dataflow1** activity selected, go to the **Settings (1)** tab. In the **Dataflow** drop-down list, choose **fabric-<inject key="DeploymentID" enableCopy="false"/>** or my workspace (2) and select **Transform Orders Dataflow (3)** 
+4. With the new **Dataflow1** activity selected, go to the **Settings (1)** tab in the bottom. In the **Workspace** drop-down list, choose **fabric-<inject key="DeploymentID" enableCopy="false"/>**  **(2)** and for the Dataflow, select **Transform Orders Dataflow (3)** from the dropdown.
 
    ![Empty data pipeline.](./Images/transform.png)
    
 6. **Save** the pipeline from the top left corner.
 
-7. Use the **Run** button to run the pipeline, and wait for it to complete. It may take a few minutes.
+7. Use the **Run** button to run the pipeline, and wait for it to complete. It may take a few minutes. Verify the run from the Ouput option in the bottom.
 
    ![Pipeline with a dataflow that has completed successfully.](./Images/lak8.png)
 
