@@ -168,7 +168,7 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
 1. In the hub menu bar on the left select the **Ingest Sales Data** pipeline you created previously.
 
-2. On the **Activities** tab, in the **More activities** list, select **Delete data**. Then position the new **Delete data**  activity to the left of the **Copy data** activity and connect its **On completion** output to the **Copy data** activity, as shown below:
+2. On the **Activities** tab, in the **More activities** list, select **Delete data**. Then position the new **Delete data**  activity to the left of the **Copy data** activity and connect its **On completion (the blue arrow)** output to the **Copy data** activity, as shown below:
 
     ![](./Images/imag13.png)
 
@@ -208,12 +208,14 @@ Now that you've implemented a notebook to transform data and load it into a tabl
     - **General**:
         - **Name**: Load Sales notebook
     - **Settings**:
-        - **Notebook**: Load Sales
-        - **Base parameters**: *Add a new parameter with the following properties:*
+        - **Notebook**: **Load Sales notebook  (1)**
+        - **Base parameters**: *Click on **Add (2)** Add a new parameter with the following **properties (3)**:*
             
             | Name | Type | Value |
             | -- | -- | -- |
             | table_name | String | new_sales |
+
+             ![](./Images/ap26.png)
 
     The **table_name** parameter will be passed to the notebook and override the default value assigned to the **table_name** variable in the parameters cell.
 
