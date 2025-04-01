@@ -20,7 +20,9 @@ You will be able to complete the following tasks:
 
 In this task, you will create a Dataflow (Gen2) to efficiently ingest and transform data from multiple sources for analysis. This process streamlines data preparation, enabling you to prepare the data for further processing and insights.
 
-1. Click on **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace from the left navigation pane and click on **+ New item (2)** to create a Dataflow. Search (3) for **Dataflow Gen2** and select (4) it from the list.
+1. Click on **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace from the left navigation pane and click on **+ New item (1)** to create a Dataflow. Search (2) for **Dataflow Gen2** and select (3) it from the list.
+
+    ![](./Images/ap2-1.png)
 
 1. Select **Get data (1)** and click on **test/csv (2)**.
 
@@ -44,6 +46,8 @@ In this task, you will create a Dataflow (Gen2) to efficiently ingest and transf
     ![](./Images/ap16.png)
 
 1. On the dialpog box, provide the name of the New Coloumn as **MonthNo (1)**, the formula as `Date.Month([OrderDate])` **(2)** and click on **OK (3)**.
+
+    ![](./Images/ap2-2.png)
 
 1. The step to add the custom column is added to the query and the resulting column is displayed in the data pane:
 
