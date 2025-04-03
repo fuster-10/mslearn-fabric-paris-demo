@@ -60,22 +60,32 @@ In this task, you will design and implement a data warehouse by organizing data 
 
 In this task, you will model our Stars Wars database by defining the tables appropriate fields. Afterward, you'll insert data into the tables, ensuring it is ready for querying and further operations.
 
-1. In your new warehouse, select the **Create tables with T-SQL** tile.
+Our Stars Wars database will be composed by:
+- DimCharacters: Character data with additional attributes.
+- DimCities: City plus population data.
+- DimPlanets: Plante and gravitational information.
+- DimSpecies: Table that displays species attributes information.
+- DimStarships: Table that shows spaceship specifications.
+- DimVehicles: Table that shows vehicles specifications.
+- FactQuotes: Table that contains quotes occured during the movies and their corresponding charaters.
+
+1. Let's test the creation of a table. For that, in your new warehouse, select the **Create tables with T-SQL** tile.
 
 ![image](https://github.com/user-attachments/assets/ddc15492-992b-4eb4-a480-28ad729dc603)
 
-2. Replace the default SQL code with the following **CREATE TABLE statement (1)** and Use the **&#9655; Run (2)** button to run the SQL script, which creates a new table named **DimProduct** in the **dbo** schema of the data warehouse.
+2. Replace the default SQL code with the following **CREATE TABLE statement (1)** and Use the **&#9655; Run (2)** button to run the SQL script, which creates a new table named **DimProduct** in the **dbo** schema of the data warehouse. 
 
     ```SQL
-   CREATE TABLE dbo.DimProduct
-   (
-       ProductKey INTEGER NOT NULL,
-       ProductAltKey VARCHAR(25) NULL,
-       ProductName VARCHAR(50) NOT NULL,
-       Category VARCHAR(50) NULL,
-       ListPrice DECIMAL(5,2) NULL
+    
+   CREATE TABLE DimCities (
+       id INT,
+       name VARCHAR(100) NOT NULL,
+       planet VARCHAR(100) NOT NULL,
+       population INT,
+       description VARCHAR(100)
    );
    GO
+    
     ```
 
    ![](./Images/E3-T2-S2.png)
