@@ -1,4 +1,4 @@
-# Exercise 3: Analyze data in a data warehouse
+# Exercise 1: Analyze data in a data warehouse
 
 ### Estimated Duration: 60 minutes
 
@@ -22,23 +22,26 @@ In this task, you will design and implement a data warehouse by organizing data 
 
 1. At the bottom left of the Power BI portal, select the **Fabric (1)** icon and switch to the **Fabric (2)** experience.
 
-   ![](./Images/E2T1S1.png)
+![image](https://github.com/user-attachments/assets/e4d66d90-5a22-4521-8aa4-f4949e236794)
 
-   ![](./Images/E1T1S1-1.png)
+![image](https://github.com/user-attachments/assets/8d9acbf6-7b80-4c34-b4d6-a9074bf7f92a)
+
 
 2. Navigate to your workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, click on **+ New item (2)** to create a new warehouse.
 
-    ![](./Images/E1T1S2.png)
-   
-4. In the **All items** search for Warehouse (1) and select **Warehouse** (2) from the list.
+![image](https://github.com/user-attachments/assets/5dc383e3-1f0d-4709-9f42-310bd5578bb2)
 
-   ![](./Images/E3T1S1.png)
+   
+3. In the **All items** search for Warehouse (1) and select **Warehouse** (2) from the list.
+
+  ![image](https://github.com/user-attachments/assets/e8923c25-3ae4-4f8b-b0cb-78820e7d945d)
    
    - **Name:** Enter **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/>** **(1)**
 
    - Click on **Create (2)**
 
-    ![01](./Images/lab2-image2.png)
+   ![image](https://github.com/user-attachments/assets/ca4700cc-d802-423f-989c-4d5b00ef606c)
+
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
       
@@ -55,7 +58,7 @@ In this task, you will create database tables by defining their structure with a
 
 1. In your new warehouse, select the **Create tables with T-SQL** tile.
 
-   ![](./Images/E3-T2-S1.png)
+![image](https://github.com/user-attachments/assets/ddc15492-992b-4eb4-a480-28ad729dc603)
 
 2. Replace the default SQL code with the following **CREATE TABLE statement (1)** and Use the **&#9655; Run (2)** button to run the SQL script, which creates a new table named **DimProduct** in the **dbo** schema of the data warehouse.
 
