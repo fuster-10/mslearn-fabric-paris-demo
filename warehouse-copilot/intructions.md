@@ -18,7 +18,7 @@ You will be able to complete the following tasks:
 - Task 6: Create a visual query
 - Task 7: Visualize your data
 
-### Task 1: Create a data warehouse
+### Task 1: Create a data warehouse and populate its data
 
 In this task, you will design and implement a data warehouse by organizing data from multiple sources, creating ETL processes, and optimizing for performance. The goal is to enable efficient querying and reporting while ensuring security, compliance, and scalability.
 
@@ -117,7 +117,7 @@ Our Stars Wars database will be composed by:
 
 
 
-9. Run the query, following query to validate the correct creation of the tables. Alternatively, you can create, click on the tables to visualize a preview of its data in the explorer. For this last option, use the **Refresh** button on the toolbar to refresh the view. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
+9. Run the query, following query to validate the correct creation of the tables.
 
     ```SQL
    select top 10 * from dbo.DimBattles;
@@ -131,7 +131,9 @@ Our Stars Wars database will be composed by:
    select top 10 * from dbo.FactQuotes;
 
     ```
-   
+    
+10. Alternatively, you can create, click on the tables to visualize a preview of its data in the explorer. For this last option, use the **Refresh** button on the toolbar to refresh the view. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
+
     - **DimCharacters**
     - **DimCities**
     - **DimPlanets**
@@ -144,7 +146,12 @@ Our Stars Wars database will be composed by:
 
 > **Tip**: If the schema takes a while to load, just refresh the browser page.
 
-### Task 3: Define a data model
+
+### Task 2: Perform an exploratory analysis
+
+
+
+### Task 3: Define a the  semantic model
 
 In this task, you will create a relational data warehouse consisting of fact and dimension tables, where fact tables hold numeric measures for analysis and dimension tables store entity attributes. You'll define relationships between tables in Microsoft Fabric to build a data model for efficient business performance analysis.
 
