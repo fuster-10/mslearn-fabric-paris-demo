@@ -61,13 +61,13 @@ In this task, you will design and implement a data warehouse by organizing data 
 In this task, you will model our Stars Wars database by defining the tables appropriate fields. Afterward, you'll insert data into the tables, ensuring it is ready for querying and further operations.
 
 Our Stars Wars database will be composed by:
-- DimCharacters: Character data with additional attributes.
-- DimCities: City plus population data.
-- DimPlanets: Plante and gravitational information.
-- DimSpecies: Table that displays species attributes information.
-- DimStarships: Table that shows spaceship specifications.
-- DimVehicles: Table that shows vehicles specifications.
-- FactQuotes: Table that contains quotes occured during the movies and their corresponding charaters.
+- **DimCharacters**: Character data with additional attributes.
+- **DimCities**: City plus population data.
+- **DimPlanets**: Plante and gravitational information.
+- **DimSpecies**: Table that displays species attributes information.
+- **DimStarships**: Table that shows spaceship specifications.
+- **DimVehicles**: Table that shows vehicles specifications.
+- **FactQuotes**: Table that contains quotes occured during the movies and their corresponding charaters.
 
 1. Let's test the creation of a table. For that, in your new warehouse, select the **Create tables with T-SQL** tile.
 
@@ -111,22 +111,34 @@ Our Stars Wars database will be composed by:
 
 6. Run the above query to insert three rows into the **DimCities** table.
 
-7. When the query has finished, select the **Data** tab at the bottom of the page in the data warehouse. In the **Explorer** pane, select the **DimProduct** table and verify that the three rows have been added to the table.
+7. When the query has finished, select the **Data** tab at the bottom of the page in the data warehouse. In the **Explorer** pane, select the **DimCities** table and verify that the three rows have been added to the table.
 
-8. On the Home menu tab, use the **New SQL Query** button to create a new query for the table. In the Lab VM, Open the first text file, from **C:\LabFiles\Files\create-dw-01.txt**, and copy the Transact-SQL code related to the 'DimProduct' table. Paste the 'DimProduct' table code into the new query pane you created and similarily copy code from file **C:\LabFiles\Files\create-dw-02.txt** and **C:\LabFiles\Files\create-dw-03.txt** one after the other in same query pane and execute the query.
+8. Now that we've sucesfully tested how a table can be creted one-by-one, let's create the whole data model at once by running a script. For that, navigat to the folder /lab_files on this directory and open the _star_wars_db_creation.sql_ file with a text editor. On the Home menu tab, use the **New SQL Query** button to create a new query for the table and past the content of that file. To run the whole script you can select ctrl + a and then, ctrl + enter to execute it. Please, wait some time until the script finishes and you see no error messages.
 
-     ![01](./Images/02/Pg4-T2-S7.png)
 
-     ![01](./Images/E3-T2-S8.png)
 
-9. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
+9. Run the query, following query to validate the correct creation of the tables. Alternatively, you can create, click on the tables to visualize a preview of its data in the explorer. For this last option, use the **Refresh** button on the toolbar to refresh the view. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
 
-10. Use the **Refresh** button on the toolbar to refresh the view. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
+    ```SQL
+   select top 10 * from dbo.DimBattles;
+   select top 10 * from dbo.DimCharacters;
+   select top 10 * from dbo.DimCities;
+   select top 10 * from dbo.DimOrganizations;
+   select top 10 * from dbo.DimPlanets;
+   select top 10 * from dbo.DimSpecies;
+   select top 10 * from dbo.DimStarships;
+   select top 10 * from dbo.DimVehicles;
+   select top 10 * from dbo.FactQuotes;
+
+    ```
    
-    - **DimCustomer**
-    - **DimDate**
-    - **DimProduct**
-    - **FactSalesOrder**
+    - **DimCharacters**
+    - **DimCities**
+    - **DimPlanets**
+    - **DimSpecies**
+    - **DimStarships**
+    - **DimVehicles**
+    - **FactQuotes**
 
         ![01](./Images/02/Pg4-T2-S9.png)
 
