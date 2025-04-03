@@ -90,20 +90,26 @@ Our Stars Wars database will be composed by:
 
    ![](./Images/E3-T2-S2.png)
 
-3. Use the **Refresh** button on the toolbar to refresh the view. Then, in the **Explorer** pane, expand **Schemas** > **dbo** > **Tables** and verify that the **DimProduct** table has been created.
+3. Use the **Refresh** button on the toolbar to refresh the view. Then, in the **Explorer** pane, expand **Schemas** > **dbo** > **Tables** and verify that the **DimCities** table has been created.
 
 4. On the **Home** menu tab, use the **New SQL Query** button and from the drop down select **New SQL Query**  to create a new query, and enter the following INSERT statement:
 
     ```SQL
-   INSERT INTO dbo.DimProduct
+   INSERT INTO DimCities (id, name, planet, population, description)
    VALUES
-   (1, 'RING1', 'Bicycle bell', 'Accessories', 5.99),
-   (2, 'BRITE1', 'Front light', 'Accessories', 15.49),
-   (3, 'BRITE2', 'Rear light', 'Accessories', 15.49);
-   GO
+   (1, 'Mos Eisley', 'Tatooine', 50000, 'A wretched hive of scum and villainy.'),
+   (2, 'Theed', 'Naboo', 200000, 'Capital city of Naboo, known for its classical architecture.'),
+   (3, 'Cloud City', 'Bespin', 10000, 'A tibanna gas mining colony floating in the clouds of Bespin.'),
+   (4, 'Coruscant', 'Coruscant', 1000000000, 'The bustling capital of the Galactic Republic and later the Galactic Empire.'),
+   (5, 'Jedha City', 'Jedha', 30000, 'A holy city and center of pilgrimage for those who believe in the Force.'),
+   (6, 'Canto Bight', 'Cantonica', 20000, 'A casino city known for its luxury and opulence.'),
+   (7, 'Mos Espa', 'Tatooine', 40000, 'A spaceport settlement on Tatooine, known for its podracing.'),
+   (8, 'NiJedha', 'Jedha', 20000, 'Another important city on Jedha, known for its historical significance.'),
+   (9, 'Tipoca City', 'Kamino', 50000, 'The capital city of Kamino, known for its cloning facilities.'),
+   (10, 'Dahhh City', 'Toydaria', 15000, 'A major city on Toydaria.');
     ```
 
-6. Run the above query to insert three rows into the **DimProduct** table.
+6. Run the above query to insert three rows into the **DimCities** table.
 
 7. When the query has finished, select the **Data** tab at the bottom of the page in the data warehouse. In the **Explorer** pane, select the **DimProduct** table and verify that the three rows have been added to the table.
 
