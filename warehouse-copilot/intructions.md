@@ -32,7 +32,7 @@ In this task, you will design and implement a data warehouse by organizing data 
 ![image](https://github.com/user-attachments/assets/49294d29-649f-460e-9598-b3a1646b5e19)
 
 
-3. click on **+ New item (2)** to create a new warehouse. Provide it a convenient name.
+3. click on **+ New item (2)** to create a new warehouse. 
 
 ![image](https://github.com/user-attachments/assets/5dc383e3-1f0d-4709-9f42-310bd5578bb2)
 
