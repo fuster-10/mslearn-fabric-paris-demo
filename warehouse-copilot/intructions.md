@@ -113,7 +113,7 @@ Our Stars Wars database will be composed by:
 
 7. When the query has finished, select the **Data** tab at the bottom of the page in the data warehouse. In the **Explorer** pane, select the **DimCities** table and verify that the three rows have been added to the table.
 
-8. Now that we've sucesfully tested how a table can be creted one-by-one, let's create the whole data model at once by running a script. For that, navigat to the folder /lab_files on this directory and open the _star_wars_db_creation.sql_ file with a text editor. On the Home menu tab, use the **New SQL Query** button to create a new query for the table and past the content of that file. To run the whole script you can select ctrl + a and then, ctrl + enter to execute it. Please, wait some time until the script finishes and you see no error messages.
+8. Now that we've sucesfully tested how a table can be creted one-by-one, let's create the whole data model at once by running a script. For that, open the file [Tables_Creation_Script](https://github.com/fuster-10/mslearn-fabric-paris-demo/blob/main/warehouse-copilot/Tables_Creation_Script.sql) with a text editor. On the Home menu tab, use the **New SQL Query** button to create a new query for the table and past the content of that file. To run the whole script you can select ctrl + a and then, ctrl + enter to execute it. Please, wait some time until the script finishes and you see no error messages.
 
 
 
