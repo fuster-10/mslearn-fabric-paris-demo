@@ -28,7 +28,7 @@ In this task, you will design and implement a data warehouse by organizing data 
 
 ![image](https://github.com/user-attachments/assets/8d9acbf6-7b80-4c34-b4d6-a9074bf7f92a)
 
-2. To keep things tidy, navigate to your workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, click on **+ New folder (2)** and create a new folder with the following syntax _202504_Lab1_Surname_Name_. From now onwards, any Fabric-related item should be created within our personal folder.
+2. To keep things tidy, navigate to your workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, click on **+ New folder (2)** and create a new folder with the syntax YYYYMMDD_Lab1_Surname_Name. From now onwards, any Fabric-related created item should be placed in this directory.
 ![image](https://github.com/user-attachments/assets/49294d29-649f-460e-9598-b3a1646b5e19)
 
 
