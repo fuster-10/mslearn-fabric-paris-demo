@@ -53,13 +53,12 @@ In this task, you will design and implement a data warehouse by organizing data 
    - If you receive an InProgress message, you can hit refresh to see the final status.
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 <validation step="ed927a03-5062-4d23-bf52-d57ae336f0eb" />
 
 ### Task 2: Create tables and insert data
 
-In this task, you will create database tables by defining their structure with appropriate columns and constraints. Afterward, you'll insert data into the tables, ensuring it is ready for querying and further operations.
+In this task, you will model our Stars Wars database by defining the tables appropriate fields. Afterward, you'll insert data into the tables, ensuring it is ready for querying and further operations.
 
 1. In your new warehouse, select the **Create tables with T-SQL** tile.
 
