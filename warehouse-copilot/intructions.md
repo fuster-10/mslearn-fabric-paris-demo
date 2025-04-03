@@ -1,8 +1,10 @@
-# Exercise 1: Analyze data in a data warehouse
+# Part 1: Analyze data in a data warehouse
 
 ### Estimated Duration: 60 minutes
 
 In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. Unlike the default read-only SQL endpoint for tables defined in a lakehouse, a data warehouse provides full SQL semantics; including the ability to insert, update, and delete data in the tables.
+
+In this section of the lab, the Star Wars related data will be loaded into the data warehouse. Additionally, we will perform an exploratory analysis.
 
 ## Lab objectives
 
@@ -26,8 +28,11 @@ In this task, you will design and implement a data warehouse by organizing data 
 
 ![image](https://github.com/user-attachments/assets/8d9acbf6-7b80-4c34-b4d6-a9074bf7f92a)
 
+2. To keep things tidy, navigate to your workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, click on **+ New folder (2)** and create a new folder with the following syntax _202504_Lab1_Surname_Name_. From now onwards, any Fabric-related item should be created within our personal folder.
+![image](https://github.com/user-attachments/assets/49294d29-649f-460e-9598-b3a1646b5e19)
 
-2. Navigate to your workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, click on **+ New item (2)** to create a new warehouse.
+
+3. click on **+ New item (2)** to create a new warehouse. Provide it a convenient name.
 
 ![image](https://github.com/user-attachments/assets/5dc383e3-1f0d-4709-9f42-310bd5578bb2)
 
