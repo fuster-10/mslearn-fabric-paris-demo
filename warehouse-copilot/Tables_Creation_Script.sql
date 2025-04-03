@@ -117,7 +117,7 @@ CREATE TABLE DimCharacters (
     year_born INT,
     homeworld VARCHAR(100),
     year_died INT NULL,
-    description TEXT
+    description VARCHAR(255)
 );
 
 -- Inserting Data into the Dimension Table
