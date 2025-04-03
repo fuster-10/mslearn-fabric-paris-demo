@@ -115,6 +115,7 @@ Our Stars Wars database will be composed by:
 
 8. Now that we've sucesfully tested how a table can be creted one-by-one, let's create the whole data model at once by running a script. For that, open the file [Tables_Creation_Script](https://github.com/fuster-10/mslearn-fabric-paris-demo/blob/main/warehouse-copilot/Tables_Creation_Script.sql) with a text editor. On the Home menu tab, use the **New SQL Query** button to create a new query for the table and past the content of that file. To run the whole script you can select ctrl + a and then, ctrl + enter to execute it. Please, wait some time until the script finishes and you see no error messages.
 
+![image](https://github.com/user-attachments/assets/cd5b9673-d2b4-451c-9c78-733e09205f75)
 
 
 9. Run the query, following query to validate the correct creation of the tables.
@@ -142,7 +143,8 @@ Our Stars Wars database will be composed by:
     - **DimVehicles**
     - **FactQuotes**
 
-        ![01](./Images/02/Pg4-T2-S9.png)
+  ![image](https://github.com/user-attachments/assets/4e147c8a-c6c7-4153-b217-11f04b80e05f)
+ 
 
 > **Tip**: If the schema takes a while to load, just refresh the browser page.
 
